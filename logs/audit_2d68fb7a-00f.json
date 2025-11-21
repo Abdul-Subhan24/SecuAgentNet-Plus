@@ -1,0 +1,162 @@
+{
+  "run_ts": "2025-11-20T12:15:03.220138Z",
+  "incident": {
+    "incident_id": "2d68fb7a-00f",
+    "kind": "email",
+    "sender": "user163@trusted-health.org",
+    "recipient": "user1578@example.com",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-2d68fb7a-00f",
+        "from_agent": "detection_agent",
+        "incident_id": "2d68fb7a-00f",
+        "iocs": {
+          "urls": [
+            "https://trusted-health.org/?id=2d68fb7a-00f"
+          ],
+          "domains": [
+            "trusted-health.org"
+          ]
+        },
+        "score": 0.7,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_attachment",
+          "pii_present",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user163@trusted-health.org",
+          "recipient": "user1578@example.com",
+          "attachment_type": "docx",
+          "pii_present": 1
+        }
+      },
+      "rule": {
+        "message_id": "detection-2d68fb7a-00f",
+        "from_agent": "detection_agent",
+        "incident_id": "2d68fb7a-00f",
+        "iocs": {
+          "urls": [
+            "https://trusted-health.org/?id=2d68fb7a-00f"
+          ],
+          "domains": [
+            "trusted-health.org"
+          ]
+        },
+        "score": 0.7,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_attachment",
+          "pii_present",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user163@trusted-health.org",
+          "recipient": "user1578@example.com",
+          "attachment_type": "docx",
+          "pii_present": 1
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-2d68fb7a-00f",
+          "from_agent": "detection_agent",
+          "incident_id": "2d68fb7a-00f",
+          "iocs": {
+            "urls": [
+              "https://trusted-health.org/?id=2d68fb7a-00f"
+            ],
+            "domains": [
+              "trusted-health.org"
+            ]
+          },
+          "score": 0.7,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_attachment",
+            "pii_present",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user163@trusted-health.org",
+            "recipient": "user1578@example.com",
+            "attachment_type": "docx",
+            "pii_present": 1
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-2d68fb7a-00f",
+      "from_agent": "misuse_agent",
+      "incident_id": "2d68fb7a-00f",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-2d68fb7a-00f",
+      "from_agent": "deepfake_agent",
+      "incident_id": "2d68fb7a-00f",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "docx"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-2d68fb7a-00f",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "2d68fb7a-00f",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-2d68fb7a-00f",
+      "from_agent": "governance_agent",
+      "incident_id": "2d68fb7a-00f",
+      "autonomy_risk_score": 72.5,
+      "allow_automation": false,
+      "policy_constraints": [
+        "HITL_required"
+      ],
+      "justification": "High autonomy risk; manual review required",
+      "metadata": {
+        "sensitivity": 0.8,
+        "impact": 0.8,
+        "detection_confidence": 0.7
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "Governance: HITL_required"
+    }
+  }
+}

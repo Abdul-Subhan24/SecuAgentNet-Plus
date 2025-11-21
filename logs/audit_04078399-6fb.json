@@ -1,0 +1,144 @@
+{
+  "run_ts": "2025-11-20T12:14:55.747374Z",
+  "incident": {
+    "incident_id": "04078399-6fb",
+    "kind": "email",
+    "sender": "user952@uni-scholar.org",
+    "recipient": "user1930@example.com",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-04078399-6fb",
+        "from_agent": "detection_agent",
+        "incident_id": "04078399-6fb",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.35,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user952@uni-scholar.org",
+          "recipient": "user1930@example.com",
+          "attachment_type": "pdf",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-04078399-6fb",
+        "from_agent": "detection_agent",
+        "incident_id": "04078399-6fb",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.35,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user952@uni-scholar.org",
+          "recipient": "user1930@example.com",
+          "attachment_type": "pdf",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-04078399-6fb",
+          "from_agent": "detection_agent",
+          "incident_id": "04078399-6fb",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.35,
+          "tags": [
+            "suspicious"
+          ],
+          "evidence_chain": [
+            "suspicious_attachment",
+            "medium_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user952@uni-scholar.org",
+            "recipient": "user1930@example.com",
+            "attachment_type": "pdf",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-04078399-6fb",
+      "from_agent": "misuse_agent",
+      "incident_id": "04078399-6fb",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "suspicious"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-04078399-6fb",
+      "from_agent": "deepfake_agent",
+      "incident_id": "04078399-6fb",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "pdf"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-04078399-6fb",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "04078399-6fb",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-04078399-6fb",
+      "from_agent": "governance_agent",
+      "incident_id": "04078399-6fb",
+      "autonomy_risk_score": 67.75,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.35
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

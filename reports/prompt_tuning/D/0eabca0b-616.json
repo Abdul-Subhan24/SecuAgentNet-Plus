@@ -1,0 +1,22 @@
+{
+  "message_id": "detection-heuristic-0eabca0b-616",
+  "from_agent": "detection_agent_heuristic_fallback",
+  "incident_id": "0eabca0b-616",
+  "iocs": {
+    "urls": [],
+    "domains": []
+  },
+  "score": 0.0,
+  "tags": [
+    "benign"
+  ],
+  "evidence_chain": [
+    "fallback_heuristic"
+  ],
+  "metadata": {
+    "kind": "social",
+    "sender": "John Smith",
+    "attachment_type": "jpg",
+    "has_link": false
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "run_ts": "2025-11-20T12:14:56.240094Z",
+  "incident": {
+    "incident_id": "500c2155-f61",
+    "kind": "email",
+    "sender": "user111@secure-bank.com",
+    "recipient": "user1012@example.com",
+    "manual_severity": "medium"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-500c2155-f61",
+        "from_agent": "detection_agent",
+        "incident_id": "500c2155-f61",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.35,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user111@secure-bank.com",
+          "recipient": "user1012@example.com",
+          "attachment_type": "docx",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-500c2155-f61",
+        "from_agent": "detection_agent",
+        "incident_id": "500c2155-f61",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.35,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user111@secure-bank.com",
+          "recipient": "user1012@example.com",
+          "attachment_type": "docx",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-500c2155-f61",
+          "from_agent": "detection_agent",
+          "incident_id": "500c2155-f61",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.35,
+          "tags": [
+            "suspicious"
+          ],
+          "evidence_chain": [
+            "suspicious_attachment",
+            "medium_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user111@secure-bank.com",
+            "recipient": "user1012@example.com",
+            "attachment_type": "docx",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-500c2155-f61",
+      "from_agent": "misuse_agent",
+      "incident_id": "500c2155-f61",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "suspicious"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-500c2155-f61",
+      "from_agent": "deepfake_agent",
+      "incident_id": "500c2155-f61",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "docx"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-500c2155-f61",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "500c2155-f61",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-500c2155-f61",
+      "from_agent": "governance_agent",
+      "incident_id": "500c2155-f61",
+      "autonomy_risk_score": 67.75,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.35
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

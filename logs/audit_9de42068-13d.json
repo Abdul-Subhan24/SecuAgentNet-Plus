@@ -1,0 +1,159 @@
+{
+  "run_ts": "2025-11-20T12:15:03.067847Z",
+  "incident": {
+    "incident_id": "9de42068-13d",
+    "kind": "email",
+    "sender": "user833@parcel-track.net",
+    "recipient": "user1267@example.com",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-9de42068-13d",
+        "from_agent": "detection_agent",
+        "incident_id": "9de42068-13d",
+        "iocs": {
+          "urls": [
+            "https://gov-id.org/?id=9de42068-13d"
+          ],
+          "domains": [
+            "gov-id.org"
+          ]
+        },
+        "score": 0.84,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "pii_present",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user833@parcel-track.net",
+          "recipient": "user1267@example.com",
+          "attachment_type": "mp4",
+          "pii_present": 1
+        }
+      },
+      "rule": {
+        "message_id": "detection-9de42068-13d",
+        "from_agent": "detection_agent",
+        "incident_id": "9de42068-13d",
+        "iocs": {
+          "urls": [
+            "https://gov-id.org/?id=9de42068-13d"
+          ],
+          "domains": [
+            "gov-id.org"
+          ]
+        },
+        "score": 0.84,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "pii_present",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user833@parcel-track.net",
+          "recipient": "user1267@example.com",
+          "attachment_type": "mp4",
+          "pii_present": 1
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-9de42068-13d",
+          "from_agent": "detection_agent",
+          "incident_id": "9de42068-13d",
+          "iocs": {
+            "urls": [
+              "https://gov-id.org/?id=9de42068-13d"
+            ],
+            "domains": [
+              "gov-id.org"
+            ]
+          },
+          "score": 0.84,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "pii_present",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user833@parcel-track.net",
+            "recipient": "user1267@example.com",
+            "attachment_type": "mp4",
+            "pii_present": 1
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-9de42068-13d",
+      "from_agent": "misuse_agent",
+      "incident_id": "9de42068-13d",
+      "misuse_label": "scholarship_scam",
+      "confidence": 0.75,
+      "explanation": "scholarship keywords",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-9de42068-13d",
+      "from_agent": "deepfake_agent",
+      "incident_id": "9de42068-13d",
+      "deepfake_prob": 0.2,
+      "tag": "benign",
+      "explanation": "attachment_type:mp4; detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "mp4"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-9de42068-13d",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "9de42068-13d",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-9de42068-13d",
+      "from_agent": "governance_agent",
+      "incident_id": "9de42068-13d",
+      "autonomy_risk_score": 42.4,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.8,
+        "impact": 0.0,
+        "detection_confidence": 0.84
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "strong signals"
+    }
+  }
+}

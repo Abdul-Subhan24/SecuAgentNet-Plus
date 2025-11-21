@@ -1,0 +1,148 @@
+{
+  "run_ts": "2025-11-20T12:15:02.016236Z",
+  "incident": {
+    "incident_id": "12828d1a-aa0",
+    "kind": "document",
+    "sender": "medilifehospital@trusted-health.org",
+    "recipient": "records@gov.org",
+    "manual_severity": "medium"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-12828d1a-aa0",
+        "from_agent": "detection_agent",
+        "incident_id": "12828d1a-aa0",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.2,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment",
+          "pii_present"
+        ],
+        "metadata": {
+          "kind": "document",
+          "sender": "medilifehospital@trusted-health.org",
+          "recipient": "records@gov.org",
+          "attachment_type": "pdf",
+          "pii_present": 1
+        }
+      },
+      "rule": {
+        "message_id": "detection-12828d1a-aa0",
+        "from_agent": "detection_agent",
+        "incident_id": "12828d1a-aa0",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.2,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment",
+          "pii_present"
+        ],
+        "metadata": {
+          "kind": "document",
+          "sender": "medilifehospital@trusted-health.org",
+          "recipient": "records@gov.org",
+          "attachment_type": "pdf",
+          "pii_present": 1
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-12828d1a-aa0",
+          "from_agent": "detection_agent",
+          "incident_id": "12828d1a-aa0",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.2,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [
+            "suspicious_attachment",
+            "pii_present"
+          ],
+          "metadata": {
+            "kind": "document",
+            "sender": "medilifehospital@trusted-health.org",
+            "recipient": "records@gov.org",
+            "attachment_type": "pdf",
+            "pii_present": 1
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-12828d1a-aa0",
+      "from_agent": "misuse_agent",
+      "incident_id": "12828d1a-aa0",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "document",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-12828d1a-aa0",
+      "from_agent": "deepfake_agent",
+      "incident_id": "12828d1a-aa0",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "pdf"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-12828d1a-aa0",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "12828d1a-aa0",
+      "ok": false,
+      "issues": [
+        "Detection marked benign but misuse agent found high-risk label"
+      ],
+      "corrective_suggestions": [
+        "Re-check detection thresholds or escalate to HITL"
+      ]
+    },
+    "governance": {
+      "message_id": "governance-12828d1a-aa0",
+      "from_agent": "governance_agent",
+      "incident_id": "12828d1a-aa0",
+      "autonomy_risk_score": 80.0,
+      "allow_automation": false,
+      "policy_constraints": [
+        "HITL_required"
+      ],
+      "justification": "High autonomy risk; manual review required",
+      "metadata": {
+        "sensitivity": 0.8,
+        "impact": 0.8,
+        "detection_confidence": 0.2
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "Governance: HITL_required"
+    }
+  }
+}

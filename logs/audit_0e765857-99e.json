@@ -1,0 +1,148 @@
+{
+  "run_ts": "2025-11-20T12:14:58.691774Z",
+  "incident": {
+    "incident_id": "0e765857-99e",
+    "kind": "document",
+    "sender": "medilifehospital@payments-update.com",
+    "recipient": "records@hospital.org",
+    "manual_severity": "medium"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-0e765857-99e",
+        "from_agent": "detection_agent",
+        "incident_id": "0e765857-99e",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.2,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment",
+          "pii_present"
+        ],
+        "metadata": {
+          "kind": "document",
+          "sender": "medilifehospital@payments-update.com",
+          "recipient": "records@hospital.org",
+          "attachment_type": "docx",
+          "pii_present": 1
+        }
+      },
+      "rule": {
+        "message_id": "detection-0e765857-99e",
+        "from_agent": "detection_agent",
+        "incident_id": "0e765857-99e",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.2,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment",
+          "pii_present"
+        ],
+        "metadata": {
+          "kind": "document",
+          "sender": "medilifehospital@payments-update.com",
+          "recipient": "records@hospital.org",
+          "attachment_type": "docx",
+          "pii_present": 1
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-0e765857-99e",
+          "from_agent": "detection_agent",
+          "incident_id": "0e765857-99e",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.2,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [
+            "suspicious_attachment",
+            "pii_present"
+          ],
+          "metadata": {
+            "kind": "document",
+            "sender": "medilifehospital@payments-update.com",
+            "recipient": "records@hospital.org",
+            "attachment_type": "docx",
+            "pii_present": 1
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-0e765857-99e",
+      "from_agent": "misuse_agent",
+      "incident_id": "0e765857-99e",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "document",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-0e765857-99e",
+      "from_agent": "deepfake_agent",
+      "incident_id": "0e765857-99e",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "docx"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-0e765857-99e",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "0e765857-99e",
+      "ok": false,
+      "issues": [
+        "Detection marked benign but misuse agent found high-risk label"
+      ],
+      "corrective_suggestions": [
+        "Re-check detection thresholds or escalate to HITL"
+      ]
+    },
+    "governance": {
+      "message_id": "governance-0e765857-99e",
+      "from_agent": "governance_agent",
+      "incident_id": "0e765857-99e",
+      "autonomy_risk_score": 80.0,
+      "allow_automation": false,
+      "policy_constraints": [
+        "HITL_required"
+      ],
+      "justification": "High autonomy risk; manual review required",
+      "metadata": {
+        "sensitivity": 0.8,
+        "impact": 0.8,
+        "detection_confidence": 0.2
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "Governance: HITL_required"
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "run_ts": "2025-11-20T12:14:58.029941Z",
+  "incident": {
+    "incident_id": "afce65c6-001",
+    "kind": "social",
+    "sender": "Sana Ahmed",
+    "recipient": "public",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-afce65c6-001",
+        "from_agent": "detection_agent",
+        "incident_id": "afce65c6-001",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.0,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [],
+        "metadata": {
+          "kind": "social",
+          "sender": "Sana Ahmed",
+          "recipient": "public",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-afce65c6-001",
+        "from_agent": "detection_agent",
+        "incident_id": "afce65c6-001",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.0,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [],
+        "metadata": {
+          "kind": "social",
+          "sender": "Sana Ahmed",
+          "recipient": "public",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-afce65c6-001",
+          "from_agent": "detection_agent",
+          "incident_id": "afce65c6-001",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.0,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [],
+          "metadata": {
+            "kind": "social",
+            "sender": "Sana Ahmed",
+            "recipient": "public",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-afce65c6-001",
+      "from_agent": "misuse_agent",
+      "incident_id": "afce65c6-001",
+      "misuse_label": "job_scam",
+      "confidence": 0.6,
+      "explanation": "job/offer wording",
+      "metadata": {
+        "kind": "social",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-afce65c6-001",
+      "from_agent": "deepfake_agent",
+      "incident_id": "afce65c6-001",
+      "deepfake_prob": 0.2,
+      "tag": "benign",
+      "explanation": "deepfake keywords",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-afce65c6-001",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "afce65c6-001",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-afce65c6-001",
+      "from_agent": "governance_agent",
+      "incident_id": "afce65c6-001",
+      "autonomy_risk_score": 15.0,
+      "allow_automation": true,
+      "policy_constraints": [
+        "Automation_allowed_under_monitoring"
+      ],
+      "justification": "Low autonomy risk; automation permitted",
+      "metadata": {
+        "sensitivity": 0.0,
+        "impact": 0.0,
+        "detection_confidence": 0.0
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

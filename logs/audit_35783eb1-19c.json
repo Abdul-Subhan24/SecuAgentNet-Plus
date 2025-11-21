@@ -1,0 +1,162 @@
+{
+  "run_ts": "2025-11-20T12:15:02.414434Z",
+  "incident": {
+    "incident_id": "35783eb1-19c",
+    "kind": "email",
+    "sender": "user605@loanfast.info",
+    "recipient": "user1885@example.com",
+    "manual_severity": "medium"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-35783eb1-19c",
+        "from_agent": "detection_agent",
+        "incident_id": "35783eb1-19c",
+        "iocs": {
+          "urls": [
+            "https://uni-scholar.org/?id=35783eb1-19c"
+          ],
+          "domains": [
+            "uni-scholar.org"
+          ]
+        },
+        "score": 0.99,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "pii_present",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user605@loanfast.info",
+          "recipient": "user1885@example.com",
+          "attachment_type": "jpg",
+          "pii_present": 1
+        }
+      },
+      "rule": {
+        "message_id": "detection-35783eb1-19c",
+        "from_agent": "detection_agent",
+        "incident_id": "35783eb1-19c",
+        "iocs": {
+          "urls": [
+            "https://uni-scholar.org/?id=35783eb1-19c"
+          ],
+          "domains": [
+            "uni-scholar.org"
+          ]
+        },
+        "score": 0.99,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "pii_present",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user605@loanfast.info",
+          "recipient": "user1885@example.com",
+          "attachment_type": "jpg",
+          "pii_present": 1
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-35783eb1-19c",
+          "from_agent": "detection_agent",
+          "incident_id": "35783eb1-19c",
+          "iocs": {
+            "urls": [
+              "https://uni-scholar.org/?id=35783eb1-19c"
+            ],
+            "domains": [
+              "uni-scholar.org"
+            ]
+          },
+          "score": 0.99,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "pii_present",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user605@loanfast.info",
+            "recipient": "user1885@example.com",
+            "attachment_type": "jpg",
+            "pii_present": 1
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-35783eb1-19c",
+      "from_agent": "misuse_agent",
+      "incident_id": "35783eb1-19c",
+      "misuse_label": "phishing",
+      "confidence": 0.99,
+      "explanation": "no strong misuse indicators; may be benign",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-35783eb1-19c",
+      "from_agent": "deepfake_agent",
+      "incident_id": "35783eb1-19c",
+      "deepfake_prob": 0.2,
+      "tag": "benign",
+      "explanation": "attachment_type:jpg; detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "jpg"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-35783eb1-19c",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "35783eb1-19c",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-35783eb1-19c",
+      "from_agent": "governance_agent",
+      "incident_id": "35783eb1-19c",
+      "autonomy_risk_score": 61.15,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.8,
+        "impact": 0.6,
+        "detection_confidence": 0.99
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "strong signals"
+    }
+  }
+}

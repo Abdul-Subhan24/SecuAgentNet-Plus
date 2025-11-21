@@ -1,0 +1,140 @@
+{
+  "run_ts": "2025-11-20T12:15:03.143284Z",
+  "incident": {
+    "incident_id": "cc6f0b16-23c",
+    "kind": "social",
+    "sender": "John Smith",
+    "recipient": "public",
+    "manual_severity": "high"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-cc6f0b16-23c",
+        "from_agent": "detection_agent",
+        "incident_id": "cc6f0b16-23c",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.0,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [],
+        "metadata": {
+          "kind": "social",
+          "sender": "John Smith",
+          "recipient": "public",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-cc6f0b16-23c",
+        "from_agent": "detection_agent",
+        "incident_id": "cc6f0b16-23c",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.0,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [],
+        "metadata": {
+          "kind": "social",
+          "sender": "John Smith",
+          "recipient": "public",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-cc6f0b16-23c",
+          "from_agent": "detection_agent",
+          "incident_id": "cc6f0b16-23c",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.0,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [],
+          "metadata": {
+            "kind": "social",
+            "sender": "John Smith",
+            "recipient": "public",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-cc6f0b16-23c",
+      "from_agent": "misuse_agent",
+      "incident_id": "cc6f0b16-23c",
+      "misuse_label": "job_scam",
+      "confidence": 0.6,
+      "explanation": "job/offer wording",
+      "metadata": {
+        "kind": "social",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-cc6f0b16-23c",
+      "from_agent": "deepfake_agent",
+      "incident_id": "cc6f0b16-23c",
+      "deepfake_prob": 0.8,
+      "tag": "deepfake",
+      "explanation": "dataset_deepfake_flag; deepfake keywords",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-cc6f0b16-23c",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "cc6f0b16-23c",
+      "ok": false,
+      "issues": [
+        "Deepfake flagged but no media attachment present"
+      ],
+      "corrective_suggestions": [
+        "Verify dataset flag; check media file hashes"
+      ]
+    },
+    "governance": {
+      "message_id": "governance-cc6f0b16-23c",
+      "from_agent": "governance_agent",
+      "incident_id": "cc6f0b16-23c",
+      "autonomy_risk_score": 39.5,
+      "allow_automation": true,
+      "policy_constraints": [
+        "Automation_allowed_under_monitoring",
+        "Preserve_evidence; No_publication_without_HITL"
+      ],
+      "justification": "Low autonomy risk; automation permitted ; Deepfake detected; preserve evidence and escalate",
+      "metadata": {
+        "sensitivity": 0.0,
+        "impact": 0.7,
+        "detection_confidence": 0.0
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "deepfake or harassment detected"
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "run_ts": "2025-11-20T12:15:02.995355Z",
+  "incident": {
+    "incident_id": "974610e0-620",
+    "kind": "document",
+    "sender": "jobhubpvtltd@secure-bank.com",
+    "recipient": "records@company.com",
+    "manual_severity": "high"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-974610e0-620",
+        "from_agent": "detection_agent",
+        "incident_id": "974610e0-620",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.15,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment"
+        ],
+        "metadata": {
+          "kind": "document",
+          "sender": "jobhubpvtltd@secure-bank.com",
+          "recipient": "records@company.com",
+          "attachment_type": "docx",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-974610e0-620",
+        "from_agent": "detection_agent",
+        "incident_id": "974610e0-620",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.15,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment"
+        ],
+        "metadata": {
+          "kind": "document",
+          "sender": "jobhubpvtltd@secure-bank.com",
+          "recipient": "records@company.com",
+          "attachment_type": "docx",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-974610e0-620",
+          "from_agent": "detection_agent",
+          "incident_id": "974610e0-620",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.15,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [
+            "suspicious_attachment"
+          ],
+          "metadata": {
+            "kind": "document",
+            "sender": "jobhubpvtltd@secure-bank.com",
+            "recipient": "records@company.com",
+            "attachment_type": "docx",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-974610e0-620",
+      "from_agent": "misuse_agent",
+      "incident_id": "974610e0-620",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "document",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-974610e0-620",
+      "from_agent": "deepfake_agent",
+      "incident_id": "974610e0-620",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "docx"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-974610e0-620",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "974610e0-620",
+      "ok": false,
+      "issues": [
+        "Detection marked benign but misuse agent found high-risk label"
+      ],
+      "corrective_suggestions": [
+        "Re-check detection thresholds or escalate to HITL"
+      ]
+    },
+    "governance": {
+      "message_id": "governance-974610e0-620",
+      "from_agent": "governance_agent",
+      "incident_id": "974610e0-620",
+      "autonomy_risk_score": 75.75,
+      "allow_automation": false,
+      "policy_constraints": [
+        "HITL_required"
+      ],
+      "justification": "High autonomy risk; manual review required",
+      "metadata": {
+        "sensitivity": 0.7,
+        "impact": 0.8,
+        "detection_confidence": 0.15
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "Governance: HITL_required"
+    }
+  }
+}

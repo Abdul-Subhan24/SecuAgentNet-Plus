@@ -1,0 +1,145 @@
+{
+  "run_ts": "2025-11-20T12:14:57.679429Z",
+  "incident": {
+    "incident_id": "b5f8c8ee-74f",
+    "kind": "social",
+    "sender": "Sana Ahmed",
+    "recipient": "public",
+    "manual_severity": "high"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-b5f8c8ee-74f",
+        "from_agent": "detection_agent",
+        "incident_id": "b5f8c8ee-74f",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.0,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [],
+        "metadata": {
+          "kind": "social",
+          "sender": "Sana Ahmed",
+          "recipient": "public",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-b5f8c8ee-74f",
+        "from_agent": "detection_agent",
+        "incident_id": "b5f8c8ee-74f",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.0,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [],
+        "metadata": {
+          "kind": "social",
+          "sender": "Sana Ahmed",
+          "recipient": "public",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-b5f8c8ee-74f",
+          "from_agent": "detection_agent",
+          "incident_id": "b5f8c8ee-74f",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.0,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [],
+          "metadata": {
+            "kind": "social",
+            "sender": "Sana Ahmed",
+            "recipient": "public",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-b5f8c8ee-74f",
+      "from_agent": "misuse_agent",
+      "incident_id": "b5f8c8ee-74f",
+      "misuse_label": "harassment",
+      "confidence": 0.8,
+      "explanation": "harassment keywords",
+      "metadata": {
+        "kind": "social",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-b5f8c8ee-74f",
+      "from_agent": "deepfake_agent",
+      "incident_id": "b5f8c8ee-74f",
+      "deepfake_prob": 0.8,
+      "tag": "deepfake",
+      "explanation": "dataset_deepfake_flag; deepfake keywords",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-b5f8c8ee-74f",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "b5f8c8ee-74f",
+      "ok": false,
+      "issues": [
+        "Detection marked benign but misuse agent found high-risk label",
+        "Deepfake flagged but no media attachment present",
+        "High misuse confidence with low detection score"
+      ],
+      "corrective_suggestions": [
+        "Re-check detection thresholds or escalate to HITL",
+        "Verify dataset flag; check media file hashes",
+        "Run additional enrichment (WHOIS, domain reputation) and retry"
+      ]
+    },
+    "governance": {
+      "message_id": "governance-b5f8c8ee-74f",
+      "from_agent": "governance_agent",
+      "incident_id": "b5f8c8ee-74f",
+      "autonomy_risk_score": 84.5,
+      "allow_automation": false,
+      "policy_constraints": [
+        "HITL_required",
+        "Preserve_evidence; No_publication_without_HITL",
+        "Immediate_support_and_privacy_measures"
+      ],
+      "justification": "High autonomy risk; manual review required ; Deepfake detected; preserve evidence and escalate ; Harassment detected; privacy & support required",
+      "metadata": {
+        "sensitivity": 0.9,
+        "impact": 0.7,
+        "detection_confidence": 0.0
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "Governance: HITL_required"
+    }
+  }
+}

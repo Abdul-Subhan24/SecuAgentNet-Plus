@@ -1,0 +1,159 @@
+{
+  "run_ts": "2025-11-20T12:14:56.260375Z",
+  "incident": {
+    "incident_id": "3aea58be-20b",
+    "kind": "email",
+    "sender": "user139@docverify.net",
+    "recipient": "user1659@example.com",
+    "manual_severity": "high"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-3aea58be-20b",
+        "from_agent": "detection_agent",
+        "incident_id": "3aea58be-20b",
+        "iocs": {
+          "urls": [
+            "https://docverify.net/?id=3aea58be-20b"
+          ],
+          "domains": [
+            "docverify.net"
+          ]
+        },
+        "score": 0.95,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user139@docverify.net",
+          "recipient": "user1659@example.com",
+          "attachment_type": "mp4",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-3aea58be-20b",
+        "from_agent": "detection_agent",
+        "incident_id": "3aea58be-20b",
+        "iocs": {
+          "urls": [
+            "https://docverify.net/?id=3aea58be-20b"
+          ],
+          "domains": [
+            "docverify.net"
+          ]
+        },
+        "score": 0.95,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user139@docverify.net",
+          "recipient": "user1659@example.com",
+          "attachment_type": "mp4",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-3aea58be-20b",
+          "from_agent": "detection_agent",
+          "incident_id": "3aea58be-20b",
+          "iocs": {
+            "urls": [
+              "https://docverify.net/?id=3aea58be-20b"
+            ],
+            "domains": [
+              "docverify.net"
+            ]
+          },
+          "score": 0.95,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user139@docverify.net",
+            "recipient": "user1659@example.com",
+            "attachment_type": "mp4",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-3aea58be-20b",
+      "from_agent": "misuse_agent",
+      "incident_id": "3aea58be-20b",
+      "misuse_label": "phishing",
+      "confidence": 0.95,
+      "explanation": "no strong misuse indicators; may be benign",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-3aea58be-20b",
+      "from_agent": "deepfake_agent",
+      "incident_id": "3aea58be-20b",
+      "deepfake_prob": 0.2,
+      "tag": "benign",
+      "explanation": "attachment_type:mp4; detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "mp4"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-3aea58be-20b",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "3aea58be-20b",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-3aea58be-20b",
+      "from_agent": "governance_agent",
+      "incident_id": "3aea58be-20b",
+      "autonomy_risk_score": 51.75,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.6,
+        "detection_confidence": 0.95
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "strong signals"
+    }
+  }
+}

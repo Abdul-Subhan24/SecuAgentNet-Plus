@@ -1,0 +1,22 @@
+{
+  "message_id": "detection-heuristic-9fd7358b-de8",
+  "from_agent": "detection_agent_heuristic_fallback",
+  "incident_id": "9fd7358b-de8",
+  "iocs": {
+    "urls": [],
+    "domains": []
+  },
+  "score": 0.0,
+  "tags": [
+    "benign"
+  ],
+  "evidence_chain": [
+    "fallback_heuristic"
+  ],
+  "metadata": {
+    "kind": "upload",
+    "sender": "Aisha Khan",
+    "attachment_type": "mp4",
+    "has_link": false
+  }
+}

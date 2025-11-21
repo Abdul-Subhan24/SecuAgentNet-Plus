@@ -1,0 +1,15 @@
+{
+  "mode": "hybrid",
+  "n_incidents": 50,
+  "detection": {
+    "precision": 0.26666666666666666,
+    "recall": 0.4444444444444444,
+    "f1": 0.3333333333333333,
+    "roc_auc": 0.6842818428184281,
+    "threshold": 0.6
+  },
+  "governance": {
+    "total_high_risk_cases": 12,
+    "governance_compliance_hitl": 1.0
+  }
+}

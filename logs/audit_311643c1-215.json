@@ -1,0 +1,156 @@
+{
+  "run_ts": "2025-11-20T12:15:03.971406Z",
+  "incident": {
+    "incident_id": "311643c1-215",
+    "kind": "sms",
+    "sender": "+918388487193",
+    "recipient": "+919466209387",
+    "manual_severity": "medium"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-311643c1-215",
+        "from_agent": "detection_agent",
+        "incident_id": "311643c1-215",
+        "iocs": {
+          "urls": [
+            "http://trusted-health.org/surveys?id=311643c1-215"
+          ],
+          "domains": [
+            "trusted-health.org"
+          ]
+        },
+        "score": 0.4,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+918388487193",
+          "recipient": "+919466209387",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-311643c1-215",
+        "from_agent": "detection_agent",
+        "incident_id": "311643c1-215",
+        "iocs": {
+          "urls": [
+            "http://trusted-health.org/surveys?id=311643c1-215"
+          ],
+          "domains": [
+            "trusted-health.org"
+          ]
+        },
+        "score": 0.4,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+918388487193",
+          "recipient": "+919466209387",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-311643c1-215",
+          "from_agent": "detection_agent",
+          "incident_id": "311643c1-215",
+          "iocs": {
+            "urls": [
+              "http://trusted-health.org/surveys?id=311643c1-215"
+            ],
+            "domains": [
+              "trusted-health.org"
+            ]
+          },
+          "score": 0.4,
+          "tags": [
+            "suspicious"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "medium_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "sms",
+            "sender": "+918388487193",
+            "recipient": "+919466209387",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-311643c1-215",
+      "from_agent": "misuse_agent",
+      "incident_id": "311643c1-215",
+      "misuse_label": "suspicious",
+      "confidence": 0.4,
+      "explanation": "detection_agent_signals",
+      "metadata": {
+        "kind": "sms",
+        "detection_tags": [
+          "suspicious"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-311643c1-215",
+      "from_agent": "deepfake_agent",
+      "incident_id": "311643c1-215",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-311643c1-215",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "311643c1-215",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-311643c1-215",
+      "from_agent": "governance_agent",
+      "incident_id": "311643c1-215",
+      "autonomy_risk_score": 9.0,
+      "allow_automation": true,
+      "policy_constraints": [
+        "Automation_allowed_under_monitoring"
+      ],
+      "justification": "Low autonomy risk; automation permitted",
+      "metadata": {
+        "sensitivity": 0.0,
+        "impact": 0.0,
+        "detection_confidence": 0.4
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "no strong automated signals"
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "run_ts": "2025-11-20T12:14:55.757165Z",
+  "incident": {
+    "incident_id": "a7b344d5-09b",
+    "kind": "email",
+    "sender": "user293@payments-update.com",
+    "recipient": "user1426@example.com",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-a7b344d5-09b",
+        "from_agent": "detection_agent",
+        "incident_id": "a7b344d5-09b",
+        "iocs": {
+          "urls": [
+            "https://docverify.net/?id=a7b344d5-09b"
+          ],
+          "domains": [
+            "docverify.net"
+          ]
+        },
+        "score": 0.67,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user293@payments-update.com",
+          "recipient": "user1426@example.com",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-a7b344d5-09b",
+        "from_agent": "detection_agent",
+        "incident_id": "a7b344d5-09b",
+        "iocs": {
+          "urls": [
+            "https://docverify.net/?id=a7b344d5-09b"
+          ],
+          "domains": [
+            "docverify.net"
+          ]
+        },
+        "score": 0.67,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user293@payments-update.com",
+          "recipient": "user1426@example.com",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-a7b344d5-09b",
+          "from_agent": "detection_agent",
+          "incident_id": "a7b344d5-09b",
+          "iocs": {
+            "urls": [
+              "https://docverify.net/?id=a7b344d5-09b"
+            ],
+            "domains": [
+              "docverify.net"
+            ]
+          },
+          "score": 0.67,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user293@payments-update.com",
+            "recipient": "user1426@example.com",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-a7b344d5-09b",
+      "from_agent": "misuse_agent",
+      "incident_id": "a7b344d5-09b",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-a7b344d5-09b",
+      "from_agent": "deepfake_agent",
+      "incident_id": "a7b344d5-09b",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-a7b344d5-09b",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "a7b344d5-09b",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-a7b344d5-09b",
+      "from_agent": "governance_agent",
+      "incident_id": "a7b344d5-09b",
+      "autonomy_risk_score": 62.95,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.67
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

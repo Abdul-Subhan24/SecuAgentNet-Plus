@@ -1,0 +1,159 @@
+{
+  "run_ts": "2025-11-20T12:15:03.606648Z",
+  "incident": {
+    "incident_id": "e7baf2f0-03d",
+    "kind": "email",
+    "sender": "user734@trusted-health.org",
+    "recipient": "user1982@example.com",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-e7baf2f0-03d",
+        "from_agent": "detection_agent",
+        "incident_id": "e7baf2f0-03d",
+        "iocs": {
+          "urls": [
+            "https://secure-bank.com/?id=e7baf2f0-03d"
+          ],
+          "domains": [
+            "secure-bank.com"
+          ]
+        },
+        "score": 0.6,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "pii_present",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user734@trusted-health.org",
+          "recipient": "user1982@example.com",
+          "attachment_type": "jpg",
+          "pii_present": 1
+        }
+      },
+      "rule": {
+        "message_id": "detection-e7baf2f0-03d",
+        "from_agent": "detection_agent",
+        "incident_id": "e7baf2f0-03d",
+        "iocs": {
+          "urls": [
+            "https://secure-bank.com/?id=e7baf2f0-03d"
+          ],
+          "domains": [
+            "secure-bank.com"
+          ]
+        },
+        "score": 0.6,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "pii_present",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user734@trusted-health.org",
+          "recipient": "user1982@example.com",
+          "attachment_type": "jpg",
+          "pii_present": 1
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-e7baf2f0-03d",
+          "from_agent": "detection_agent",
+          "incident_id": "e7baf2f0-03d",
+          "iocs": {
+            "urls": [
+              "https://secure-bank.com/?id=e7baf2f0-03d"
+            ],
+            "domains": [
+              "secure-bank.com"
+            ]
+          },
+          "score": 0.6,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "pii_present",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user734@trusted-health.org",
+            "recipient": "user1982@example.com",
+            "attachment_type": "jpg",
+            "pii_present": 1
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-e7baf2f0-03d",
+      "from_agent": "misuse_agent",
+      "incident_id": "e7baf2f0-03d",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-e7baf2f0-03d",
+      "from_agent": "deepfake_agent",
+      "incident_id": "e7baf2f0-03d",
+      "deepfake_prob": 0.2,
+      "tag": "benign",
+      "explanation": "attachment_type:jpg; detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "jpg"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-e7baf2f0-03d",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "e7baf2f0-03d",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-e7baf2f0-03d",
+      "from_agent": "governance_agent",
+      "incident_id": "e7baf2f0-03d",
+      "autonomy_risk_score": 74.0,
+      "allow_automation": false,
+      "policy_constraints": [
+        "HITL_required"
+      ],
+      "justification": "High autonomy risk; manual review required",
+      "metadata": {
+        "sensitivity": 0.8,
+        "impact": 0.8,
+        "detection_confidence": 0.6
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "Governance: HITL_required"
+    }
+  }
+}

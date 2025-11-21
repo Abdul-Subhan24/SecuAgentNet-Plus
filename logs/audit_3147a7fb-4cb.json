@@ -1,0 +1,159 @@
+{
+  "run_ts": "2025-11-20T12:14:56.233131Z",
+  "incident": {
+    "incident_id": "3147a7fb-4cb",
+    "kind": "sms",
+    "sender": "+917434900760",
+    "recipient": "+919049219769",
+    "manual_severity": "medium"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-3147a7fb-4cb",
+        "from_agent": "detection_agent",
+        "incident_id": "3147a7fb-4cb",
+        "iocs": {
+          "urls": [
+            "http://docverify.net/surveys?id=3147a7fb-4cb"
+          ],
+          "domains": [
+            "docverify.net"
+          ]
+        },
+        "score": 0.64,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+917434900760",
+          "recipient": "+919049219769",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-3147a7fb-4cb",
+        "from_agent": "detection_agent",
+        "incident_id": "3147a7fb-4cb",
+        "iocs": {
+          "urls": [
+            "http://docverify.net/surveys?id=3147a7fb-4cb"
+          ],
+          "domains": [
+            "docverify.net"
+          ]
+        },
+        "score": 0.64,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+917434900760",
+          "recipient": "+919049219769",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-3147a7fb-4cb",
+          "from_agent": "detection_agent",
+          "incident_id": "3147a7fb-4cb",
+          "iocs": {
+            "urls": [
+              "http://docverify.net/surveys?id=3147a7fb-4cb"
+            ],
+            "domains": [
+              "docverify.net"
+            ]
+          },
+          "score": 0.64,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "sms",
+            "sender": "+917434900760",
+            "recipient": "+919049219769",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-3147a7fb-4cb",
+      "from_agent": "misuse_agent",
+      "incident_id": "3147a7fb-4cb",
+      "misuse_label": "phishing",
+      "confidence": 0.64,
+      "explanation": "no strong misuse indicators; may be benign",
+      "metadata": {
+        "kind": "sms",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-3147a7fb-4cb",
+      "from_agent": "deepfake_agent",
+      "incident_id": "3147a7fb-4cb",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-3147a7fb-4cb",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "3147a7fb-4cb",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-3147a7fb-4cb",
+      "from_agent": "governance_agent",
+      "incident_id": "3147a7fb-4cb",
+      "autonomy_risk_score": 56.4,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.6,
+        "detection_confidence": 0.64
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

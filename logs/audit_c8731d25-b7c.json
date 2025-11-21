@@ -1,0 +1,168 @@
+{
+  "run_ts": "2025-11-20T12:14:56.500132Z",
+  "incident": {
+    "incident_id": "c8731d25-b7c",
+    "kind": "email",
+    "sender": "user781@loanfast.info",
+    "recipient": "user1037@example.com",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-c8731d25-b7c",
+        "from_agent": "detection_agent",
+        "incident_id": "c8731d25-b7c",
+        "iocs": {
+          "urls": [
+            "https://payments-update.com/?id=c8731d25-b7c",
+            "https://payments-update.com/?id=c8731d25-b7c."
+          ],
+          "domains": [
+            "payments-update.com",
+            "payments-update.com"
+          ]
+        },
+        "score": 0.99,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "suspicious_attachment",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user781@loanfast.info",
+          "recipient": "user1037@example.com",
+          "attachment_type": "pdf",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-c8731d25-b7c",
+        "from_agent": "detection_agent",
+        "incident_id": "c8731d25-b7c",
+        "iocs": {
+          "urls": [
+            "https://payments-update.com/?id=c8731d25-b7c",
+            "https://payments-update.com/?id=c8731d25-b7c."
+          ],
+          "domains": [
+            "payments-update.com",
+            "payments-update.com"
+          ]
+        },
+        "score": 0.99,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "suspicious_attachment",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user781@loanfast.info",
+          "recipient": "user1037@example.com",
+          "attachment_type": "pdf",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-c8731d25-b7c",
+          "from_agent": "detection_agent",
+          "incident_id": "c8731d25-b7c",
+          "iocs": {
+            "urls": [
+              "https://payments-update.com/?id=c8731d25-b7c",
+              "https://payments-update.com/?id=c8731d25-b7c."
+            ],
+            "domains": [
+              "payments-update.com",
+              "payments-update.com"
+            ]
+          },
+          "score": 0.99,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "suspicious_attachment",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user781@loanfast.info",
+            "recipient": "user1037@example.com",
+            "attachment_type": "pdf",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-c8731d25-b7c",
+      "from_agent": "misuse_agent",
+      "incident_id": "c8731d25-b7c",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-c8731d25-b7c",
+      "from_agent": "deepfake_agent",
+      "incident_id": "c8731d25-b7c",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "pdf"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-c8731d25-b7c",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "c8731d25-b7c",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-c8731d25-b7c",
+      "from_agent": "governance_agent",
+      "incident_id": "c8731d25-b7c",
+      "autonomy_risk_score": 58.15,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.99
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "strong signals"
+    }
+  }
+}

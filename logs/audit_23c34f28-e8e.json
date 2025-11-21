@@ -1,0 +1,159 @@
+{
+  "run_ts": "2025-11-20T12:14:58.491531Z",
+  "incident": {
+    "incident_id": "23c34f28-e8e",
+    "kind": "email",
+    "sender": "user693@payments-update.com",
+    "recipient": "user1557@example.com",
+    "manual_severity": "medium"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-23c34f28-e8e",
+        "from_agent": "detection_agent",
+        "incident_id": "23c34f28-e8e",
+        "iocs": {
+          "urls": [
+            "https://payments-update.com/?id=23c34f28-e8e"
+          ],
+          "domains": [
+            "payments-update.com"
+          ]
+        },
+        "score": 0.91,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user693@payments-update.com",
+          "recipient": "user1557@example.com",
+          "attachment_type": "jpg",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-23c34f28-e8e",
+        "from_agent": "detection_agent",
+        "incident_id": "23c34f28-e8e",
+        "iocs": {
+          "urls": [
+            "https://payments-update.com/?id=23c34f28-e8e"
+          ],
+          "domains": [
+            "payments-update.com"
+          ]
+        },
+        "score": 0.91,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user693@payments-update.com",
+          "recipient": "user1557@example.com",
+          "attachment_type": "jpg",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-23c34f28-e8e",
+          "from_agent": "detection_agent",
+          "incident_id": "23c34f28-e8e",
+          "iocs": {
+            "urls": [
+              "https://payments-update.com/?id=23c34f28-e8e"
+            ],
+            "domains": [
+              "payments-update.com"
+            ]
+          },
+          "score": 0.91,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user693@payments-update.com",
+            "recipient": "user1557@example.com",
+            "attachment_type": "jpg",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-23c34f28-e8e",
+      "from_agent": "misuse_agent",
+      "incident_id": "23c34f28-e8e",
+      "misuse_label": "scholarship_scam",
+      "confidence": 0.75,
+      "explanation": "scholarship keywords; invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-23c34f28-e8e",
+      "from_agent": "deepfake_agent",
+      "incident_id": "23c34f28-e8e",
+      "deepfake_prob": 0.2,
+      "tag": "benign",
+      "explanation": "attachment_type:jpg; detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "jpg"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-23c34f28-e8e",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "23c34f28-e8e",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-23c34f28-e8e",
+      "from_agent": "governance_agent",
+      "incident_id": "23c34f28-e8e",
+      "autonomy_risk_score": 1.35,
+      "allow_automation": true,
+      "policy_constraints": [
+        "Automation_allowed_under_monitoring"
+      ],
+      "justification": "Low autonomy risk; automation permitted",
+      "metadata": {
+        "sensitivity": 0.0,
+        "impact": 0.0,
+        "detection_confidence": 0.91
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "strong signals"
+    }
+  }
+}

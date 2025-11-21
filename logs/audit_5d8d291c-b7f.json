@@ -1,0 +1,178 @@
+{
+  "run_ts": "2025-11-20T12:15:26.774847Z",
+  "incident": {
+    "incident_id": "5d8d291c-b7f",
+    "kind": "social",
+    "sender": "Rahul Verma",
+    "recipient": "public",
+    "manual_severity": "medium"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-heuristic-5d8d291c-b7f",
+        "from_agent": "detection_agent_heuristic_fallback",
+        "incident_id": "5d8d291c-b7f",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.0,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "fallback_heuristic"
+        ],
+        "metadata": {
+          "kind": "social",
+          "sender": "Rahul Verma",
+          "attachment_type": "jpg",
+          "has_link": false
+        }
+      },
+      "rule": {
+        "message_id": "detection-5d8d291c-b7f",
+        "from_agent": "detection_agent",
+        "incident_id": "5d8d291c-b7f",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.0,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [],
+        "metadata": {
+          "kind": "social",
+          "sender": "Rahul Verma",
+          "recipient": "public",
+          "attachment_type": "jpg",
+          "pii_present": 0
+        }
+      },
+      "llm": {
+        "message_id": "detection-heuristic-5d8d291c-b7f",
+        "from_agent": "detection_agent_heuristic_fallback",
+        "incident_id": "5d8d291c-b7f",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.0,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "fallback_heuristic"
+        ],
+        "metadata": {
+          "kind": "social",
+          "sender": "Rahul Verma",
+          "attachment_type": "jpg",
+          "has_link": false
+        }
+      },
+      "selection_meta": {
+        "chosen_by": "llm_tie_preference",
+        "rule_msg": {
+          "message_id": "detection-5d8d291c-b7f",
+          "from_agent": "detection_agent",
+          "incident_id": "5d8d291c-b7f",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.0,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [],
+          "metadata": {
+            "kind": "social",
+            "sender": "Rahul Verma",
+            "recipient": "public",
+            "attachment_type": "jpg",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": {
+          "message_id": "detection-heuristic-5d8d291c-b7f",
+          "from_agent": "detection_agent_heuristic_fallback",
+          "incident_id": "5d8d291c-b7f",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.0,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [
+            "fallback_heuristic"
+          ],
+          "metadata": {
+            "kind": "social",
+            "sender": "Rahul Verma",
+            "attachment_type": "jpg",
+            "has_link": false
+          }
+        }
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-5d8d291c-b7f",
+      "from_agent": "misuse_agent",
+      "incident_id": "5d8d291c-b7f",
+      "misuse_label": "job_scam",
+      "confidence": 0.6,
+      "explanation": "job/offer wording",
+      "metadata": {
+        "kind": "social",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-5d8d291c-b7f",
+      "from_agent": "deepfake_agent",
+      "incident_id": "5d8d291c-b7f",
+      "deepfake_prob": 0.35,
+      "tag": "suspect_media",
+      "explanation": "attachment_type:jpg; deepfake keywords",
+      "metadata": {
+        "attachment_type": "jpg"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-5d8d291c-b7f",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "5d8d291c-b7f",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-5d8d291c-b7f",
+      "from_agent": "governance_agent",
+      "incident_id": "5d8d291c-b7f",
+      "autonomy_risk_score": 15.0,
+      "allow_automation": true,
+      "policy_constraints": [
+        "Automation_allowed_under_monitoring"
+      ],
+      "justification": "Low autonomy risk; automation permitted",
+      "metadata": {
+        "sensitivity": 0.0,
+        "impact": 0.0,
+        "detection_confidence": 0.0
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

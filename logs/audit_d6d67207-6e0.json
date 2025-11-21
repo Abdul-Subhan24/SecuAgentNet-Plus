@@ -1,0 +1,168 @@
+{
+  "run_ts": "2025-11-20T12:14:56.718175Z",
+  "incident": {
+    "incident_id": "d6d67207-6e0",
+    "kind": "email",
+    "sender": "user168@gov-id.org",
+    "recipient": "user1141@example.com",
+    "manual_severity": "high"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-d6d67207-6e0",
+        "from_agent": "detection_agent",
+        "incident_id": "d6d67207-6e0",
+        "iocs": {
+          "urls": [
+            "https://secure-bank.com/?id=d6d67207-6e0",
+            "https://secure-bank.com/?id=d6d67207-6e0."
+          ],
+          "domains": [
+            "secure-bank.com",
+            "secure-bank.com"
+          ]
+        },
+        "score": 0.99,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "suspicious_attachment",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user168@gov-id.org",
+          "recipient": "user1141@example.com",
+          "attachment_type": "pdf",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-d6d67207-6e0",
+        "from_agent": "detection_agent",
+        "incident_id": "d6d67207-6e0",
+        "iocs": {
+          "urls": [
+            "https://secure-bank.com/?id=d6d67207-6e0",
+            "https://secure-bank.com/?id=d6d67207-6e0."
+          ],
+          "domains": [
+            "secure-bank.com",
+            "secure-bank.com"
+          ]
+        },
+        "score": 0.99,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "suspicious_attachment",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user168@gov-id.org",
+          "recipient": "user1141@example.com",
+          "attachment_type": "pdf",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-d6d67207-6e0",
+          "from_agent": "detection_agent",
+          "incident_id": "d6d67207-6e0",
+          "iocs": {
+            "urls": [
+              "https://secure-bank.com/?id=d6d67207-6e0",
+              "https://secure-bank.com/?id=d6d67207-6e0."
+            ],
+            "domains": [
+              "secure-bank.com",
+              "secure-bank.com"
+            ]
+          },
+          "score": 0.99,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "suspicious_attachment",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user168@gov-id.org",
+            "recipient": "user1141@example.com",
+            "attachment_type": "pdf",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-d6d67207-6e0",
+      "from_agent": "misuse_agent",
+      "incident_id": "d6d67207-6e0",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-d6d67207-6e0",
+      "from_agent": "deepfake_agent",
+      "incident_id": "d6d67207-6e0",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "pdf"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-d6d67207-6e0",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "d6d67207-6e0",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-d6d67207-6e0",
+      "from_agent": "governance_agent",
+      "incident_id": "d6d67207-6e0",
+      "autonomy_risk_score": 58.15,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.99
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "strong signals"
+    }
+  }
+}

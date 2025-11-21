@@ -1,0 +1,162 @@
+{
+  "run_ts": "2025-11-20T12:14:57.040029Z",
+  "incident": {
+    "incident_id": "6fdc4ac6-64b",
+    "kind": "email",
+    "sender": "user727@gov-id.org",
+    "recipient": "user1391@example.com",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-6fdc4ac6-64b",
+        "from_agent": "detection_agent",
+        "incident_id": "6fdc4ac6-64b",
+        "iocs": {
+          "urls": [
+            "https://payments-update.com/?id=6fdc4ac6-64b"
+          ],
+          "domains": [
+            "payments-update.com"
+          ]
+        },
+        "score": 0.89,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "suspicious_attachment",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user727@gov-id.org",
+          "recipient": "user1391@example.com",
+          "attachment_type": "pdf",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-6fdc4ac6-64b",
+        "from_agent": "detection_agent",
+        "incident_id": "6fdc4ac6-64b",
+        "iocs": {
+          "urls": [
+            "https://payments-update.com/?id=6fdc4ac6-64b"
+          ],
+          "domains": [
+            "payments-update.com"
+          ]
+        },
+        "score": 0.89,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "suspicious_attachment",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user727@gov-id.org",
+          "recipient": "user1391@example.com",
+          "attachment_type": "pdf",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-6fdc4ac6-64b",
+          "from_agent": "detection_agent",
+          "incident_id": "6fdc4ac6-64b",
+          "iocs": {
+            "urls": [
+              "https://payments-update.com/?id=6fdc4ac6-64b"
+            ],
+            "domains": [
+              "payments-update.com"
+            ]
+          },
+          "score": 0.89,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "suspicious_attachment",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user727@gov-id.org",
+            "recipient": "user1391@example.com",
+            "attachment_type": "pdf",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-6fdc4ac6-64b",
+      "from_agent": "misuse_agent",
+      "incident_id": "6fdc4ac6-64b",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-6fdc4ac6-64b",
+      "from_agent": "deepfake_agent",
+      "incident_id": "6fdc4ac6-64b",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "pdf"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-6fdc4ac6-64b",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "6fdc4ac6-64b",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-6fdc4ac6-64b",
+      "from_agent": "governance_agent",
+      "incident_id": "6fdc4ac6-64b",
+      "autonomy_risk_score": 59.65,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.89
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "strong signals"
+    }
+  }
+}

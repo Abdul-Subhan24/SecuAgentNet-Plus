@@ -1,0 +1,159 @@
+{
+  "run_ts": "2025-11-20T12:14:56.693765Z",
+  "incident": {
+    "incident_id": "956f4b1b-6c8",
+    "kind": "sms",
+    "sender": "+916940577363",
+    "recipient": "+919008063611",
+    "manual_severity": "medium"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-956f4b1b-6c8",
+        "from_agent": "detection_agent",
+        "incident_id": "956f4b1b-6c8",
+        "iocs": {
+          "urls": [
+            "http://payments-update.com/surveys?id=956f4b1b-6c8"
+          ],
+          "domains": [
+            "payments-update.com"
+          ]
+        },
+        "score": 0.76,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+916940577363",
+          "recipient": "+919008063611",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-956f4b1b-6c8",
+        "from_agent": "detection_agent",
+        "incident_id": "956f4b1b-6c8",
+        "iocs": {
+          "urls": [
+            "http://payments-update.com/surveys?id=956f4b1b-6c8"
+          ],
+          "domains": [
+            "payments-update.com"
+          ]
+        },
+        "score": 0.76,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+916940577363",
+          "recipient": "+919008063611",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-956f4b1b-6c8",
+          "from_agent": "detection_agent",
+          "incident_id": "956f4b1b-6c8",
+          "iocs": {
+            "urls": [
+              "http://payments-update.com/surveys?id=956f4b1b-6c8"
+            ],
+            "domains": [
+              "payments-update.com"
+            ]
+          },
+          "score": 0.76,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "sms",
+            "sender": "+916940577363",
+            "recipient": "+919008063611",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-956f4b1b-6c8",
+      "from_agent": "misuse_agent",
+      "incident_id": "956f4b1b-6c8",
+      "misuse_label": "loan_scam",
+      "confidence": 0.7,
+      "explanation": "loan keywords; invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "sms",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-956f4b1b-6c8",
+      "from_agent": "deepfake_agent",
+      "incident_id": "956f4b1b-6c8",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-956f4b1b-6c8",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "956f4b1b-6c8",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-956f4b1b-6c8",
+      "from_agent": "governance_agent",
+      "incident_id": "956f4b1b-6c8",
+      "autonomy_risk_score": 61.6,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.76
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "strong signals"
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "run_ts": "2025-11-20T12:14:57.522636Z",
+  "incident": {
+    "incident_id": "db3ebcb4-0ad",
+    "kind": "document",
+    "sender": "fintrustltd@gov-id.org",
+    "recipient": "records@gov.org",
+    "manual_severity": "high"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-db3ebcb4-0ad",
+        "from_agent": "detection_agent",
+        "incident_id": "db3ebcb4-0ad",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.15,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment"
+        ],
+        "metadata": {
+          "kind": "document",
+          "sender": "fintrustltd@gov-id.org",
+          "recipient": "records@gov.org",
+          "attachment_type": "pdf",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-db3ebcb4-0ad",
+        "from_agent": "detection_agent",
+        "incident_id": "db3ebcb4-0ad",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.15,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment"
+        ],
+        "metadata": {
+          "kind": "document",
+          "sender": "fintrustltd@gov-id.org",
+          "recipient": "records@gov.org",
+          "attachment_type": "pdf",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-db3ebcb4-0ad",
+          "from_agent": "detection_agent",
+          "incident_id": "db3ebcb4-0ad",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.15,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [
+            "suspicious_attachment"
+          ],
+          "metadata": {
+            "kind": "document",
+            "sender": "fintrustltd@gov-id.org",
+            "recipient": "records@gov.org",
+            "attachment_type": "pdf",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-db3ebcb4-0ad",
+      "from_agent": "misuse_agent",
+      "incident_id": "db3ebcb4-0ad",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "document",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-db3ebcb4-0ad",
+      "from_agent": "deepfake_agent",
+      "incident_id": "db3ebcb4-0ad",
+      "deepfake_prob": 0.6,
+      "tag": "deepfake",
+      "explanation": "dataset_deepfake_flag",
+      "metadata": {
+        "attachment_type": "pdf"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-db3ebcb4-0ad",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "db3ebcb4-0ad",
+      "ok": false,
+      "issues": [
+        "Detection marked benign but misuse agent found high-risk label"
+      ],
+      "corrective_suggestions": [
+        "Re-check detection thresholds or escalate to HITL"
+      ]
+    },
+    "governance": {
+      "message_id": "governance-db3ebcb4-0ad",
+      "from_agent": "governance_agent",
+      "incident_id": "db3ebcb4-0ad",
+      "autonomy_risk_score": 75.75,
+      "allow_automation": false,
+      "policy_constraints": [
+        "HITL_required",
+        "Preserve_evidence; No_publication_without_HITL"
+      ],
+      "justification": "High autonomy risk; manual review required ; Deepfake detected; preserve evidence and escalate",
+      "metadata": {
+        "sensitivity": 0.7,
+        "impact": 0.8,
+        "detection_confidence": 0.15
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "Governance: HITL_required"
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "run_ts": "2025-11-20T12:15:03.213662Z",
+  "incident": {
+    "incident_id": "3221c9cd-bcd",
+    "kind": "email",
+    "sender": "user274@trusted-health.org",
+    "recipient": "user1869@example.com",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-3221c9cd-bcd",
+        "from_agent": "detection_agent",
+        "incident_id": "3221c9cd-bcd",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.3,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "pii_present"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user274@trusted-health.org",
+          "recipient": "user1869@example.com",
+          "attachment_type": "none",
+          "pii_present": 1
+        }
+      },
+      "rule": {
+        "message_id": "detection-3221c9cd-bcd",
+        "from_agent": "detection_agent",
+        "incident_id": "3221c9cd-bcd",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.3,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "pii_present"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user274@trusted-health.org",
+          "recipient": "user1869@example.com",
+          "attachment_type": "none",
+          "pii_present": 1
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-3221c9cd-bcd",
+          "from_agent": "detection_agent",
+          "incident_id": "3221c9cd-bcd",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.3,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [
+            "pii_present"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user274@trusted-health.org",
+            "recipient": "user1869@example.com",
+            "attachment_type": "none",
+            "pii_present": 1
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-3221c9cd-bcd",
+      "from_agent": "misuse_agent",
+      "incident_id": "3221c9cd-bcd",
+      "misuse_label": "benign",
+      "confidence": 0.0,
+      "explanation": "no strong misuse indicators; may be benign",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-3221c9cd-bcd",
+      "from_agent": "deepfake_agent",
+      "incident_id": "3221c9cd-bcd",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-3221c9cd-bcd",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "3221c9cd-bcd",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-3221c9cd-bcd",
+      "from_agent": "governance_agent",
+      "incident_id": "3221c9cd-bcd",
+      "autonomy_risk_score": 50.5,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.8,
+        "impact": 0.0,
+        "detection_confidence": 0.3
+      }
+    },
+    "triage": {
+      "recommended_severity": "low",
+      "reason": "no strong automated signals"
+    }
+  }
+}

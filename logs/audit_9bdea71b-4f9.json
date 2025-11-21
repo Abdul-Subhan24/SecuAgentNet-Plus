@@ -1,0 +1,156 @@
+{
+  "run_ts": "2025-11-20T12:14:56.431468Z",
+  "incident": {
+    "incident_id": "9bdea71b-4f9",
+    "kind": "sms",
+    "sender": "+916191142963",
+    "recipient": "+916682194678",
+    "manual_severity": "high"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-9bdea71b-4f9",
+        "from_agent": "detection_agent",
+        "incident_id": "9bdea71b-4f9",
+        "iocs": {
+          "urls": [
+            "http://parcel-track.net/surveys?id=9bdea71b-4f9"
+          ],
+          "domains": [
+            "parcel-track.net"
+          ]
+        },
+        "score": 0.4,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+916191142963",
+          "recipient": "+916682194678",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-9bdea71b-4f9",
+        "from_agent": "detection_agent",
+        "incident_id": "9bdea71b-4f9",
+        "iocs": {
+          "urls": [
+            "http://parcel-track.net/surveys?id=9bdea71b-4f9"
+          ],
+          "domains": [
+            "parcel-track.net"
+          ]
+        },
+        "score": 0.4,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+916191142963",
+          "recipient": "+916682194678",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-9bdea71b-4f9",
+          "from_agent": "detection_agent",
+          "incident_id": "9bdea71b-4f9",
+          "iocs": {
+            "urls": [
+              "http://parcel-track.net/surveys?id=9bdea71b-4f9"
+            ],
+            "domains": [
+              "parcel-track.net"
+            ]
+          },
+          "score": 0.4,
+          "tags": [
+            "suspicious"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "medium_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "sms",
+            "sender": "+916191142963",
+            "recipient": "+916682194678",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-9bdea71b-4f9",
+      "from_agent": "misuse_agent",
+      "incident_id": "9bdea71b-4f9",
+      "misuse_label": "suspicious",
+      "confidence": 0.4,
+      "explanation": "detection_agent_signals",
+      "metadata": {
+        "kind": "sms",
+        "detection_tags": [
+          "suspicious"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-9bdea71b-4f9",
+      "from_agent": "deepfake_agent",
+      "incident_id": "9bdea71b-4f9",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-9bdea71b-4f9",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "9bdea71b-4f9",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-9bdea71b-4f9",
+      "from_agent": "governance_agent",
+      "incident_id": "9bdea71b-4f9",
+      "autonomy_risk_score": 9.0,
+      "allow_automation": true,
+      "policy_constraints": [
+        "Automation_allowed_under_monitoring"
+      ],
+      "justification": "Low autonomy risk; automation permitted",
+      "metadata": {
+        "sensitivity": 0.0,
+        "impact": 0.0,
+        "detection_confidence": 0.4
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "no strong automated signals"
+    }
+  }
+}

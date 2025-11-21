@@ -1,0 +1,156 @@
+{
+  "run_ts": "2025-11-20T12:15:02.455381Z",
+  "incident": {
+    "incident_id": "c7ebc6c7-157",
+    "kind": "sms",
+    "sender": "+916893891825",
+    "recipient": "+917132967557",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-c7ebc6c7-157",
+        "from_agent": "detection_agent",
+        "incident_id": "c7ebc6c7-157",
+        "iocs": {
+          "urls": [
+            "http://secure-bank.com/surveys?id=c7ebc6c7-157"
+          ],
+          "domains": [
+            "secure-bank.com"
+          ]
+        },
+        "score": 0.64,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+916893891825",
+          "recipient": "+917132967557",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-c7ebc6c7-157",
+        "from_agent": "detection_agent",
+        "incident_id": "c7ebc6c7-157",
+        "iocs": {
+          "urls": [
+            "http://secure-bank.com/surveys?id=c7ebc6c7-157"
+          ],
+          "domains": [
+            "secure-bank.com"
+          ]
+        },
+        "score": 0.64,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+916893891825",
+          "recipient": "+917132967557",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-c7ebc6c7-157",
+          "from_agent": "detection_agent",
+          "incident_id": "c7ebc6c7-157",
+          "iocs": {
+            "urls": [
+              "http://secure-bank.com/surveys?id=c7ebc6c7-157"
+            ],
+            "domains": [
+              "secure-bank.com"
+            ]
+          },
+          "score": 0.64,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "sms",
+            "sender": "+916893891825",
+            "recipient": "+917132967557",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-c7ebc6c7-157",
+      "from_agent": "misuse_agent",
+      "incident_id": "c7ebc6c7-157",
+      "misuse_label": "loan_scam",
+      "confidence": 0.7,
+      "explanation": "loan keywords",
+      "metadata": {
+        "kind": "sms",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-c7ebc6c7-157",
+      "from_agent": "deepfake_agent",
+      "incident_id": "c7ebc6c7-157",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-c7ebc6c7-157",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "c7ebc6c7-157",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-c7ebc6c7-157",
+      "from_agent": "governance_agent",
+      "incident_id": "c7ebc6c7-157",
+      "autonomy_risk_score": 63.4,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.64
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

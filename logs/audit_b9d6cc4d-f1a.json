@@ -1,0 +1,162 @@
+{
+  "run_ts": "2025-11-20T12:15:01.938257Z",
+  "incident": {
+    "incident_id": "b9d6cc4d-f1a",
+    "kind": "email",
+    "sender": "user122@trusted-health.org",
+    "recipient": "user1168@example.com",
+    "manual_severity": "high"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-b9d6cc4d-f1a",
+        "from_agent": "detection_agent",
+        "incident_id": "b9d6cc4d-f1a",
+        "iocs": {
+          "urls": [
+            "https://loanfast.info/?id=b9d6cc4d-f1a"
+          ],
+          "domains": [
+            "loanfast.info"
+          ]
+        },
+        "score": 0.99,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "suspicious_attachment",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user122@trusted-health.org",
+          "recipient": "user1168@example.com",
+          "attachment_type": "pdf",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-b9d6cc4d-f1a",
+        "from_agent": "detection_agent",
+        "incident_id": "b9d6cc4d-f1a",
+        "iocs": {
+          "urls": [
+            "https://loanfast.info/?id=b9d6cc4d-f1a"
+          ],
+          "domains": [
+            "loanfast.info"
+          ]
+        },
+        "score": 0.99,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "suspicious_attachment",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user122@trusted-health.org",
+          "recipient": "user1168@example.com",
+          "attachment_type": "pdf",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-b9d6cc4d-f1a",
+          "from_agent": "detection_agent",
+          "incident_id": "b9d6cc4d-f1a",
+          "iocs": {
+            "urls": [
+              "https://loanfast.info/?id=b9d6cc4d-f1a"
+            ],
+            "domains": [
+              "loanfast.info"
+            ]
+          },
+          "score": 0.99,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "suspicious_attachment",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user122@trusted-health.org",
+            "recipient": "user1168@example.com",
+            "attachment_type": "pdf",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-b9d6cc4d-f1a",
+      "from_agent": "misuse_agent",
+      "incident_id": "b9d6cc4d-f1a",
+      "misuse_label": "loan_scam",
+      "confidence": 0.7,
+      "explanation": "loan keywords; invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-b9d6cc4d-f1a",
+      "from_agent": "deepfake_agent",
+      "incident_id": "b9d6cc4d-f1a",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "pdf"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-b9d6cc4d-f1a",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "b9d6cc4d-f1a",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-b9d6cc4d-f1a",
+      "from_agent": "governance_agent",
+      "incident_id": "b9d6cc4d-f1a",
+      "autonomy_risk_score": 58.15,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.99
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "strong signals"
+    }
+  }
+}

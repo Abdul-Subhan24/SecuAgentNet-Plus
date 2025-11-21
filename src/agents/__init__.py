@@ -1,0 +1,1 @@
+"Hey, this folder is a module — imports are allowed."

@@ -1,0 +1,22 @@
+{
+  "message_id": "detection-heuristic-bed56fed-96e",
+  "from_agent": "detection_agent_heuristic_fallback",
+  "incident_id": "bed56fed-96e",
+  "iocs": {
+    "urls": [],
+    "domains": []
+  },
+  "score": 0.2,
+  "tags": [
+    "benign"
+  ],
+  "evidence_chain": [
+    "fallback_heuristic"
+  ],
+  "metadata": {
+    "kind": "document",
+    "sender": "medilifehospital@secure-bank.com",
+    "attachment_type": "docx",
+    "has_link": false
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "run_ts": "2025-11-20T12:14:55.729967Z",
+  "incident": {
+    "incident_id": "571f234d-2cb",
+    "kind": "upload",
+    "sender": "Aisha Khan",
+    "recipient": "admin",
+    "manual_severity": "high"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-571f234d-2cb",
+        "from_agent": "detection_agent",
+        "incident_id": "571f234d-2cb",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.0,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [],
+        "metadata": {
+          "kind": "upload",
+          "sender": "Aisha Khan",
+          "recipient": "admin",
+          "attachment_type": "mp4",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-571f234d-2cb",
+        "from_agent": "detection_agent",
+        "incident_id": "571f234d-2cb",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.0,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [],
+        "metadata": {
+          "kind": "upload",
+          "sender": "Aisha Khan",
+          "recipient": "admin",
+          "attachment_type": "mp4",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-571f234d-2cb",
+          "from_agent": "detection_agent",
+          "incident_id": "571f234d-2cb",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.0,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [],
+          "metadata": {
+            "kind": "upload",
+            "sender": "Aisha Khan",
+            "recipient": "admin",
+            "attachment_type": "mp4",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-571f234d-2cb",
+      "from_agent": "misuse_agent",
+      "incident_id": "571f234d-2cb",
+      "misuse_label": "benign",
+      "confidence": 0.0,
+      "explanation": "no strong misuse indicators; may be benign",
+      "metadata": {
+        "kind": "upload",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-571f234d-2cb",
+      "from_agent": "deepfake_agent",
+      "incident_id": "571f234d-2cb",
+      "deepfake_prob": 0.15,
+      "tag": "benign",
+      "explanation": "attachment_type:mp4",
+      "metadata": {
+        "attachment_type": "mp4"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-571f234d-2cb",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "571f234d-2cb",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-571f234d-2cb",
+      "from_agent": "governance_agent",
+      "incident_id": "571f234d-2cb",
+      "autonomy_risk_score": 15.0,
+      "allow_automation": true,
+      "policy_constraints": [
+        "Automation_allowed_under_monitoring"
+      ],
+      "justification": "Low autonomy risk; automation permitted",
+      "metadata": {
+        "sensitivity": 0.0,
+        "impact": 0.0,
+        "detection_confidence": 0.0
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "no strong automated signals"
+    }
+  }
+}

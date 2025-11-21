@@ -1,0 +1,69 @@
+{
+  "run_ts": "2025-11-20T10:04:32.584223Z",
+  "incident": {
+    "incident_id": "7c1db138-a99",
+    "kind": "sms",
+    "sender": "+916851492165",
+    "recipient": "+916226154750",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "message_id": "detection-7c1db138-a99",
+      "from_agent": "detection_agent",
+      "incident_id": "7c1db138-a99",
+      "iocs": {
+        "urls": [
+          "http://parcel-track.net/surveys?id=7c1db138-a99"
+        ],
+        "domains": [
+          "parcel-track.net"
+        ]
+      },
+      "score": 0.64,
+      "tags": [
+        "phishing"
+      ],
+      "evidence_chain": [
+        "contains_url",
+        "high_confidence_rule"
+      ],
+      "metadata": {
+        "kind": "sms",
+        "sender": "+916851492165",
+        "recipient": "+916226154750",
+        "attachment_type": "none",
+        "pii_present": 0
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-7c1db138-a99",
+      "from_agent": "misuse_agent",
+      "incident_id": "7c1db138-a99",
+      "misuse_label": "loan_scam",
+      "confidence": 0.7,
+      "explanation": "loan keywords",
+      "metadata": {
+        "kind": "sms",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-7c1db138-a99",
+      "from_agent": "deepfake_agent",
+      "incident_id": "7c1db138-a99",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

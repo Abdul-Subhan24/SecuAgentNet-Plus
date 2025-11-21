@@ -1,0 +1,135 @@
+{
+  "run_ts": "2025-11-20T12:14:58.346252Z",
+  "incident": {
+    "incident_id": "a24b91af-5e0",
+    "kind": "sms",
+    "sender": "+918086269098",
+    "recipient": "+917825211011",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-a24b91af-5e0",
+        "from_agent": "detection_agent",
+        "incident_id": "a24b91af-5e0",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.1,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+918086269098",
+          "recipient": "+917825211011",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-a24b91af-5e0",
+        "from_agent": "detection_agent",
+        "incident_id": "a24b91af-5e0",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.1,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+918086269098",
+          "recipient": "+917825211011",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-a24b91af-5e0",
+          "from_agent": "detection_agent",
+          "incident_id": "a24b91af-5e0",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.1,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [],
+          "metadata": {
+            "kind": "sms",
+            "sender": "+918086269098",
+            "recipient": "+917825211011",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-a24b91af-5e0",
+      "from_agent": "misuse_agent",
+      "incident_id": "a24b91af-5e0",
+      "misuse_label": "benign",
+      "confidence": 0.0,
+      "explanation": "no strong misuse indicators; may be benign",
+      "metadata": {
+        "kind": "sms",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-a24b91af-5e0",
+      "from_agent": "deepfake_agent",
+      "incident_id": "a24b91af-5e0",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-a24b91af-5e0",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "a24b91af-5e0",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-a24b91af-5e0",
+      "from_agent": "governance_agent",
+      "incident_id": "a24b91af-5e0",
+      "autonomy_risk_score": 13.5,
+      "allow_automation": true,
+      "policy_constraints": [
+        "Automation_allowed_under_monitoring"
+      ],
+      "justification": "Low autonomy risk; automation permitted",
+      "metadata": {
+        "sensitivity": 0.0,
+        "impact": 0.0,
+        "detection_confidence": 0.1
+      }
+    },
+    "triage": {
+      "recommended_severity": "low",
+      "reason": "no strong automated signals"
+    }
+  }
+}

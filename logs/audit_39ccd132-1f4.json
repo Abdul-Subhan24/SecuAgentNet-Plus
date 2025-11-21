@@ -1,0 +1,135 @@
+{
+  "run_ts": "2025-11-20T12:14:56.939548Z",
+  "incident": {
+    "incident_id": "39ccd132-1f4",
+    "kind": "upload",
+    "sender": "Rahul Verma",
+    "recipient": "admin",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-39ccd132-1f4",
+        "from_agent": "detection_agent",
+        "incident_id": "39ccd132-1f4",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.0,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [],
+        "metadata": {
+          "kind": "upload",
+          "sender": "Rahul Verma",
+          "recipient": "admin",
+          "attachment_type": "mp4",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-39ccd132-1f4",
+        "from_agent": "detection_agent",
+        "incident_id": "39ccd132-1f4",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.0,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [],
+        "metadata": {
+          "kind": "upload",
+          "sender": "Rahul Verma",
+          "recipient": "admin",
+          "attachment_type": "mp4",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-39ccd132-1f4",
+          "from_agent": "detection_agent",
+          "incident_id": "39ccd132-1f4",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.0,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [],
+          "metadata": {
+            "kind": "upload",
+            "sender": "Rahul Verma",
+            "recipient": "admin",
+            "attachment_type": "mp4",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-39ccd132-1f4",
+      "from_agent": "misuse_agent",
+      "incident_id": "39ccd132-1f4",
+      "misuse_label": "benign",
+      "confidence": 0.0,
+      "explanation": "no strong misuse indicators; may be benign",
+      "metadata": {
+        "kind": "upload",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-39ccd132-1f4",
+      "from_agent": "deepfake_agent",
+      "incident_id": "39ccd132-1f4",
+      "deepfake_prob": 0.15,
+      "tag": "benign",
+      "explanation": "attachment_type:mp4",
+      "metadata": {
+        "attachment_type": "mp4"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-39ccd132-1f4",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "39ccd132-1f4",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-39ccd132-1f4",
+      "from_agent": "governance_agent",
+      "incident_id": "39ccd132-1f4",
+      "autonomy_risk_score": 15.0,
+      "allow_automation": true,
+      "policy_constraints": [
+        "Automation_allowed_under_monitoring"
+      ],
+      "justification": "Low autonomy risk; automation permitted",
+      "metadata": {
+        "sensitivity": 0.0,
+        "impact": 0.0,
+        "detection_confidence": 0.0
+      }
+    },
+    "triage": {
+      "recommended_severity": "low",
+      "reason": "no strong automated signals"
+    }
+  }
+}

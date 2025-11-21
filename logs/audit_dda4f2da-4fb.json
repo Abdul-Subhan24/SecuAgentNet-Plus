@@ -1,0 +1,146 @@
+{
+  "run_ts": "2025-11-20T12:14:56.174373Z",
+  "incident": {
+    "incident_id": "dda4f2da-4fb",
+    "kind": "document",
+    "sender": "fintrustltd@loanfast.info",
+    "recipient": "records@gov.org",
+    "manual_severity": "medium"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-dda4f2da-4fb",
+        "from_agent": "detection_agent",
+        "incident_id": "dda4f2da-4fb",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.15,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment"
+        ],
+        "metadata": {
+          "kind": "document",
+          "sender": "fintrustltd@loanfast.info",
+          "recipient": "records@gov.org",
+          "attachment_type": "docx",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-dda4f2da-4fb",
+        "from_agent": "detection_agent",
+        "incident_id": "dda4f2da-4fb",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.15,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment"
+        ],
+        "metadata": {
+          "kind": "document",
+          "sender": "fintrustltd@loanfast.info",
+          "recipient": "records@gov.org",
+          "attachment_type": "docx",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-dda4f2da-4fb",
+          "from_agent": "detection_agent",
+          "incident_id": "dda4f2da-4fb",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.15,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [
+            "suspicious_attachment"
+          ],
+          "metadata": {
+            "kind": "document",
+            "sender": "fintrustltd@loanfast.info",
+            "recipient": "records@gov.org",
+            "attachment_type": "docx",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-dda4f2da-4fb",
+      "from_agent": "misuse_agent",
+      "incident_id": "dda4f2da-4fb",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "document",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-dda4f2da-4fb",
+      "from_agent": "deepfake_agent",
+      "incident_id": "dda4f2da-4fb",
+      "deepfake_prob": 0.6,
+      "tag": "deepfake",
+      "explanation": "dataset_deepfake_flag",
+      "metadata": {
+        "attachment_type": "docx"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-dda4f2da-4fb",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "dda4f2da-4fb",
+      "ok": false,
+      "issues": [
+        "Detection marked benign but misuse agent found high-risk label"
+      ],
+      "corrective_suggestions": [
+        "Re-check detection thresholds or escalate to HITL"
+      ]
+    },
+    "governance": {
+      "message_id": "governance-dda4f2da-4fb",
+      "from_agent": "governance_agent",
+      "incident_id": "dda4f2da-4fb",
+      "autonomy_risk_score": 75.75,
+      "allow_automation": false,
+      "policy_constraints": [
+        "HITL_required",
+        "Preserve_evidence; No_publication_without_HITL"
+      ],
+      "justification": "High autonomy risk; manual review required ; Deepfake detected; preserve evidence and escalate",
+      "metadata": {
+        "sensitivity": 0.7,
+        "impact": 0.8,
+        "detection_confidence": 0.15
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "Governance: HITL_required"
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "run_ts": "2025-11-20T12:14:57.570690Z",
+  "incident": {
+    "incident_id": "14a73a6d-422",
+    "kind": "email",
+    "sender": "user461@docverify.net",
+    "recipient": "user1392@example.com",
+    "manual_severity": "high"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-14a73a6d-422",
+        "from_agent": "detection_agent",
+        "incident_id": "14a73a6d-422",
+        "iocs": {
+          "urls": [
+            "https://trusted-health.org/?id=14a73a6d-422"
+          ],
+          "domains": [
+            "trusted-health.org"
+          ]
+        },
+        "score": 0.67,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user461@docverify.net",
+          "recipient": "user1392@example.com",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-14a73a6d-422",
+        "from_agent": "detection_agent",
+        "incident_id": "14a73a6d-422",
+        "iocs": {
+          "urls": [
+            "https://trusted-health.org/?id=14a73a6d-422"
+          ],
+          "domains": [
+            "trusted-health.org"
+          ]
+        },
+        "score": 0.67,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user461@docverify.net",
+          "recipient": "user1392@example.com",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-14a73a6d-422",
+          "from_agent": "detection_agent",
+          "incident_id": "14a73a6d-422",
+          "iocs": {
+            "urls": [
+              "https://trusted-health.org/?id=14a73a6d-422"
+            ],
+            "domains": [
+              "trusted-health.org"
+            ]
+          },
+          "score": 0.67,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user461@docverify.net",
+            "recipient": "user1392@example.com",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-14a73a6d-422",
+      "from_agent": "misuse_agent",
+      "incident_id": "14a73a6d-422",
+      "misuse_label": "phishing",
+      "confidence": 0.67,
+      "explanation": "no strong misuse indicators; may be benign",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-14a73a6d-422",
+      "from_agent": "deepfake_agent",
+      "incident_id": "14a73a6d-422",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-14a73a6d-422",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "14a73a6d-422",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-14a73a6d-422",
+      "from_agent": "governance_agent",
+      "incident_id": "14a73a6d-422",
+      "autonomy_risk_score": 55.95,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.6,
+        "detection_confidence": 0.67
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

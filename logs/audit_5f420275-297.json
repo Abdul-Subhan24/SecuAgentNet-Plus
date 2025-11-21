@@ -1,0 +1,162 @@
+{
+  "run_ts": "2025-11-20T12:14:57.409236Z",
+  "incident": {
+    "incident_id": "5f420275-297",
+    "kind": "email",
+    "sender": "user745@docverify.net",
+    "recipient": "user1287@example.com",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-5f420275-297",
+        "from_agent": "detection_agent",
+        "incident_id": "5f420275-297",
+        "iocs": {
+          "urls": [
+            "https://payments-update.com/?id=5f420275-297"
+          ],
+          "domains": [
+            "payments-update.com"
+          ]
+        },
+        "score": 0.72,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "pii_present",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user745@docverify.net",
+          "recipient": "user1287@example.com",
+          "attachment_type": "none",
+          "pii_present": 1
+        }
+      },
+      "rule": {
+        "message_id": "detection-5f420275-297",
+        "from_agent": "detection_agent",
+        "incident_id": "5f420275-297",
+        "iocs": {
+          "urls": [
+            "https://payments-update.com/?id=5f420275-297"
+          ],
+          "domains": [
+            "payments-update.com"
+          ]
+        },
+        "score": 0.72,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "pii_present",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user745@docverify.net",
+          "recipient": "user1287@example.com",
+          "attachment_type": "none",
+          "pii_present": 1
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-5f420275-297",
+          "from_agent": "detection_agent",
+          "incident_id": "5f420275-297",
+          "iocs": {
+            "urls": [
+              "https://payments-update.com/?id=5f420275-297"
+            ],
+            "domains": [
+              "payments-update.com"
+            ]
+          },
+          "score": 0.72,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "pii_present",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user745@docverify.net",
+            "recipient": "user1287@example.com",
+            "attachment_type": "none",
+            "pii_present": 1
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-5f420275-297",
+      "from_agent": "misuse_agent",
+      "incident_id": "5f420275-297",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-5f420275-297",
+      "from_agent": "deepfake_agent",
+      "incident_id": "5f420275-297",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-5f420275-297",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "5f420275-297",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-5f420275-297",
+      "from_agent": "governance_agent",
+      "incident_id": "5f420275-297",
+      "autonomy_risk_score": 72.2,
+      "allow_automation": false,
+      "policy_constraints": [
+        "HITL_required"
+      ],
+      "justification": "High autonomy risk; manual review required",
+      "metadata": {
+        "sensitivity": 0.8,
+        "impact": 0.8,
+        "detection_confidence": 0.72
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "Governance: HITL_required"
+    }
+  }
+}

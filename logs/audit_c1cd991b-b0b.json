@@ -1,0 +1,156 @@
+{
+  "run_ts": "2025-11-20T12:14:55.781687Z",
+  "incident": {
+    "incident_id": "c1cd991b-b0b",
+    "kind": "email",
+    "sender": "user617@payments-update.com",
+    "recipient": "user1151@example.com",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-c1cd991b-b0b",
+        "from_agent": "detection_agent",
+        "incident_id": "c1cd991b-b0b",
+        "iocs": {
+          "urls": [
+            "https://secure-bank.com/?id=c1cd991b-b0b"
+          ],
+          "domains": [
+            "secure-bank.com"
+          ]
+        },
+        "score": 0.55,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user617@payments-update.com",
+          "recipient": "user1151@example.com",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-c1cd991b-b0b",
+        "from_agent": "detection_agent",
+        "incident_id": "c1cd991b-b0b",
+        "iocs": {
+          "urls": [
+            "https://secure-bank.com/?id=c1cd991b-b0b"
+          ],
+          "domains": [
+            "secure-bank.com"
+          ]
+        },
+        "score": 0.55,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user617@payments-update.com",
+          "recipient": "user1151@example.com",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-c1cd991b-b0b",
+          "from_agent": "detection_agent",
+          "incident_id": "c1cd991b-b0b",
+          "iocs": {
+            "urls": [
+              "https://secure-bank.com/?id=c1cd991b-b0b"
+            ],
+            "domains": [
+              "secure-bank.com"
+            ]
+          },
+          "score": 0.55,
+          "tags": [
+            "suspicious"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "medium_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user617@payments-update.com",
+            "recipient": "user1151@example.com",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-c1cd991b-b0b",
+      "from_agent": "misuse_agent",
+      "incident_id": "c1cd991b-b0b",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "suspicious"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-c1cd991b-b0b",
+      "from_agent": "deepfake_agent",
+      "incident_id": "c1cd991b-b0b",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-c1cd991b-b0b",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "c1cd991b-b0b",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-c1cd991b-b0b",
+      "from_agent": "governance_agent",
+      "incident_id": "c1cd991b-b0b",
+      "autonomy_risk_score": 64.75,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.55
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

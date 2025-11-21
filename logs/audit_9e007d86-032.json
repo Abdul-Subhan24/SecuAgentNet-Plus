@@ -1,0 +1,159 @@
+{
+  "run_ts": "2025-11-20T12:14:56.382793Z",
+  "incident": {
+    "incident_id": "9e007d86-032",
+    "kind": "email",
+    "sender": "user551@uni-scholar.org",
+    "recipient": "user1445@example.com",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-9e007d86-032",
+        "from_agent": "detection_agent",
+        "incident_id": "9e007d86-032",
+        "iocs": {
+          "urls": [
+            "https://loanfast.info/?id=9e007d86-032"
+          ],
+          "domains": [
+            "loanfast.info"
+          ]
+        },
+        "score": 0.95,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user551@uni-scholar.org",
+          "recipient": "user1445@example.com",
+          "attachment_type": "jpg",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-9e007d86-032",
+        "from_agent": "detection_agent",
+        "incident_id": "9e007d86-032",
+        "iocs": {
+          "urls": [
+            "https://loanfast.info/?id=9e007d86-032"
+          ],
+          "domains": [
+            "loanfast.info"
+          ]
+        },
+        "score": 0.95,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user551@uni-scholar.org",
+          "recipient": "user1445@example.com",
+          "attachment_type": "jpg",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-9e007d86-032",
+          "from_agent": "detection_agent",
+          "incident_id": "9e007d86-032",
+          "iocs": {
+            "urls": [
+              "https://loanfast.info/?id=9e007d86-032"
+            ],
+            "domains": [
+              "loanfast.info"
+            ]
+          },
+          "score": 0.95,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user551@uni-scholar.org",
+            "recipient": "user1445@example.com",
+            "attachment_type": "jpg",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-9e007d86-032",
+      "from_agent": "misuse_agent",
+      "incident_id": "9e007d86-032",
+      "misuse_label": "loan_scam",
+      "confidence": 0.7,
+      "explanation": "loan keywords",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-9e007d86-032",
+      "from_agent": "deepfake_agent",
+      "incident_id": "9e007d86-032",
+      "deepfake_prob": 0.2,
+      "tag": "benign",
+      "explanation": "attachment_type:jpg; detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "jpg"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-9e007d86-032",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "9e007d86-032",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-9e007d86-032",
+      "from_agent": "governance_agent",
+      "incident_id": "9e007d86-032",
+      "autonomy_risk_score": 58.75,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.95
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "strong signals"
+    }
+  }
+}

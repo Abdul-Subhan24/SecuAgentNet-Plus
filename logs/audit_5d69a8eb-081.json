@@ -1,0 +1,162 @@
+{
+  "run_ts": "2025-11-20T12:14:57.310273Z",
+  "incident": {
+    "incident_id": "5d69a8eb-081",
+    "kind": "email",
+    "sender": "user559@loanfast.info",
+    "recipient": "user1069@example.com",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-5d69a8eb-081",
+        "from_agent": "detection_agent",
+        "incident_id": "5d69a8eb-081",
+        "iocs": {
+          "urls": [
+            "https://payments-update.com/?id=5d69a8eb-081"
+          ],
+          "domains": [
+            "payments-update.com"
+          ]
+        },
+        "score": 0.72,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "pii_present",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user559@loanfast.info",
+          "recipient": "user1069@example.com",
+          "attachment_type": "mp4",
+          "pii_present": 1
+        }
+      },
+      "rule": {
+        "message_id": "detection-5d69a8eb-081",
+        "from_agent": "detection_agent",
+        "incident_id": "5d69a8eb-081",
+        "iocs": {
+          "urls": [
+            "https://payments-update.com/?id=5d69a8eb-081"
+          ],
+          "domains": [
+            "payments-update.com"
+          ]
+        },
+        "score": 0.72,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "pii_present",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user559@loanfast.info",
+          "recipient": "user1069@example.com",
+          "attachment_type": "mp4",
+          "pii_present": 1
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-5d69a8eb-081",
+          "from_agent": "detection_agent",
+          "incident_id": "5d69a8eb-081",
+          "iocs": {
+            "urls": [
+              "https://payments-update.com/?id=5d69a8eb-081"
+            ],
+            "domains": [
+              "payments-update.com"
+            ]
+          },
+          "score": 0.72,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "pii_present",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user559@loanfast.info",
+            "recipient": "user1069@example.com",
+            "attachment_type": "mp4",
+            "pii_present": 1
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-5d69a8eb-081",
+      "from_agent": "misuse_agent",
+      "incident_id": "5d69a8eb-081",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-5d69a8eb-081",
+      "from_agent": "deepfake_agent",
+      "incident_id": "5d69a8eb-081",
+      "deepfake_prob": 0.2,
+      "tag": "benign",
+      "explanation": "attachment_type:mp4; detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "mp4"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-5d69a8eb-081",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "5d69a8eb-081",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-5d69a8eb-081",
+      "from_agent": "governance_agent",
+      "incident_id": "5d69a8eb-081",
+      "autonomy_risk_score": 72.2,
+      "allow_automation": false,
+      "policy_constraints": [
+        "HITL_required"
+      ],
+      "justification": "High autonomy risk; manual review required",
+      "metadata": {
+        "sensitivity": 0.8,
+        "impact": 0.8,
+        "detection_confidence": 0.72
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "Governance: HITL_required"
+    }
+  }
+}

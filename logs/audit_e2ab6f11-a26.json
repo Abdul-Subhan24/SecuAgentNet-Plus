@@ -1,0 +1,156 @@
+{
+  "run_ts": "2025-11-20T12:14:59.556815Z",
+  "incident": {
+    "incident_id": "e2ab6f11-a26",
+    "kind": "email",
+    "sender": "user569@trusted-health.org",
+    "recipient": "user1016@example.com",
+    "manual_severity": "medium"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-e2ab6f11-a26",
+        "from_agent": "detection_agent",
+        "incident_id": "e2ab6f11-a26",
+        "iocs": {
+          "urls": [
+            "https://uni-scholar.org/?id=e2ab6f11-a26"
+          ],
+          "domains": [
+            "uni-scholar.org"
+          ]
+        },
+        "score": 0.55,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user569@trusted-health.org",
+          "recipient": "user1016@example.com",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-e2ab6f11-a26",
+        "from_agent": "detection_agent",
+        "incident_id": "e2ab6f11-a26",
+        "iocs": {
+          "urls": [
+            "https://uni-scholar.org/?id=e2ab6f11-a26"
+          ],
+          "domains": [
+            "uni-scholar.org"
+          ]
+        },
+        "score": 0.55,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user569@trusted-health.org",
+          "recipient": "user1016@example.com",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-e2ab6f11-a26",
+          "from_agent": "detection_agent",
+          "incident_id": "e2ab6f11-a26",
+          "iocs": {
+            "urls": [
+              "https://uni-scholar.org/?id=e2ab6f11-a26"
+            ],
+            "domains": [
+              "uni-scholar.org"
+            ]
+          },
+          "score": 0.55,
+          "tags": [
+            "suspicious"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "medium_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user569@trusted-health.org",
+            "recipient": "user1016@example.com",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-e2ab6f11-a26",
+      "from_agent": "misuse_agent",
+      "incident_id": "e2ab6f11-a26",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "suspicious"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-e2ab6f11-a26",
+      "from_agent": "deepfake_agent",
+      "incident_id": "e2ab6f11-a26",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-e2ab6f11-a26",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "e2ab6f11-a26",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-e2ab6f11-a26",
+      "from_agent": "governance_agent",
+      "incident_id": "e2ab6f11-a26",
+      "autonomy_risk_score": 64.75,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.55
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

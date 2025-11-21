@@ -1,0 +1,204 @@
+{
+  "run_ts": "2025-11-20T12:15:43.355698Z",
+  "incident": {
+    "incident_id": "23f08630-70c",
+    "kind": "sms",
+    "sender": "+917266614070",
+    "recipient": "+919251963811",
+    "manual_severity": "medium"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-heuristic-23f08630-70c",
+        "from_agent": "detection_agent_heuristic_fallback",
+        "incident_id": "23f08630-70c",
+        "iocs": {
+          "urls": [
+            "http://loanfast.info/surveys?id=23f08630-70c"
+          ],
+          "domains": [
+            "loanfast.info"
+          ]
+        },
+        "score": 0.52,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "fallback_heuristic"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+917266614070",
+          "attachment_type": "none",
+          "has_link": true
+        }
+      },
+      "rule": {
+        "message_id": "detection-23f08630-70c",
+        "from_agent": "detection_agent",
+        "incident_id": "23f08630-70c",
+        "iocs": {
+          "urls": [
+            "http://loanfast.info/surveys?id=23f08630-70c"
+          ],
+          "domains": [
+            "loanfast.info"
+          ]
+        },
+        "score": 0.52,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+917266614070",
+          "recipient": "+919251963811",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": {
+        "message_id": "detection-heuristic-23f08630-70c",
+        "from_agent": "detection_agent_heuristic_fallback",
+        "incident_id": "23f08630-70c",
+        "iocs": {
+          "urls": [
+            "http://loanfast.info/surveys?id=23f08630-70c"
+          ],
+          "domains": [
+            "loanfast.info"
+          ]
+        },
+        "score": 0.52,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "fallback_heuristic"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+917266614070",
+          "attachment_type": "none",
+          "has_link": true
+        }
+      },
+      "selection_meta": {
+        "chosen_by": "llm_tie_preference",
+        "rule_msg": {
+          "message_id": "detection-23f08630-70c",
+          "from_agent": "detection_agent",
+          "incident_id": "23f08630-70c",
+          "iocs": {
+            "urls": [
+              "http://loanfast.info/surveys?id=23f08630-70c"
+            ],
+            "domains": [
+              "loanfast.info"
+            ]
+          },
+          "score": 0.52,
+          "tags": [
+            "suspicious"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "medium_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "sms",
+            "sender": "+917266614070",
+            "recipient": "+919251963811",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": {
+          "message_id": "detection-heuristic-23f08630-70c",
+          "from_agent": "detection_agent_heuristic_fallback",
+          "incident_id": "23f08630-70c",
+          "iocs": {
+            "urls": [
+              "http://loanfast.info/surveys?id=23f08630-70c"
+            ],
+            "domains": [
+              "loanfast.info"
+            ]
+          },
+          "score": 0.52,
+          "tags": [
+            "suspicious"
+          ],
+          "evidence_chain": [
+            "fallback_heuristic"
+          ],
+          "metadata": {
+            "kind": "sms",
+            "sender": "+917266614070",
+            "attachment_type": "none",
+            "has_link": true
+          }
+        }
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-23f08630-70c",
+      "from_agent": "misuse_agent",
+      "incident_id": "23f08630-70c",
+      "misuse_label": "loan_scam",
+      "confidence": 0.7,
+      "explanation": "loan keywords",
+      "metadata": {
+        "kind": "sms",
+        "detection_tags": [
+          "suspicious"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-23f08630-70c",
+      "from_agent": "deepfake_agent",
+      "incident_id": "23f08630-70c",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-23f08630-70c",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "23f08630-70c",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-23f08630-70c",
+      "from_agent": "governance_agent",
+      "incident_id": "23f08630-70c",
+      "autonomy_risk_score": 65.2,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.52
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

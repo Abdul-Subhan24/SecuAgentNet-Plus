@@ -1,0 +1,143 @@
+{
+  "run_ts": "2025-11-20T12:14:58.718594Z",
+  "incident": {
+    "incident_id": "28baee0a-64f",
+    "kind": "social",
+    "sender": "Aisha Khan",
+    "recipient": "public",
+    "manual_severity": "high"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-28baee0a-64f",
+        "from_agent": "detection_agent",
+        "incident_id": "28baee0a-64f",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.0,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [],
+        "metadata": {
+          "kind": "social",
+          "sender": "Aisha Khan",
+          "recipient": "public",
+          "attachment_type": "jpg",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-28baee0a-64f",
+        "from_agent": "detection_agent",
+        "incident_id": "28baee0a-64f",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.0,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [],
+        "metadata": {
+          "kind": "social",
+          "sender": "Aisha Khan",
+          "recipient": "public",
+          "attachment_type": "jpg",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-28baee0a-64f",
+          "from_agent": "detection_agent",
+          "incident_id": "28baee0a-64f",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.0,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [],
+          "metadata": {
+            "kind": "social",
+            "sender": "Aisha Khan",
+            "recipient": "public",
+            "attachment_type": "jpg",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-28baee0a-64f",
+      "from_agent": "misuse_agent",
+      "incident_id": "28baee0a-64f",
+      "misuse_label": "harassment",
+      "confidence": 0.8,
+      "explanation": "harassment keywords",
+      "metadata": {
+        "kind": "social",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-28baee0a-64f",
+      "from_agent": "deepfake_agent",
+      "incident_id": "28baee0a-64f",
+      "deepfake_prob": 0.95,
+      "tag": "deepfake",
+      "explanation": "dataset_deepfake_flag; attachment_type:jpg; deepfake keywords",
+      "metadata": {
+        "attachment_type": "jpg"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-28baee0a-64f",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "28baee0a-64f",
+      "ok": false,
+      "issues": [
+        "Detection marked benign but misuse agent found high-risk label",
+        "High misuse confidence with low detection score"
+      ],
+      "corrective_suggestions": [
+        "Re-check detection thresholds or escalate to HITL",
+        "Run additional enrichment (WHOIS, domain reputation) and retry"
+      ]
+    },
+    "governance": {
+      "message_id": "governance-28baee0a-64f",
+      "from_agent": "governance_agent",
+      "incident_id": "28baee0a-64f",
+      "autonomy_risk_score": 84.5,
+      "allow_automation": false,
+      "policy_constraints": [
+        "HITL_required",
+        "Preserve_evidence; No_publication_without_HITL",
+        "Immediate_support_and_privacy_measures"
+      ],
+      "justification": "High autonomy risk; manual review required ; Deepfake detected; preserve evidence and escalate ; Harassment detected; privacy & support required",
+      "metadata": {
+        "sensitivity": 0.9,
+        "impact": 0.7,
+        "detection_confidence": 0.0
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "Governance: HITL_required"
+    }
+  }
+}

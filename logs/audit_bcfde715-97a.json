@@ -1,0 +1,168 @@
+{
+  "run_ts": "2025-11-20T12:15:02.496045Z",
+  "incident": {
+    "incident_id": "bcfde715-97a",
+    "kind": "email",
+    "sender": "user553@payments-update.com",
+    "recipient": "user1095@example.com",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-bcfde715-97a",
+        "from_agent": "detection_agent",
+        "incident_id": "bcfde715-97a",
+        "iocs": {
+          "urls": [
+            "https://docverify.net/?id=bcfde715-97a",
+            "https://docverify.net/?id=bcfde715-97a."
+          ],
+          "domains": [
+            "docverify.net",
+            "docverify.net"
+          ]
+        },
+        "score": 0.99,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "suspicious_attachment",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user553@payments-update.com",
+          "recipient": "user1095@example.com",
+          "attachment_type": "pdf",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-bcfde715-97a",
+        "from_agent": "detection_agent",
+        "incident_id": "bcfde715-97a",
+        "iocs": {
+          "urls": [
+            "https://docverify.net/?id=bcfde715-97a",
+            "https://docverify.net/?id=bcfde715-97a."
+          ],
+          "domains": [
+            "docverify.net",
+            "docverify.net"
+          ]
+        },
+        "score": 0.99,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "suspicious_attachment",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user553@payments-update.com",
+          "recipient": "user1095@example.com",
+          "attachment_type": "pdf",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-bcfde715-97a",
+          "from_agent": "detection_agent",
+          "incident_id": "bcfde715-97a",
+          "iocs": {
+            "urls": [
+              "https://docverify.net/?id=bcfde715-97a",
+              "https://docverify.net/?id=bcfde715-97a."
+            ],
+            "domains": [
+              "docverify.net",
+              "docverify.net"
+            ]
+          },
+          "score": 0.99,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "suspicious_attachment",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user553@payments-update.com",
+            "recipient": "user1095@example.com",
+            "attachment_type": "pdf",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-bcfde715-97a",
+      "from_agent": "misuse_agent",
+      "incident_id": "bcfde715-97a",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-bcfde715-97a",
+      "from_agent": "deepfake_agent",
+      "incident_id": "bcfde715-97a",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "pdf"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-bcfde715-97a",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "bcfde715-97a",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-bcfde715-97a",
+      "from_agent": "governance_agent",
+      "incident_id": "bcfde715-97a",
+      "autonomy_risk_score": 58.15,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.99
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "strong signals"
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "run_ts": "2025-11-20T12:15:02.085271Z",
+  "incident": {
+    "incident_id": "8363ce03-792",
+    "kind": "document",
+    "sender": "acmecorp@uni-scholar.org",
+    "recipient": "records@company.com",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-8363ce03-792",
+        "from_agent": "detection_agent",
+        "incident_id": "8363ce03-792",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.2,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment",
+          "pii_present"
+        ],
+        "metadata": {
+          "kind": "document",
+          "sender": "acmecorp@uni-scholar.org",
+          "recipient": "records@company.com",
+          "attachment_type": "pdf",
+          "pii_present": 1
+        }
+      },
+      "rule": {
+        "message_id": "detection-8363ce03-792",
+        "from_agent": "detection_agent",
+        "incident_id": "8363ce03-792",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.2,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment",
+          "pii_present"
+        ],
+        "metadata": {
+          "kind": "document",
+          "sender": "acmecorp@uni-scholar.org",
+          "recipient": "records@company.com",
+          "attachment_type": "pdf",
+          "pii_present": 1
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-8363ce03-792",
+          "from_agent": "detection_agent",
+          "incident_id": "8363ce03-792",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.2,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [
+            "suspicious_attachment",
+            "pii_present"
+          ],
+          "metadata": {
+            "kind": "document",
+            "sender": "acmecorp@uni-scholar.org",
+            "recipient": "records@company.com",
+            "attachment_type": "pdf",
+            "pii_present": 1
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-8363ce03-792",
+      "from_agent": "misuse_agent",
+      "incident_id": "8363ce03-792",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "document",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-8363ce03-792",
+      "from_agent": "deepfake_agent",
+      "incident_id": "8363ce03-792",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "pdf"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-8363ce03-792",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "8363ce03-792",
+      "ok": false,
+      "issues": [
+        "Detection marked benign but misuse agent found high-risk label"
+      ],
+      "corrective_suggestions": [
+        "Re-check detection thresholds or escalate to HITL"
+      ]
+    },
+    "governance": {
+      "message_id": "governance-8363ce03-792",
+      "from_agent": "governance_agent",
+      "incident_id": "8363ce03-792",
+      "autonomy_risk_score": 80.0,
+      "allow_automation": false,
+      "policy_constraints": [
+        "HITL_required"
+      ],
+      "justification": "High autonomy risk; manual review required",
+      "metadata": {
+        "sensitivity": 0.8,
+        "impact": 0.8,
+        "detection_confidence": 0.2
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "Governance: HITL_required"
+    }
+  }
+}

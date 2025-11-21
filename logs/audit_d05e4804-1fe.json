@@ -1,0 +1,147 @@
+{
+  "run_ts": "2025-11-20T12:14:56.454854Z",
+  "incident": {
+    "incident_id": "d05e4804-1fe",
+    "kind": "email",
+    "sender": "user467@gov-id.org",
+    "recipient": "user1229@example.com",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-d05e4804-1fe",
+        "from_agent": "detection_agent",
+        "incident_id": "d05e4804-1fe",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.4,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment",
+          "pii_present",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user467@gov-id.org",
+          "recipient": "user1229@example.com",
+          "attachment_type": "docx",
+          "pii_present": 1
+        }
+      },
+      "rule": {
+        "message_id": "detection-d05e4804-1fe",
+        "from_agent": "detection_agent",
+        "incident_id": "d05e4804-1fe",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.4,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment",
+          "pii_present",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user467@gov-id.org",
+          "recipient": "user1229@example.com",
+          "attachment_type": "docx",
+          "pii_present": 1
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-d05e4804-1fe",
+          "from_agent": "detection_agent",
+          "incident_id": "d05e4804-1fe",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.4,
+          "tags": [
+            "suspicious"
+          ],
+          "evidence_chain": [
+            "suspicious_attachment",
+            "pii_present",
+            "medium_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user467@gov-id.org",
+            "recipient": "user1229@example.com",
+            "attachment_type": "docx",
+            "pii_present": 1
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-d05e4804-1fe",
+      "from_agent": "misuse_agent",
+      "incident_id": "d05e4804-1fe",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "suspicious"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-d05e4804-1fe",
+      "from_agent": "deepfake_agent",
+      "incident_id": "d05e4804-1fe",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "docx"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-d05e4804-1fe",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "d05e4804-1fe",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-d05e4804-1fe",
+      "from_agent": "governance_agent",
+      "incident_id": "d05e4804-1fe",
+      "autonomy_risk_score": 77.0,
+      "allow_automation": false,
+      "policy_constraints": [
+        "HITL_required"
+      ],
+      "justification": "High autonomy risk; manual review required",
+      "metadata": {
+        "sensitivity": 0.8,
+        "impact": 0.8,
+        "detection_confidence": 0.4
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "Governance: HITL_required"
+    }
+  }
+}

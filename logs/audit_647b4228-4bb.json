@@ -1,0 +1,159 @@
+{
+  "run_ts": "2025-11-20T12:15:03.786182Z",
+  "incident": {
+    "incident_id": "647b4228-4bb",
+    "kind": "sms",
+    "sender": "+918493672062",
+    "recipient": "+917676415181",
+    "manual_severity": "medium"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-647b4228-4bb",
+        "from_agent": "detection_agent",
+        "incident_id": "647b4228-4bb",
+        "iocs": {
+          "urls": [
+            "http://payments-update.com/surveys?id=647b4228-4bb"
+          ],
+          "domains": [
+            "payments-update.com"
+          ]
+        },
+        "score": 0.64,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+918493672062",
+          "recipient": "+917676415181",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-647b4228-4bb",
+        "from_agent": "detection_agent",
+        "incident_id": "647b4228-4bb",
+        "iocs": {
+          "urls": [
+            "http://payments-update.com/surveys?id=647b4228-4bb"
+          ],
+          "domains": [
+            "payments-update.com"
+          ]
+        },
+        "score": 0.64,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+918493672062",
+          "recipient": "+917676415181",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-647b4228-4bb",
+          "from_agent": "detection_agent",
+          "incident_id": "647b4228-4bb",
+          "iocs": {
+            "urls": [
+              "http://payments-update.com/surveys?id=647b4228-4bb"
+            ],
+            "domains": [
+              "payments-update.com"
+            ]
+          },
+          "score": 0.64,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "sms",
+            "sender": "+918493672062",
+            "recipient": "+917676415181",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-647b4228-4bb",
+      "from_agent": "misuse_agent",
+      "incident_id": "647b4228-4bb",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "sms",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-647b4228-4bb",
+      "from_agent": "deepfake_agent",
+      "incident_id": "647b4228-4bb",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-647b4228-4bb",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "647b4228-4bb",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-647b4228-4bb",
+      "from_agent": "governance_agent",
+      "incident_id": "647b4228-4bb",
+      "autonomy_risk_score": 63.4,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.64
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

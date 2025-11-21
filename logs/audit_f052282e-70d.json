@@ -1,0 +1,156 @@
+{
+  "run_ts": "2025-11-20T12:15:02.073244Z",
+  "incident": {
+    "incident_id": "f052282e-70d",
+    "kind": "sms",
+    "sender": "+917328736767",
+    "recipient": "+919172747875",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-f052282e-70d",
+        "from_agent": "detection_agent",
+        "incident_id": "f052282e-70d",
+        "iocs": {
+          "urls": [
+            "http://secure-bank.com/surveys?id=f052282e-70d"
+          ],
+          "domains": [
+            "secure-bank.com"
+          ]
+        },
+        "score": 0.4,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+917328736767",
+          "recipient": "+919172747875",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-f052282e-70d",
+        "from_agent": "detection_agent",
+        "incident_id": "f052282e-70d",
+        "iocs": {
+          "urls": [
+            "http://secure-bank.com/surveys?id=f052282e-70d"
+          ],
+          "domains": [
+            "secure-bank.com"
+          ]
+        },
+        "score": 0.4,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+917328736767",
+          "recipient": "+919172747875",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-f052282e-70d",
+          "from_agent": "detection_agent",
+          "incident_id": "f052282e-70d",
+          "iocs": {
+            "urls": [
+              "http://secure-bank.com/surveys?id=f052282e-70d"
+            ],
+            "domains": [
+              "secure-bank.com"
+            ]
+          },
+          "score": 0.4,
+          "tags": [
+            "suspicious"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "medium_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "sms",
+            "sender": "+917328736767",
+            "recipient": "+919172747875",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-f052282e-70d",
+      "from_agent": "misuse_agent",
+      "incident_id": "f052282e-70d",
+      "misuse_label": "suspicious",
+      "confidence": 0.4,
+      "explanation": "detection_agent_signals",
+      "metadata": {
+        "kind": "sms",
+        "detection_tags": [
+          "suspicious"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-f052282e-70d",
+      "from_agent": "deepfake_agent",
+      "incident_id": "f052282e-70d",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-f052282e-70d",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "f052282e-70d",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-f052282e-70d",
+      "from_agent": "governance_agent",
+      "incident_id": "f052282e-70d",
+      "autonomy_risk_score": 9.0,
+      "allow_automation": true,
+      "policy_constraints": [
+        "Automation_allowed_under_monitoring"
+      ],
+      "justification": "Low autonomy risk; automation permitted",
+      "metadata": {
+        "sensitivity": 0.0,
+        "impact": 0.0,
+        "detection_confidence": 0.4
+      }
+    },
+    "triage": {
+      "recommended_severity": "low",
+      "reason": "no strong automated signals"
+    }
+  }
+}

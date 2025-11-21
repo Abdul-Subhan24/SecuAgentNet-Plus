@@ -1,0 +1,28 @@
+{
+  "message_id": "detection-heuristic-cbcc61e4-f31",
+  "from_agent": "detection_agent_heuristic_fallback",
+  "incident_id": "cbcc61e4-f31",
+  "iocs": {
+    "urls": [
+      "https://trusted-health.org/?id=cbcc61e4-f31",
+      "https://trusted-health.org/?id=cbcc61e4-f31."
+    ],
+    "domains": [
+      "trusted-health.org",
+      "trusted-health.org"
+    ]
+  },
+  "score": 0.99,
+  "tags": [
+    "phishing"
+  ],
+  "evidence_chain": [
+    "fallback_heuristic"
+  ],
+  "metadata": {
+    "kind": "email",
+    "sender": "user772@trusted-health.org",
+    "attachment_type": "pdf",
+    "has_link": true
+  }
+}

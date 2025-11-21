@@ -1,0 +1,159 @@
+{
+  "run_ts": "2025-11-20T12:15:03.624157Z",
+  "incident": {
+    "incident_id": "83eeb593-015",
+    "kind": "email",
+    "sender": "user294@loanfast.info",
+    "recipient": "user1784@example.com",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-83eeb593-015",
+        "from_agent": "detection_agent",
+        "incident_id": "83eeb593-015",
+        "iocs": {
+          "urls": [
+            "https://gov-id.org/?id=83eeb593-015"
+          ],
+          "domains": [
+            "gov-id.org"
+          ]
+        },
+        "score": 0.65,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_attachment",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user294@loanfast.info",
+          "recipient": "user1784@example.com",
+          "attachment_type": "docx",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-83eeb593-015",
+        "from_agent": "detection_agent",
+        "incident_id": "83eeb593-015",
+        "iocs": {
+          "urls": [
+            "https://gov-id.org/?id=83eeb593-015"
+          ],
+          "domains": [
+            "gov-id.org"
+          ]
+        },
+        "score": 0.65,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_attachment",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user294@loanfast.info",
+          "recipient": "user1784@example.com",
+          "attachment_type": "docx",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-83eeb593-015",
+          "from_agent": "detection_agent",
+          "incident_id": "83eeb593-015",
+          "iocs": {
+            "urls": [
+              "https://gov-id.org/?id=83eeb593-015"
+            ],
+            "domains": [
+              "gov-id.org"
+            ]
+          },
+          "score": 0.65,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_attachment",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user294@loanfast.info",
+            "recipient": "user1784@example.com",
+            "attachment_type": "docx",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-83eeb593-015",
+      "from_agent": "misuse_agent",
+      "incident_id": "83eeb593-015",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-83eeb593-015",
+      "from_agent": "deepfake_agent",
+      "incident_id": "83eeb593-015",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "docx"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-83eeb593-015",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "83eeb593-015",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-83eeb593-015",
+      "from_agent": "governance_agent",
+      "incident_id": "83eeb593-015",
+      "autonomy_risk_score": 63.25,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.65
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

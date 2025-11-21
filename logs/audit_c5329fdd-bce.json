@@ -1,0 +1,188 @@
+{
+  "run_ts": "2025-11-20T12:15:25.271039Z",
+  "incident": {
+    "incident_id": "c5329fdd-bce",
+    "kind": "document",
+    "sender": "medilifehospital@docverify.net",
+    "recipient": "records@gov.org",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-heuristic-c5329fdd-bce",
+        "from_agent": "detection_agent_heuristic_fallback",
+        "incident_id": "c5329fdd-bce",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.2,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "fallback_heuristic"
+        ],
+        "metadata": {
+          "kind": "document",
+          "sender": "medilifehospital@docverify.net",
+          "attachment_type": "docx",
+          "has_link": false
+        }
+      },
+      "rule": {
+        "message_id": "detection-c5329fdd-bce",
+        "from_agent": "detection_agent",
+        "incident_id": "c5329fdd-bce",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.2,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment",
+          "pii_present"
+        ],
+        "metadata": {
+          "kind": "document",
+          "sender": "medilifehospital@docverify.net",
+          "recipient": "records@gov.org",
+          "attachment_type": "docx",
+          "pii_present": 1
+        }
+      },
+      "llm": {
+        "message_id": "detection-heuristic-c5329fdd-bce",
+        "from_agent": "detection_agent_heuristic_fallback",
+        "incident_id": "c5329fdd-bce",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.2,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "fallback_heuristic"
+        ],
+        "metadata": {
+          "kind": "document",
+          "sender": "medilifehospital@docverify.net",
+          "attachment_type": "docx",
+          "has_link": false
+        }
+      },
+      "selection_meta": {
+        "chosen_by": "llm_tie_preference",
+        "rule_msg": {
+          "message_id": "detection-c5329fdd-bce",
+          "from_agent": "detection_agent",
+          "incident_id": "c5329fdd-bce",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.2,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [
+            "suspicious_attachment",
+            "pii_present"
+          ],
+          "metadata": {
+            "kind": "document",
+            "sender": "medilifehospital@docverify.net",
+            "recipient": "records@gov.org",
+            "attachment_type": "docx",
+            "pii_present": 1
+          }
+        },
+        "llm_msg": {
+          "message_id": "detection-heuristic-c5329fdd-bce",
+          "from_agent": "detection_agent_heuristic_fallback",
+          "incident_id": "c5329fdd-bce",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.2,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [
+            "fallback_heuristic"
+          ],
+          "metadata": {
+            "kind": "document",
+            "sender": "medilifehospital@docverify.net",
+            "attachment_type": "docx",
+            "has_link": false
+          }
+        }
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-c5329fdd-bce",
+      "from_agent": "misuse_agent",
+      "incident_id": "c5329fdd-bce",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment; job/offer wording",
+      "metadata": {
+        "kind": "document",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-c5329fdd-bce",
+      "from_agent": "deepfake_agent",
+      "incident_id": "c5329fdd-bce",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "docx"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-c5329fdd-bce",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "c5329fdd-bce",
+      "ok": false,
+      "issues": [
+        "Detection marked benign but misuse agent found high-risk label"
+      ],
+      "corrective_suggestions": [
+        "Re-check detection thresholds or escalate to HITL"
+      ]
+    },
+    "governance": {
+      "message_id": "governance-c5329fdd-bce",
+      "from_agent": "governance_agent",
+      "incident_id": "c5329fdd-bce",
+      "autonomy_risk_score": 80.0,
+      "allow_automation": false,
+      "policy_constraints": [
+        "HITL_required"
+      ],
+      "justification": "High autonomy risk; manual review required",
+      "metadata": {
+        "sensitivity": 0.8,
+        "impact": 0.8,
+        "detection_confidence": 0.2
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "Governance: HITL_required"
+    }
+  }
+}

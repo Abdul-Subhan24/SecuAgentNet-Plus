@@ -1,0 +1,159 @@
+{
+  "run_ts": "2025-11-20T12:14:57.232345Z",
+  "incident": {
+    "incident_id": "52ec0501-824",
+    "kind": "email",
+    "sender": "user404@payments-update.com",
+    "recipient": "user1502@example.com",
+    "manual_severity": "high"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-52ec0501-824",
+        "from_agent": "detection_agent",
+        "incident_id": "52ec0501-824",
+        "iocs": {
+          "urls": [
+            "https://gov-id.org/?id=52ec0501-824"
+          ],
+          "domains": [
+            "gov-id.org"
+          ]
+        },
+        "score": 0.67,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user404@payments-update.com",
+          "recipient": "user1502@example.com",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-52ec0501-824",
+        "from_agent": "detection_agent",
+        "incident_id": "52ec0501-824",
+        "iocs": {
+          "urls": [
+            "https://gov-id.org/?id=52ec0501-824"
+          ],
+          "domains": [
+            "gov-id.org"
+          ]
+        },
+        "score": 0.67,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user404@payments-update.com",
+          "recipient": "user1502@example.com",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-52ec0501-824",
+          "from_agent": "detection_agent",
+          "incident_id": "52ec0501-824",
+          "iocs": {
+            "urls": [
+              "https://gov-id.org/?id=52ec0501-824"
+            ],
+            "domains": [
+              "gov-id.org"
+            ]
+          },
+          "score": 0.67,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user404@payments-update.com",
+            "recipient": "user1502@example.com",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-52ec0501-824",
+      "from_agent": "misuse_agent",
+      "incident_id": "52ec0501-824",
+      "misuse_label": "phishing",
+      "confidence": 0.67,
+      "explanation": "no strong misuse indicators; may be benign",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-52ec0501-824",
+      "from_agent": "deepfake_agent",
+      "incident_id": "52ec0501-824",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-52ec0501-824",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "52ec0501-824",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-52ec0501-824",
+      "from_agent": "governance_agent",
+      "incident_id": "52ec0501-824",
+      "autonomy_risk_score": 55.95,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.6,
+        "detection_confidence": 0.67
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

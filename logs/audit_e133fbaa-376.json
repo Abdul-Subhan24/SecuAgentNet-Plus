@@ -1,0 +1,156 @@
+{
+  "run_ts": "2025-11-20T12:15:02.540770Z",
+  "incident": {
+    "incident_id": "e133fbaa-376",
+    "kind": "sms",
+    "sender": "+918864615169",
+    "recipient": "+918603876895",
+    "manual_severity": "high"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-e133fbaa-376",
+        "from_agent": "detection_agent",
+        "incident_id": "e133fbaa-376",
+        "iocs": {
+          "urls": [
+            "http://uni-scholar.org/surveys?id=e133fbaa-376"
+          ],
+          "domains": [
+            "uni-scholar.org"
+          ]
+        },
+        "score": 0.4,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+918864615169",
+          "recipient": "+918603876895",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-e133fbaa-376",
+        "from_agent": "detection_agent",
+        "incident_id": "e133fbaa-376",
+        "iocs": {
+          "urls": [
+            "http://uni-scholar.org/surveys?id=e133fbaa-376"
+          ],
+          "domains": [
+            "uni-scholar.org"
+          ]
+        },
+        "score": 0.4,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+918864615169",
+          "recipient": "+918603876895",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-e133fbaa-376",
+          "from_agent": "detection_agent",
+          "incident_id": "e133fbaa-376",
+          "iocs": {
+            "urls": [
+              "http://uni-scholar.org/surveys?id=e133fbaa-376"
+            ],
+            "domains": [
+              "uni-scholar.org"
+            ]
+          },
+          "score": 0.4,
+          "tags": [
+            "suspicious"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "medium_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "sms",
+            "sender": "+918864615169",
+            "recipient": "+918603876895",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-e133fbaa-376",
+      "from_agent": "misuse_agent",
+      "incident_id": "e133fbaa-376",
+      "misuse_label": "suspicious",
+      "confidence": 0.4,
+      "explanation": "detection_agent_signals",
+      "metadata": {
+        "kind": "sms",
+        "detection_tags": [
+          "suspicious"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-e133fbaa-376",
+      "from_agent": "deepfake_agent",
+      "incident_id": "e133fbaa-376",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-e133fbaa-376",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "e133fbaa-376",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-e133fbaa-376",
+      "from_agent": "governance_agent",
+      "incident_id": "e133fbaa-376",
+      "autonomy_risk_score": 9.0,
+      "allow_automation": true,
+      "policy_constraints": [
+        "Automation_allowed_under_monitoring"
+      ],
+      "justification": "Low autonomy risk; automation permitted",
+      "metadata": {
+        "sensitivity": 0.0,
+        "impact": 0.0,
+        "detection_confidence": 0.4
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "no strong automated signals"
+    }
+  }
+}

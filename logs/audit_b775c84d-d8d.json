@@ -1,0 +1,145 @@
+{
+  "run_ts": "2025-11-20T12:14:57.337759Z",
+  "incident": {
+    "incident_id": "b775c84d-d8d",
+    "kind": "document",
+    "sender": "jobhubpvtltd@loanfast.info",
+    "recipient": "records@gov.org",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-b775c84d-d8d",
+        "from_agent": "detection_agent",
+        "incident_id": "b775c84d-d8d",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.15,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment"
+        ],
+        "metadata": {
+          "kind": "document",
+          "sender": "jobhubpvtltd@loanfast.info",
+          "recipient": "records@gov.org",
+          "attachment_type": "pdf",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-b775c84d-d8d",
+        "from_agent": "detection_agent",
+        "incident_id": "b775c84d-d8d",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.15,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment"
+        ],
+        "metadata": {
+          "kind": "document",
+          "sender": "jobhubpvtltd@loanfast.info",
+          "recipient": "records@gov.org",
+          "attachment_type": "pdf",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-b775c84d-d8d",
+          "from_agent": "detection_agent",
+          "incident_id": "b775c84d-d8d",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.15,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [
+            "suspicious_attachment"
+          ],
+          "metadata": {
+            "kind": "document",
+            "sender": "jobhubpvtltd@loanfast.info",
+            "recipient": "records@gov.org",
+            "attachment_type": "pdf",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-b775c84d-d8d",
+      "from_agent": "misuse_agent",
+      "incident_id": "b775c84d-d8d",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment; job/offer wording",
+      "metadata": {
+        "kind": "document",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-b775c84d-d8d",
+      "from_agent": "deepfake_agent",
+      "incident_id": "b775c84d-d8d",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "pdf"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-b775c84d-d8d",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "b775c84d-d8d",
+      "ok": false,
+      "issues": [
+        "Detection marked benign but misuse agent found high-risk label"
+      ],
+      "corrective_suggestions": [
+        "Re-check detection thresholds or escalate to HITL"
+      ]
+    },
+    "governance": {
+      "message_id": "governance-b775c84d-d8d",
+      "from_agent": "governance_agent",
+      "incident_id": "b775c84d-d8d",
+      "autonomy_risk_score": 75.75,
+      "allow_automation": false,
+      "policy_constraints": [
+        "HITL_required"
+      ],
+      "justification": "High autonomy risk; manual review required",
+      "metadata": {
+        "sensitivity": 0.7,
+        "impact": 0.8,
+        "detection_confidence": 0.15
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "Governance: HITL_required"
+    }
+  }
+}

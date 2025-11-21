@@ -1,0 +1,144 @@
+{
+  "run_ts": "2025-11-20T12:15:03.124588Z",
+  "incident": {
+    "incident_id": "54d357c0-6ab",
+    "kind": "email",
+    "sender": "user216@trusted-health.org",
+    "recipient": "user1663@example.com",
+    "manual_severity": "medium"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-54d357c0-6ab",
+        "from_agent": "detection_agent",
+        "incident_id": "54d357c0-6ab",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.35,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user216@trusted-health.org",
+          "recipient": "user1663@example.com",
+          "attachment_type": "docx",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-54d357c0-6ab",
+        "from_agent": "detection_agent",
+        "incident_id": "54d357c0-6ab",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.35,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "suspicious_attachment",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user216@trusted-health.org",
+          "recipient": "user1663@example.com",
+          "attachment_type": "docx",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-54d357c0-6ab",
+          "from_agent": "detection_agent",
+          "incident_id": "54d357c0-6ab",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.35,
+          "tags": [
+            "suspicious"
+          ],
+          "evidence_chain": [
+            "suspicious_attachment",
+            "medium_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user216@trusted-health.org",
+            "recipient": "user1663@example.com",
+            "attachment_type": "docx",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-54d357c0-6ab",
+      "from_agent": "misuse_agent",
+      "incident_id": "54d357c0-6ab",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "suspicious"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-54d357c0-6ab",
+      "from_agent": "deepfake_agent",
+      "incident_id": "54d357c0-6ab",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "docx"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-54d357c0-6ab",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "54d357c0-6ab",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-54d357c0-6ab",
+      "from_agent": "governance_agent",
+      "incident_id": "54d357c0-6ab",
+      "autonomy_risk_score": 67.75,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.35
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

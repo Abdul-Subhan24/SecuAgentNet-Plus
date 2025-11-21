@@ -1,0 +1,159 @@
+{
+  "run_ts": "2025-11-20T12:15:02.742546Z",
+  "incident": {
+    "incident_id": "9a1021b3-633",
+    "kind": "email",
+    "sender": "user590@trusted-health.org",
+    "recipient": "user1748@example.com",
+    "manual_severity": "high"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-9a1021b3-633",
+        "from_agent": "detection_agent",
+        "incident_id": "9a1021b3-633",
+        "iocs": {
+          "urls": [
+            "https://gov-id.org/?id=9a1021b3-633"
+          ],
+          "domains": [
+            "gov-id.org"
+          ]
+        },
+        "score": 0.67,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user590@trusted-health.org",
+          "recipient": "user1748@example.com",
+          "attachment_type": "png",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-9a1021b3-633",
+        "from_agent": "detection_agent",
+        "incident_id": "9a1021b3-633",
+        "iocs": {
+          "urls": [
+            "https://gov-id.org/?id=9a1021b3-633"
+          ],
+          "domains": [
+            "gov-id.org"
+          ]
+        },
+        "score": 0.67,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user590@trusted-health.org",
+          "recipient": "user1748@example.com",
+          "attachment_type": "png",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-9a1021b3-633",
+          "from_agent": "detection_agent",
+          "incident_id": "9a1021b3-633",
+          "iocs": {
+            "urls": [
+              "https://gov-id.org/?id=9a1021b3-633"
+            ],
+            "domains": [
+              "gov-id.org"
+            ]
+          },
+          "score": 0.67,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user590@trusted-health.org",
+            "recipient": "user1748@example.com",
+            "attachment_type": "png",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-9a1021b3-633",
+      "from_agent": "misuse_agent",
+      "incident_id": "9a1021b3-633",
+      "misuse_label": "phishing",
+      "confidence": 0.67,
+      "explanation": "no strong misuse indicators; may be benign",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-9a1021b3-633",
+      "from_agent": "deepfake_agent",
+      "incident_id": "9a1021b3-633",
+      "deepfake_prob": 0.2,
+      "tag": "benign",
+      "explanation": "attachment_type:png; detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "png"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-9a1021b3-633",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "9a1021b3-633",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-9a1021b3-633",
+      "from_agent": "governance_agent",
+      "incident_id": "9a1021b3-633",
+      "autonomy_risk_score": 55.95,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.6,
+        "detection_confidence": 0.67
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

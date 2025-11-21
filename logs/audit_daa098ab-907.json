@@ -1,0 +1,162 @@
+{
+  "run_ts": "2025-11-20T12:14:57.464532Z",
+  "incident": {
+    "incident_id": "daa098ab-907",
+    "kind": "email",
+    "sender": "user485@payments-update.com",
+    "recipient": "user1914@example.com",
+    "manual_severity": "medium"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-daa098ab-907",
+        "from_agent": "detection_agent",
+        "incident_id": "daa098ab-907",
+        "iocs": {
+          "urls": [
+            "https://trusted-health.org/?id=daa098ab-907"
+          ],
+          "domains": [
+            "trusted-health.org"
+          ]
+        },
+        "score": 0.99,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "suspicious_attachment",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user485@payments-update.com",
+          "recipient": "user1914@example.com",
+          "attachment_type": "docx",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-daa098ab-907",
+        "from_agent": "detection_agent",
+        "incident_id": "daa098ab-907",
+        "iocs": {
+          "urls": [
+            "https://trusted-health.org/?id=daa098ab-907"
+          ],
+          "domains": [
+            "trusted-health.org"
+          ]
+        },
+        "score": 0.99,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "suspicious_attachment",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user485@payments-update.com",
+          "recipient": "user1914@example.com",
+          "attachment_type": "docx",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-daa098ab-907",
+          "from_agent": "detection_agent",
+          "incident_id": "daa098ab-907",
+          "iocs": {
+            "urls": [
+              "https://trusted-health.org/?id=daa098ab-907"
+            ],
+            "domains": [
+              "trusted-health.org"
+            ]
+          },
+          "score": 0.99,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "suspicious_attachment",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user485@payments-update.com",
+            "recipient": "user1914@example.com",
+            "attachment_type": "docx",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-daa098ab-907",
+      "from_agent": "misuse_agent",
+      "incident_id": "daa098ab-907",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-daa098ab-907",
+      "from_agent": "deepfake_agent",
+      "incident_id": "daa098ab-907",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "docx"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-daa098ab-907",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "daa098ab-907",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-daa098ab-907",
+      "from_agent": "governance_agent",
+      "incident_id": "daa098ab-907",
+      "autonomy_risk_score": 58.15,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.99
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "strong signals"
+    }
+  }
+}

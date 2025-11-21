@@ -1,0 +1,135 @@
+{
+  "run_ts": "2025-11-20T12:15:03.662999Z",
+  "incident": {
+    "incident_id": "6242c4cc-7ef",
+    "kind": "social",
+    "sender": "Aisha Khan",
+    "recipient": "public",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-6242c4cc-7ef",
+        "from_agent": "detection_agent",
+        "incident_id": "6242c4cc-7ef",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.0,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [],
+        "metadata": {
+          "kind": "social",
+          "sender": "Aisha Khan",
+          "recipient": "public",
+          "attachment_type": "mp4",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-6242c4cc-7ef",
+        "from_agent": "detection_agent",
+        "incident_id": "6242c4cc-7ef",
+        "iocs": {
+          "urls": [],
+          "domains": []
+        },
+        "score": 0.0,
+        "tags": [
+          "benign"
+        ],
+        "evidence_chain": [],
+        "metadata": {
+          "kind": "social",
+          "sender": "Aisha Khan",
+          "recipient": "public",
+          "attachment_type": "mp4",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-6242c4cc-7ef",
+          "from_agent": "detection_agent",
+          "incident_id": "6242c4cc-7ef",
+          "iocs": {
+            "urls": [],
+            "domains": []
+          },
+          "score": 0.0,
+          "tags": [
+            "benign"
+          ],
+          "evidence_chain": [],
+          "metadata": {
+            "kind": "social",
+            "sender": "Aisha Khan",
+            "recipient": "public",
+            "attachment_type": "mp4",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-6242c4cc-7ef",
+      "from_agent": "misuse_agent",
+      "incident_id": "6242c4cc-7ef",
+      "misuse_label": "job_scam",
+      "confidence": 0.6,
+      "explanation": "job/offer wording",
+      "metadata": {
+        "kind": "social",
+        "detection_tags": [
+          "benign"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-6242c4cc-7ef",
+      "from_agent": "deepfake_agent",
+      "incident_id": "6242c4cc-7ef",
+      "deepfake_prob": 0.35,
+      "tag": "suspect_media",
+      "explanation": "attachment_type:mp4; deepfake keywords",
+      "metadata": {
+        "attachment_type": "mp4"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-6242c4cc-7ef",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "6242c4cc-7ef",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-6242c4cc-7ef",
+      "from_agent": "governance_agent",
+      "incident_id": "6242c4cc-7ef",
+      "autonomy_risk_score": 15.0,
+      "allow_automation": true,
+      "policy_constraints": [
+        "Automation_allowed_under_monitoring"
+      ],
+      "justification": "Low autonomy risk; automation permitted",
+      "metadata": {
+        "sensitivity": 0.0,
+        "impact": 0.0,
+        "detection_confidence": 0.0
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

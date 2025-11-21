@@ -1,0 +1,159 @@
+{
+  "run_ts": "2025-11-20T12:14:57.643656Z",
+  "incident": {
+    "incident_id": "a0f765ce-acd",
+    "kind": "email",
+    "sender": "user624@uni-scholar.org",
+    "recipient": "user1160@example.com",
+    "manual_severity": "medium"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-a0f765ce-acd",
+        "from_agent": "detection_agent",
+        "incident_id": "a0f765ce-acd",
+        "iocs": {
+          "urls": [
+            "https://docverify.net/?id=a0f765ce-acd"
+          ],
+          "domains": [
+            "docverify.net"
+          ]
+        },
+        "score": 0.95,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user624@uni-scholar.org",
+          "recipient": "user1160@example.com",
+          "attachment_type": "jpg",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-a0f765ce-acd",
+        "from_agent": "detection_agent",
+        "incident_id": "a0f765ce-acd",
+        "iocs": {
+          "urls": [
+            "https://docverify.net/?id=a0f765ce-acd"
+          ],
+          "domains": [
+            "docverify.net"
+          ]
+        },
+        "score": 0.95,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "suspicious_keywords",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user624@uni-scholar.org",
+          "recipient": "user1160@example.com",
+          "attachment_type": "jpg",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-a0f765ce-acd",
+          "from_agent": "detection_agent",
+          "incident_id": "a0f765ce-acd",
+          "iocs": {
+            "urls": [
+              "https://docverify.net/?id=a0f765ce-acd"
+            ],
+            "domains": [
+              "docverify.net"
+            ]
+          },
+          "score": 0.95,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "suspicious_keywords",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user624@uni-scholar.org",
+            "recipient": "user1160@example.com",
+            "attachment_type": "jpg",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-a0f765ce-acd",
+      "from_agent": "misuse_agent",
+      "incident_id": "a0f765ce-acd",
+      "misuse_label": "phishing",
+      "confidence": 0.95,
+      "explanation": "no strong misuse indicators; may be benign",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-a0f765ce-acd",
+      "from_agent": "deepfake_agent",
+      "incident_id": "a0f765ce-acd",
+      "deepfake_prob": 0.2,
+      "tag": "benign",
+      "explanation": "attachment_type:jpg; detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "jpg"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-a0f765ce-acd",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "a0f765ce-acd",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-a0f765ce-acd",
+      "from_agent": "governance_agent",
+      "incident_id": "a0f765ce-acd",
+      "autonomy_risk_score": 51.75,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.6,
+        "detection_confidence": 0.95
+      }
+    },
+    "triage": {
+      "recommended_severity": "high",
+      "reason": "strong signals"
+    }
+  }
+}

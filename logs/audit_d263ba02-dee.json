@@ -1,0 +1,156 @@
+{
+  "run_ts": "2025-11-20T12:14:58.281859Z",
+  "incident": {
+    "incident_id": "d263ba02-dee",
+    "kind": "email",
+    "sender": "user139@loanfast.info",
+    "recipient": "user1301@example.com",
+    "manual_severity": "critical"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-d263ba02-dee",
+        "from_agent": "detection_agent",
+        "incident_id": "d263ba02-dee",
+        "iocs": {
+          "urls": [
+            "https://parcel-track.net/?id=d263ba02-dee"
+          ],
+          "domains": [
+            "parcel-track.net"
+          ]
+        },
+        "score": 0.55,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user139@loanfast.info",
+          "recipient": "user1301@example.com",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-d263ba02-dee",
+        "from_agent": "detection_agent",
+        "incident_id": "d263ba02-dee",
+        "iocs": {
+          "urls": [
+            "https://parcel-track.net/?id=d263ba02-dee"
+          ],
+          "domains": [
+            "parcel-track.net"
+          ]
+        },
+        "score": 0.55,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user139@loanfast.info",
+          "recipient": "user1301@example.com",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-d263ba02-dee",
+          "from_agent": "detection_agent",
+          "incident_id": "d263ba02-dee",
+          "iocs": {
+            "urls": [
+              "https://parcel-track.net/?id=d263ba02-dee"
+            ],
+            "domains": [
+              "parcel-track.net"
+            ]
+          },
+          "score": 0.55,
+          "tags": [
+            "suspicious"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "medium_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user139@loanfast.info",
+            "recipient": "user1301@example.com",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-d263ba02-dee",
+      "from_agent": "misuse_agent",
+      "incident_id": "d263ba02-dee",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "suspicious"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-d263ba02-dee",
+      "from_agent": "deepfake_agent",
+      "incident_id": "d263ba02-dee",
+      "deepfake_prob": 0.0,
+      "tag": "benign",
+      "explanation": "no deepfake indicators",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-d263ba02-dee",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "d263ba02-dee",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-d263ba02-dee",
+      "from_agent": "governance_agent",
+      "incident_id": "d263ba02-dee",
+      "autonomy_risk_score": 64.75,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.55
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

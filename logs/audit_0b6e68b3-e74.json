@@ -1,0 +1,156 @@
+{
+  "run_ts": "2025-11-20T12:14:58.369016Z",
+  "incident": {
+    "incident_id": "0b6e68b3-e74",
+    "kind": "email",
+    "sender": "user746@gov-id.org",
+    "recipient": "user1629@example.com",
+    "manual_severity": "critical"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-0b6e68b3-e74",
+        "from_agent": "detection_agent",
+        "incident_id": "0b6e68b3-e74",
+        "iocs": {
+          "urls": [
+            "https://uni-scholar.org/?id=0b6e68b3-e74"
+          ],
+          "domains": [
+            "uni-scholar.org"
+          ]
+        },
+        "score": 0.55,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user746@gov-id.org",
+          "recipient": "user1629@example.com",
+          "attachment_type": "png",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-0b6e68b3-e74",
+        "from_agent": "detection_agent",
+        "incident_id": "0b6e68b3-e74",
+        "iocs": {
+          "urls": [
+            "https://uni-scholar.org/?id=0b6e68b3-e74"
+          ],
+          "domains": [
+            "uni-scholar.org"
+          ]
+        },
+        "score": 0.55,
+        "tags": [
+          "suspicious"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "medium_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user746@gov-id.org",
+          "recipient": "user1629@example.com",
+          "attachment_type": "png",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-0b6e68b3-e74",
+          "from_agent": "detection_agent",
+          "incident_id": "0b6e68b3-e74",
+          "iocs": {
+            "urls": [
+              "https://uni-scholar.org/?id=0b6e68b3-e74"
+            ],
+            "domains": [
+              "uni-scholar.org"
+            ]
+          },
+          "score": 0.55,
+          "tags": [
+            "suspicious"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "medium_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user746@gov-id.org",
+            "recipient": "user1629@example.com",
+            "attachment_type": "png",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-0b6e68b3-e74",
+      "from_agent": "misuse_agent",
+      "incident_id": "0b6e68b3-e74",
+      "misuse_label": "invoice_fraud",
+      "confidence": 0.65,
+      "explanation": "invoice/payment cues or attachment",
+      "metadata": {
+        "kind": "email",
+        "detection_tags": [
+          "suspicious"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-0b6e68b3-e74",
+      "from_agent": "deepfake_agent",
+      "incident_id": "0b6e68b3-e74",
+      "deepfake_prob": 0.15,
+      "tag": "benign",
+      "explanation": "attachment_type:png",
+      "metadata": {
+        "attachment_type": "png"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-0b6e68b3-e74",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "0b6e68b3-e74",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-0b6e68b3-e74",
+      "from_agent": "governance_agent",
+      "incident_id": "0b6e68b3-e74",
+      "autonomy_risk_score": 64.75,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.55
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}

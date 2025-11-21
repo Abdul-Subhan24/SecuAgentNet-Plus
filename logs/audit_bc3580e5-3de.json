@@ -1,0 +1,156 @@
+{
+  "run_ts": "2025-11-20T12:14:56.704215Z",
+  "incident": {
+    "incident_id": "bc3580e5-3de",
+    "kind": "sms",
+    "sender": "+916581827760",
+    "recipient": "+917785374588",
+    "manual_severity": "low"
+  },
+  "agents": {
+    "detection": {
+      "final": {
+        "message_id": "detection-bc3580e5-3de",
+        "from_agent": "detection_agent",
+        "incident_id": "bc3580e5-3de",
+        "iocs": {
+          "urls": [
+            "http://loanfast.info/surveys?id=bc3580e5-3de"
+          ],
+          "domains": [
+            "loanfast.info"
+          ]
+        },
+        "score": 0.64,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+916581827760",
+          "recipient": "+917785374588",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "rule": {
+        "message_id": "detection-bc3580e5-3de",
+        "from_agent": "detection_agent",
+        "incident_id": "bc3580e5-3de",
+        "iocs": {
+          "urls": [
+            "http://loanfast.info/surveys?id=bc3580e5-3de"
+          ],
+          "domains": [
+            "loanfast.info"
+          ]
+        },
+        "score": 0.64,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "contains_url",
+          "high_confidence_rule"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+916581827760",
+          "recipient": "+917785374588",
+          "attachment_type": "none",
+          "pii_present": 0
+        }
+      },
+      "llm": null,
+      "selection_meta": {
+        "chosen_by": "rule_only",
+        "rule_msg": {
+          "message_id": "detection-bc3580e5-3de",
+          "from_agent": "detection_agent",
+          "incident_id": "bc3580e5-3de",
+          "iocs": {
+            "urls": [
+              "http://loanfast.info/surveys?id=bc3580e5-3de"
+            ],
+            "domains": [
+              "loanfast.info"
+            ]
+          },
+          "score": 0.64,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "contains_url",
+            "high_confidence_rule"
+          ],
+          "metadata": {
+            "kind": "sms",
+            "sender": "+916581827760",
+            "recipient": "+917785374588",
+            "attachment_type": "none",
+            "pii_present": 0
+          }
+        },
+        "llm_msg": null
+      }
+    },
+    "misuse": {
+      "message_id": "misuse-bc3580e5-3de",
+      "from_agent": "misuse_agent",
+      "incident_id": "bc3580e5-3de",
+      "misuse_label": "loan_scam",
+      "confidence": 0.7,
+      "explanation": "loan keywords",
+      "metadata": {
+        "kind": "sms",
+        "detection_tags": [
+          "phishing"
+        ]
+      }
+    },
+    "deepfake": {
+      "message_id": "deepfake-bc3580e5-3de",
+      "from_agent": "deepfake_agent",
+      "incident_id": "bc3580e5-3de",
+      "deepfake_prob": 0.05,
+      "tag": "benign",
+      "explanation": "detection_phishing_signal",
+      "metadata": {
+        "attachment_type": "none"
+      }
+    },
+    "crosscheck": {
+      "message_id": "crosscheck-bc3580e5-3de",
+      "from_agent": "crosscheck_agent",
+      "incident_id": "bc3580e5-3de",
+      "ok": true,
+      "issues": [],
+      "corrective_suggestions": []
+    },
+    "governance": {
+      "message_id": "governance-bc3580e5-3de",
+      "from_agent": "governance_agent",
+      "incident_id": "bc3580e5-3de",
+      "autonomy_risk_score": 63.4,
+      "allow_automation": false,
+      "policy_constraints": [
+        "Limited_automation"
+      ],
+      "justification": "Moderate autonomy risk; escalate to analyst",
+      "metadata": {
+        "sensitivity": 0.6,
+        "impact": 0.8,
+        "detection_confidence": 0.64
+      }
+    },
+    "triage": {
+      "recommended_severity": "medium",
+      "reason": "moderate signals"
+    }
+  }
+}
