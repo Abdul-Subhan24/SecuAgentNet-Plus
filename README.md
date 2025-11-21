@@ -136,21 +136,37 @@ All governance decisions are logged with timestamps and rationale for auditabili
 
 ## System Diagram (text)
 ```
-Input Incident
- (email, sms, doc, upload)
-    ↓
-Hybrid Detection
- (Rule Engine + LLM)
-    ↓
-Misuse & Fraud Analysis
-    ↓
-Safety / Deepfake Agent
-    ↓
-Triage
-    ↓
-Governance (AURA)
-    ↓
-Reporting Agent
+                 ┌────────────────────────────┐
+                 │       Input Incident        │
+                 │ (email, sms, doc, upload)   │
+                 └──────────────┬──────────────┘
+                                │
+                     ┌──────────▼──────────┐
+                     │ Hybrid Detection     │
+                     │ Rule Engine + LLM    │
+                     └──────────┬──────────┘
+                                │
+                 ┌──────────────▼──────────────┐
+                 │ Misuse & Fraud Analysis      │
+                 └──────────────┬──────────────┘
+                                │
+                      ┌─────────▼─────────┐
+                      │ Safety / Deepfake │
+                      │     Agent         │
+                      └─────────┬─────────┘
+                                │
+                        ┌───────▼───────┐
+                        │   Triage       │
+                        └───────┬───────┘
+                                │
+                   ┌────────────▼────────────┐
+                   │   Governance (AURA)      │
+                   └────────────┬────────────┘
+                                │
+                      ┌─────────▼──────────┐
+                      │  Reporting Agent    │
+                      └─────────────────────┘
+
 ```
 
 ---
