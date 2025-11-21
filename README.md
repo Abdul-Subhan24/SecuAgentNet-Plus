@@ -1,152 +1,163 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SecuAgentNet+: AI Multi-Agent Platform — Md Abdul Subhan</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <meta name="author" content="Md Abdul Subhan" />
-  <style>
-    :root{
-      --bg:#0f1724; /* deep navy */
-      --card:#0b1220;
-      --muted:#9aa4b2;
-      --accent:#6ee7b7;
-      --accent-2:#7dd3fc;
-      --glass: rgba(255,255,255,0.04);
-      --radius:14px;
-      --maxw:1100px;
-      color-scheme: dark;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:linear-gradient(180deg,#071021 0%,var(--bg) 60%); color:#e6eef6}
-    .wrap{max-width:var(--maxw);margin:36px auto;padding:28px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 10px 40px rgba(2,6,23,0.6);backdrop-filter: blur(6px);}
-    header{display:flex;gap:20px;align-items:center}
-    .title{flex:1}
-    h1{margin:0;font-weight:800;font-size:22px;letter-spacing:-0.2px}
-    .subtitle{margin-top:6px;color:var(--muted);font-size:13px}
-    .meta{display:flex;gap:12px;align-items:center}
-    .chip{background:var(--glass);padding:8px 12px;border-radius:999px;font-size:13px;color:var(--muted)}
-    .hero{display:flex;gap:20px;margin-top:20px}
-    .left{flex:1}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);box-shadow:0 8px 30px rgba(2,6,23,0.4)}
-    .kpi{display:flex;gap:14px;flex-wrap:wrap}
-    .kpi .item{min-width:140px;padding:12px;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border-radius:10px}
-    .section{margin-top:20px}
-    h2{margin:0 0 10px 0;font-family: 'Source Serif 4', serif;font-weight:600}
-    p.lead{color:var(--muted);margin:0 0 12px 0}
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
-    .toc{font-size:14px;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(13,20,30,0.4), rgba(7,12,18,0.2));}
-    ul{margin:0 0 12px 18px}
-    pre{background:#071022;padding:14px;border-radius:10px;overflow:auto;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace}
-    table{width:100%;border-collapse:collapse;margin-top:8px}
-    th,td{padding:8px;border-bottom:1px dashed rgba(255,255,255,0.03);text-align:left}
-    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:transparent;border:1px solid rgba(255,255,255,0.03);font-size:13px;color:var(--muted)}
-    .diagram{font-family:ui-monospace,monospace;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:12px;border-radius:10px}
-    footer{display:flex;justify-content:space-between;align-items:center;margin-top:22px;color:var(--muted);font-size:13px}
-    a.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#042029;font-weight:700;text-decoration:none}
-    @media (max-width:880px){.grid{grid-template-columns:1fr}.hero{flex-direction:column}.wrap{margin:18px}}
-  </style>
-</head>
-<body>
-  <main class="wrap">
-    <header>
-      <div class="title">
-        <h1>SecuAgentNet+: AI Multi‑Agent Platform for Threat Detection, Fraud Prevention &amp; Digital Safety</h1>
-        <div class="subtitle">Author: <strong>Md Abdul Subhan</strong> — Kaggle Agents Intensive Capstone 2025 | Track: Freestyle (Enterprise + Safety Hybrid)</div>
-      </div>
-      <div class="meta">
-        <div class="chip">Multi-Agent • Hybrid Detection • AURA Governance</div>
-        <div class="chip">LLM + Rule Engine</div>
-      </div>
-    </header>
+# **SecuAgentNet+**
+**AI Multi‑Agent Platform for Threat Detection, Fraud Prevention & Digital Safety**
 
-    <section class="hero">
-      <div class="left">
-        <div class="card">
-          <h2>Abstract</h2>
-          <p class="lead">SecuAgentNet+ is a hybrid AI-driven security and safety platform designed to detect phishing, fraud, AI‑generated misuse, and digital threats impacting individuals, students, families, healthcare workers, small businesses, and enterprises. It simulates an enterprise-grade incident pipeline while addressing real‑world harms such as job scams, deepfakes, fake documents, phishing, and fraud attempts.</p>
+**Author:** Md Abdul Subhan  
+**Track:** Kaggle Agents Intensive Capstone 2025 — Freestyle (Enterprise + Safety Hybrid)
 
-          <div class="section">
-            <h2>Problem Statement</h2>
-            <ul>
-              <li>New AI-enabled attack vectors (phishing websites, smishing, deepfakes, fake credentials).</li>
-              <li>Targeted scams (students, job seekers, healthcare records).</li>
-              <li>Resource gap: non-enterprise users lack SOC tools; enterprises face alert overload.</li>
-            </ul>
-          </div>
+---
 
-          <div class="section">
-            <h2>Solution Overview</h2>
-            <p class="lead">A multi-agent security platform combining rule-based detection, LLM reasoning (OpenAI/Gemini/Ollama), and a hybrid engine that cross-verifies results to reduce false positives and provide SOC-like behavior.</p>
-            <div class="kpi" style="margin-top:10px">
-              <div class="item"><strong>Core</strong><div class="badge" style="margin-top:6px">Hybrid Detection Engine</div></div>
-              <div class="item"><strong>Governance</strong><div class="badge" style="margin-top:6px">AURA-style HITL</div></div>
-              <div class="item"><strong>Outputs</strong><div class="badge" style="margin-top:6px">JSON incidents &amp; Audit Logs</div></div>
-            </div>
-          </div>
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/status-proof%20of%20concept-green)](#)
 
-          <div class="section">
-            <h2>Multi-Agent Architecture</h2>
-            <p class="lead">The platform contains dedicated agents for detection, governance, triage and reporting. Each agent is specialized and logs decisions for auditability.</p>
-            <table>
-              <thead><tr><th>Agent</th><th>Responsibility</th></tr></thead>
-              <tbody>
-                <tr><td>Rule-Based Detection Agent</td><td>Extract URLs, detect phishing indicators, heuristics scoring</td></tr>
-                <tr><td>LLM Detection Agent</td><td>LLM classification → structured JSON</td></tr>
-                <tr><td>Hybrid Detection Engine</td><td>Rule → LLM cross-check (threshold gating)</td></tr>
-                <tr><td>Misuse &amp; Scam Analysis Agent</td><td>Fake offers, docs, fraud SMS, social engineering</td></tr>
-                <tr><td>Deepfake Integrity Agent</td><td>Media manipulation screening (simulated)</td></tr>
-                <tr><td>Safety &amp; Social Harm Agent</td><td>Harassment, blackmail, intimidation detection</td></tr>
-                <tr><td>Triage Agent</td><td>Assign severity: Low / Medium / High / Critical</td></tr>
-                <tr><td>Governance Agent (AURA)</td><td>Autonomy score, HITL rules, data sensitivity</td></tr>
-                <tr><td>Anti-Hallucination Agent</td><td>Schema validation &amp; cross-checks</td></tr>
-                <tr><td>Reporting Agent</td><td>Final incident report &amp; timeline</td></tr>
-              </tbody>
-            </table>
-          </div>
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [Problem Statement](#problem-statement)
+3. [Solution Summary](#solution-summary)
+4. [Multi‑Agent Architecture](#multi-agent-architecture)
+5. [Hybrid Detection Engine (Core Innovation)](#hybrid-detection-engine-core-innovation)
+6. [Governance (AURA‑Style)](#governance-aura-style)
+7. [Evaluation Results](#evaluation-results)
+8. [Directory Structure](#directory-structure)
+9. [How to Run](#how-to-run)
+10. [Prompt Tuning & LLMs](#prompt-tuning--llms)
+11. [Future Enhancements](#future-enhancements)
+12. [Contributing & License](#contributing--license)
 
-          <div class="section">
-            <h2>Hybrid Detection Engine (Core Innovation)</h2>
-            <ol>
-              <li><strong>Rule-Based Detection</strong>: URL extraction, risky keywords, attachment type, PII detection — compute rule_score (0–1).</li>
-              <li><strong>Threshold Check</strong>: if rule_score ∈ [0.35, 0.95] → activate LLM Detection.</li>
-              <li><strong>LLM Review</strong>: LLM returns JSON classification, IoCs, confidence, and reasoning.</li>
-              <li><strong>Final Score</strong>: final_score = (rule_score * 0.4) + (llm_confidence * 0.6).</li>
-            </ol>
-            <p class="lead">This hybrid formula reduces false positives and creates more realistic SOC behavior.</p>
-          </div>
+---
 
-          <div class="section">
-            <h2>Governance (AURA-Style)</h2>
-            <p class="lead">Autonomy Risk Score (0–100) computed from data sensitivity, threat impact, reversibility, confidence, presence of personal data, and LLM usage. HITL rules determine whether a human analyst must intervene.</p>
-            <ul>
-              <li>Score &gt; 60 — Human analyst required</li>
-              <li>Score 40–60 — Allowed with warnings</li>
-              <li>Score &lt; 40 — Auto-response (simulated)</li>
-            </ul>
-          </div>
+## Project Overview
+**SecuAgentNet+** is a hybrid AI-driven security & safety platform designed to detect phishing, fraud, AI‑generated misuse (deepfakes, forged documents), and other digital threats affecting individuals and enterprises. Built as a Kaggle Capstone (Agents Intensive 2025), the project demonstrates a multi‑agent pipeline combining rule engines, LLM reasoning and governance for auditable incident handling.
 
-          <div class="section">
-            <h2>Evaluation Highlights</h2>
-            <table>
-              <tbody>
-                <tr><td>Precision</td><td>0.4203</td></tr>
-                <tr><td>Recall</td><td>0.7843</td></tr>
-                <tr><td>F1</td><td>0.5473</td></tr>
-                <tr><td>ROC AUC</td><td>0.7342</td></tr>
-                <tr><td>Threshold</td><td>0.6</td></tr>
-                <tr><td>High risk incidents</td><td>351</td></tr>
-                <tr><td>Governance HITL compliance</td><td>1.0</td></tr>
-              </tbody>
-            </table>
-          </div>
+The project focuses on:
+- Reducing false positives with a rule + LLM hybrid detection pipeline.
+- Providing an AURA‑style governance layer (autonomy scoring + HITL rules).
+- Producing structured JSON incidents, audit logs and evaluation metrics suitable for SOC‑like workflows.
 
-          <div class="section">
-            <h2>Directory Structure (example)</h2>
-            <pre>secuagentnet-plus/
+---
+
+## Problem Statement
+Modern AI has enabled novel attack vectors that are difficult for traditional heuristics alone:
+- Phishing websites, smishing and credential‑harvesting campaigns
+- Deepfake media and manipulated multimedia targeting vulnerable groups
+- Fake hospital certificates, insurance claims, and admission documents
+- Scholarship and job scams targeting students and job‑seekers
+- Ransom/blackmail messages and fraudulent parcel/OTP scams
+
+Non‑technical users lack enterprise SOC tooling while enterprises suffer alert overload and analyst fatigue. There is a need for a universal, AI‑powered digital safety assistant that is auditable, explainable and governed.
+
+---
+
+## Solution Summary
+SecuAgentNet+ implements a multi‑agent system with the following capabilities:
+- Rule‑based prefiltering for fast, explainable signals.
+- LLM‑based review for nuanced classification and IoC extraction.
+- Hybrid scoring formula that weights rule and LLM confidences.
+- Governance agent to compute autonomy risk and enforce HITL rules.
+- Audit logs and reporting agent to generate incident timelines and structured outputs.
+
+**Design goals:** auditable decisions, human‑in‑the‑loop where necessary, JSON structured outputs for downstream automation.
+
+---
+
+## Multi‑Agent Architecture
+**Agents & Responsibilities** (compact):
+
+| # | Agent | Responsibility |
+|---:|---|---|
+| 1 | Rule‑Based Detection Agent | Extract URLs, heuristics, PII detection, compute `rule_score` (0–1) |
+| 2 | LLM Detection Agent | Structured JSON classification (phishing/benign/suspicious/malware), extract IoCs |
+| 3 | Hybrid Detection Engine | Gate: rule → LLM when threshold crossed; compute `final_score` |
+| 4 | Misuse & Scam Analysis Agent | Detect job scams, fake docs, fraud SMS, social engineering patterns |
+| 5 | Deepfake Integrity Agent | Media manipulation screening (simulated in this project) |
+| 6 | Safety & Social Harm Agent | Harassment, blackmail detection, content safety scoring |
+| 7 | Triage Agent | Assign severity: Low / Medium / High / Critical |
+| 8 | Governance Agent (AURA) | Autonomy score, HITL determination, data sensitivity assessment |
+| 9 | Anti‑Hallucination Agent | Validate LLM outputs against schemas, cross‑checks with rules |
+| 10 | Reporting Agent | Compile final incident report, timeline, recommendations |
+
+Agents are modular, observable, and emit audit entries for every decision step.
+
+---
+
+## Hybrid Detection Engine (Core Innovation)
+**Workflow**:
+1. **Rule‑Based Detection**  
+   - Extract URLs, suspect keywords ("verify", "urgent", "payment"), attachment types, PII indicators.  
+   - Compute `rule_score` in [0,1].
+
+2. **Threshold Check**  
+   - If `rule_score` ∈ [0.35, 0.95] → forward to LLM Detection Agent.
+
+3. **LLM Review**  
+   - LLM returns JSON: `{ classification, iocs, confidence, reasoning }`.
+
+4. **Final Score**  
+   - `final_score = (rule_score * 0.4) + (llm_confidence * 0.6)`
+   - Action determined by final_score + governance rules.
+
+**Benefits:** reduces false positives, realistic SOC-like triage, retains explainability via rule features and LLM rationale.
+
+---
+
+## Governance (AURA‑Style)
+**Autonomy Risk Score (0–100)** computed from:
+- Data sensitivity
+- Threat impact
+- Action reversibility
+- Confidence quality
+- Presence of personal data
+- Whether an LLM was used
+
+**HITL Rules:**
+- Score &gt; 60 → Human analyst required (HITL)
+- 40 ≤ Score ≤ 60 → Allowed with warnings and additional logging
+- Score &lt; 40 → Auto‑response allowed (simulation only in this repo)
+
+All governance decisions are logged with timestamps and rationale for auditability.
+
+---
+
+## Evaluation Results
+**Detection Metrics** (sample results from experiments):
+
+- Precision: `0.4203`
+- Recall: `0.7843`
+- F1: `0.5473`
+- ROC AUC: `0.7342`
+- Threshold (decision): `0.6`
+
+**Governance Metrics:**
+- High risk incidents: `351`
+- Governance HITL compliance: `1.0` (simulated enforcement metric)
+
+> Note: Misuse classification initially uses rule‑baseline only. Accuracy will improve when LLM logic is enabled in production.
+
+---
+
+## System Diagram (text)
+```
+Input Incident
+ (email, sms, doc, upload)
+    ↓
+Hybrid Detection
+ (Rule Engine + LLM)
+    ↓
+Misuse & Fraud Analysis
+    ↓
+Safety / Deepfake Agent
+    ↓
+Triage
+    ↓
+Governance (AURA)
+    ↓
+Reporting Agent
+```
+
+---
+
+## Directory Structure
+```
+secuagentnet-plus/
 ├── data/
 │   └── synthetic_incidents_professional.csv
 ├── logs/
@@ -169,90 +180,68 @@
     │   ├── misuse_agent.py
     │   ├── triage_agent.py
     │   └── …
-    └── utils/</pre>
-          </div>
+    └── utils/
+```
 
-          <div class="section">
-            <h2>How to Run (developer notes)</h2>
-            <ol>
-              <li>Activate virtual environment — <code>.\venv\Scripts\Activate.ps1</code> (Windows) or <code>source venv/bin/activate</code> (Unix).</li>
-              <li>Run hybrid pipeline — <code>python -m scripts.run_pipeline_full</code></li>
-              <li>Run evaluation — <code>python -m scripts.evaluate</code></li>
-              <li>Test LLM detection (mock) — <code>python -m scripts.run_detection_llm_test</code></li>
-              <li>Prompt tuning tests — <code>python -m scripts.prompt_tuning_test</code></li>
-            </ol>
-          </div>
+---
 
-        </div>
+## How to Run
+**Windows (PowerShell)**
+```powershell
+.\\venv\\Scripts\\Activate.ps1
+python -m scripts.run_pipeline_full
+python -m scripts.evaluate
+python -m scripts.run_detection_llm_test
+python -m scripts.prompt_tuning_test
+```
 
-        <div class="section card" style="margin-top:14px">
-          <h2>Future Enhancements</h2>
-          <ul>
-            <li>Vision model for real deepfake detection</li>
-            <li>Integrate Gemini Flash / Claude 3 Haiku for latency-sensitive LLMs</li>
-            <li>Vector embedding memory for repeated fraud patterns</li>
-            <li>FastAPI backend + Streamlit demo UI</li>
-            <li>Production Dockerization &amp; SOC dashboard</li>
-          </ul>
-        </div>
+**Unix / Mac**
+```bash
+source venv/bin/activate
+python -m scripts.run_pipeline_full
+python -m scripts.evaluate
+python -m scripts.run_detection_llm_test
+python -m scripts.prompt_tuning_test
+```
 
-        <div class="section card" style="margin-top:14px">
-          <h2>Conclusion</h2>
-          <p class="lead">SecuAgentNet+ demonstrates a functional multi-agent security pipeline that combines rule-based detection with LLM reasoning, includes governance and audit layers, and supports SOC-style triage and reporting. The project highlights capabilities in Data Science, Python, security automation, and AI governance.</p>
-          <p style="margin-top:10px"><strong>Author:</strong> Md Abdul Subhan</p>
-        </div>
+**Notes:**
+- LLM detection runs are mocked or configured via environment variables pointing to an LLM provider (OpenAI / Gemini / Ollama) in `scripts/run_detection_llm_test.py`.
+- Audit logs are emitted to `logs/audit_*.json` for review.
 
-      </div>
+---
 
-      <aside class="card" style="width:320px">
-        <h2>Quick Contents</h2>
-        <div class="toc">
-          <strong>Contents</strong>
-          <ul>
-            <li>Abstract</li>
-            <li>Problem Statement</li>
-            <li>Solution Overview</li>
-            <li>Multi-Agent Architecture</li>
-            <li>Hybrid Engine</li>
-            <li>Governance</li>
-            <li>Evaluation</li>
-            <li>How to Run</li>
-          </ul>
-        </div>
+## Prompt Tuning & LLMs
+- The repo ships with 4 prompt variants (A/B/C/D) used for automated prompt tuning experiments.  
+- Structured output enforcement and schema validation are required to reduce hallucination.  
+- For deployment, configure provider credentials and set model selection in `src/agents/detection_agent_llm.py`.
 
-        <div style="margin-top:12px">
-          <h3 style="margin:0 0 8px 0">System Diagram (text)</h3>
-          <div class="diagram">
-<pre>Input Incident
- (email, sms, doc, upload)
-    ↓
-Hybrid Detection
- (Rule Engine + LLM)
-    ↓
-Misuse &amp; Fraud Analysis
-    ↓
-Safety / Deepfake Agent
-    ↓
-Triage
-    ↓
-Governance (AURA)
-    ↓
-Reporting Agent</pre>
-          </div>
+---
 
-          <div style="margin-top:12px">
-            <a class="btn" href="#">Export HTML</a>
-            <div style="margin-top:8px;color:var(--muted);font-size:13px">Tip: Copy the page source and save as <code>secuagentnet-plus.html</code>.</div>
-          </div>
-        </div>
+## Future Enhancements
+- Add a vision model for real deepfake detection (beyond simulation).
+- Integrate Gemini Flash / Claude 3 Haiku for low‑latency LLM responses.
+- Add vector embedding memory store for repeated fraud patterns and fast lookup.
+- Deploy FastAPI backend and a Streamlit demo front‑end for interactive testing.
+- Production Dockerization and SOC dashboard for metrics/alerting.
 
-      </aside>
-    </section>
+---
 
-    <footer>
-      <div>SecuAgentNet+ — AI Multi-Agent Platform • Author: Md Abdul Subhan</div>
-      <div style="text-align:right">Prepared for Kaggle Agents Intensive Capstone 2025</div>
-    </footer>
-  </main>
-</body>
-</html>
+## Contributing
+Contributions are welcome. Suggested workflow:
+1. Fork the repository
+2. Create a feature branch
+3. Add tests where appropriate
+4. Open a pull request with a clear description of the change
+
+Please run `python -m pytest` (or project test command) before submitting PRs.
+
+---
+
+## License
+This project is released under the **MIT License**. See `LICENSE` for details.
+
+---
+
+**Author**: Md Abdul Subhan
+
+*Prepared for Kaggle Agents Intensive Capstone 2025 — SecuAgentNet+*
