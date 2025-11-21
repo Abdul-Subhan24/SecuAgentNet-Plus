@@ -1,0 +1,79 @@
+<svg width="1250" height="820" viewBox="0 0 1250 820" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font-size: 28px; font-weight: bold; fill: #222; font-family: Arial; }
+    .subtitle { font-size: 18px; fill: #333; font-family: Arial; }
+    .box { fill: #f5f7fa; stroke: #3c6eaf; stroke-width: 2; rx: 14; }
+    .llm-box { fill: #eef6ff; stroke: #1f57a4; stroke-width: 2; rx: 14; }
+    .arrow { stroke: #000; stroke-width: 2; marker-end: url(#arrowhead); }
+    .label { font-size: 16px; fill: #000; font-family: Arial; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="5" refY="3"
+            orient="auto" fill="#000">
+      <polygon points="0 0, 6 3, 0 6" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="350" y="40" class="title">SecuAgentNet+ — Hybrid AI Threat Detection Pipeline</text>
+
+  <!-- Input Sources Block -->
+  <rect x="40" y="100" width="250" height="500" class="box"></rect>
+  <text x="90" y="135" class="subtitle">INPUT SOURCES</text>
+
+  <text x="70" y="180" class="label">• Emails</text>
+  <text x="70" y="215" class="label">• SMS</text>
+  <text x="70" y="250" class="label">• Documents</text>
+  <text x="70" y="285" class="label">• Social Media</text>
+  <text x="70" y="320" class="label">• Uploaded Files</text>
+
+  <!-- Arrow to preprocessor -->
+  <line x1="290" y1="350" x2="400" y2="350" class="arrow" />
+
+  <!-- Preprocessing -->
+  <rect x="400" y="280" width="220" height="135" class="box"></rect>
+  <text x="450" y="310" class="subtitle">PREPROCESSOR</text>
+
+  <text x="420" y="345" class="label">• Text Cleaning</text>
+  <text x="420" y="370" class="label">• URL Extraction</text>
+  <text x="420" y="395" class="label">• Metadata Parsing</text>
+
+  <!-- Arrow to hybrid detection -->
+  <line x1="620" y1="350" x2="750" y2="350" class="arrow" />
+
+  <!-- Hybrid detection block -->
+  <rect x="750" y="150" width="420" height="450" class="box"></rect>
+  <text x="820" y="185" class="subtitle">HYBRID DETECTION ENGINE</text>
+
+  <!-- Rule Engine -->
+  <rect x="770" y="230" width="180" height="160" class="box"></rect>
+  <text x="800" y="260" class="subtitle">RULE ENGINE</text>
+  <text x="780" y="295" class="label">• Heuristics</text>
+  <text x="780" y="320" class="label">• Keyword Scan</text>
+  <text x="780" y="345" class="label">• Attachment Risk</text>
+
+  <!-- LLM Engine -->
+  <rect x="990" y="230" width="160" height="160" class="llm-box"></rect>
+  <text x="1005" y="260" class="subtitle">LLM AGENT</text>
+  <text x="1005" y="295" class="label">• GPT-4</text>
+  <text x="1005" y="320" class="label">• JSON Output</text>
+  <text x="1005" y="345" class="label">• Threat Classifier</text>
+
+  <!-- Fusion -->
+  <rect x="840" y="420" width="240" height="120" class="llm-box"></rect>
+  <text x="880" y="450" class="subtitle">FUSION LOGIC</text>
+  <text x="860" y="480" class="label">Combines Rule Score + LLM Score</text>
+  <text x="860" y="510" class="label">Produces Hybrid Threat Verdict</text>
+
+  <!-- Governance arrow -->
+  <line x1="970" y1="540" x2="970" y2="620" class="arrow" />
+
+  <!-- Governance -->
+  <rect x="820" y="620" width="300" height="150" class="box"></rect>
+  <text x="900" y="655" class="subtitle">GOVERNANCE ENGINE</text>
+  <text x="840" y="690" class="label">• High Risk Scoring</text>
+  <text x="840" y="720" class="label">• HITL Required Flag</text>
+  <text x="840" y="750" class="label">• Safety Compliance</text>
+
+</svg>
