@@ -1,5 +1,5 @@
 {
-  "run_ts": "2025-11-20T12:14:55.689685Z",
+  "run_ts": "2025-11-21T11:52:24.139464Z",
   "incident": {
     "incident_id": "351e9b12-1e4",
     "kind": "email",
@@ -10,32 +10,31 @@
   "agents": {
     "detection": {
       "final": {
-        "message_id": "detection-351e9b12-1e4",
-        "from_agent": "detection_agent",
+        "message_id": "detection-llm-351e9b12-1e4",
+        "from_agent": "detection_agent_llm",
         "incident_id": "351e9b12-1e4",
         "iocs": {
           "urls": [
-            "https://trusted-health.org/?id=351e9b12-1e4"
+            "https://example.com"
           ],
           "domains": [
-            "trusted-health.org"
+            "example.com"
           ]
         },
-        "score": 0.79,
+        "score": 0.78,
         "tags": [
           "phishing"
         ],
         "evidence_chain": [
-          "contains_url",
-          "high_confidence_rule"
+          "Mock response"
         ],
         "metadata": {
           "kind": "email",
           "sender": "user818@gov-id.org",
-          "recipient": "user1650@example.com",
           "attachment_type": "jpg",
-          "pii_present": 0
-        }
+          "has_link": true
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
       },
       "rule": {
         "message_id": "detection-351e9b12-1e4",
@@ -65,9 +64,35 @@
           "pii_present": 0
         }
       },
-      "llm": null,
+      "llm": {
+        "message_id": "detection-llm-351e9b12-1e4",
+        "from_agent": "detection_agent_llm",
+        "incident_id": "351e9b12-1e4",
+        "iocs": {
+          "urls": [
+            "https://example.com"
+          ],
+          "domains": [
+            "example.com"
+          ]
+        },
+        "score": 0.78,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "Mock response"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user818@gov-id.org",
+          "attachment_type": "jpg",
+          "has_link": true
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
+      },
       "selection_meta": {
-        "chosen_by": "rule_only",
+        "chosen_by": "llm_tie_preference",
         "rule_msg": {
           "message_id": "detection-351e9b12-1e4",
           "from_agent": "detection_agent",
@@ -96,7 +121,33 @@
             "pii_present": 0
           }
         },
-        "llm_msg": null
+        "llm_msg": {
+          "message_id": "detection-llm-351e9b12-1e4",
+          "from_agent": "detection_agent_llm",
+          "incident_id": "351e9b12-1e4",
+          "iocs": {
+            "urls": [
+              "https://example.com"
+            ],
+            "domains": [
+              "example.com"
+            ]
+          },
+          "score": 0.78,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "Mock response"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user818@gov-id.org",
+            "attachment_type": "jpg",
+            "has_link": true
+          },
+          "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
+        }
       }
     },
     "misuse": {
@@ -136,7 +187,7 @@
       "message_id": "governance-351e9b12-1e4",
       "from_agent": "governance_agent",
       "incident_id": "351e9b12-1e4",
-      "autonomy_risk_score": 3.15,
+      "autonomy_risk_score": 3.3,
       "allow_automation": true,
       "policy_constraints": [
         "Automation_allowed_under_monitoring"
@@ -145,7 +196,7 @@
       "metadata": {
         "sensitivity": 0.0,
         "impact": 0.0,
-        "detection_confidence": 0.79
+        "detection_confidence": 0.78
       }
     },
     "triage": {

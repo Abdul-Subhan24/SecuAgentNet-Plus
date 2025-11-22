@@ -1,5 +1,5 @@
 {
-  "run_ts": "2025-11-20T12:15:38.838067Z",
+  "run_ts": "2025-11-21T11:52:24.104968Z",
   "incident": {
     "incident_id": "34147a4e-489",
     "kind": "email",
@@ -10,30 +10,31 @@
   "agents": {
     "detection": {
       "final": {
-        "message_id": "detection-heuristic-34147a4e-489",
-        "from_agent": "detection_agent_heuristic_fallback",
+        "message_id": "detection-llm-34147a4e-489",
+        "from_agent": "detection_agent_llm",
         "incident_id": "34147a4e-489",
         "iocs": {
           "urls": [
-            "https://docverify.net/?id=34147a4e-489"
+            "https://example.com"
           ],
           "domains": [
-            "docverify.net"
+            "example.com"
           ]
         },
-        "score": 0.79,
+        "score": 0.78,
         "tags": [
           "phishing"
         ],
         "evidence_chain": [
-          "fallback_heuristic"
+          "Mock response"
         ],
         "metadata": {
           "kind": "email",
           "sender": "user594@trusted-health.org",
           "attachment_type": "png",
           "has_link": true
-        }
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
       },
       "rule": {
         "message_id": "detection-34147a4e-489",
@@ -65,30 +66,31 @@
         }
       },
       "llm": {
-        "message_id": "detection-heuristic-34147a4e-489",
-        "from_agent": "detection_agent_heuristic_fallback",
+        "message_id": "detection-llm-34147a4e-489",
+        "from_agent": "detection_agent_llm",
         "incident_id": "34147a4e-489",
         "iocs": {
           "urls": [
-            "https://docverify.net/?id=34147a4e-489"
+            "https://example.com"
           ],
           "domains": [
-            "docverify.net"
+            "example.com"
           ]
         },
-        "score": 0.79,
+        "score": 0.78,
         "tags": [
           "phishing"
         ],
         "evidence_chain": [
-          "fallback_heuristic"
+          "Mock response"
         ],
         "metadata": {
           "kind": "email",
           "sender": "user594@trusted-health.org",
           "attachment_type": "png",
           "has_link": true
-        }
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
       },
       "selection_meta": {
         "chosen_by": "llm_tie_preference",
@@ -122,30 +124,31 @@
           }
         },
         "llm_msg": {
-          "message_id": "detection-heuristic-34147a4e-489",
-          "from_agent": "detection_agent_heuristic_fallback",
+          "message_id": "detection-llm-34147a4e-489",
+          "from_agent": "detection_agent_llm",
           "incident_id": "34147a4e-489",
           "iocs": {
             "urls": [
-              "https://docverify.net/?id=34147a4e-489"
+              "https://example.com"
             ],
             "domains": [
-              "docverify.net"
+              "example.com"
             ]
           },
-          "score": 0.79,
+          "score": 0.78,
           "tags": [
             "phishing"
           ],
           "evidence_chain": [
-            "fallback_heuristic"
+            "Mock response"
           ],
           "metadata": {
             "kind": "email",
             "sender": "user594@trusted-health.org",
             "attachment_type": "png",
             "has_link": true
-          }
+          },
+          "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
         }
       }
     },
@@ -154,7 +157,7 @@
       "from_agent": "misuse_agent",
       "incident_id": "34147a4e-489",
       "misuse_label": "phishing",
-      "confidence": 0.79,
+      "confidence": 0.78,
       "explanation": "no strong misuse indicators; may be benign",
       "metadata": {
         "kind": "email",
@@ -186,7 +189,7 @@
       "message_id": "governance-34147a4e-489",
       "from_agent": "governance_agent",
       "incident_id": "34147a4e-489",
-      "autonomy_risk_score": 54.15,
+      "autonomy_risk_score": 54.3,
       "allow_automation": false,
       "policy_constraints": [
         "Limited_automation"
@@ -195,7 +198,7 @@
       "metadata": {
         "sensitivity": 0.6,
         "impact": 0.6,
-        "detection_confidence": 0.79
+        "detection_confidence": 0.78
       }
     },
     "triage": {

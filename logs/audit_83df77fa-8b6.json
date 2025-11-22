@@ -1,5 +1,5 @@
 {
-  "run_ts": "2025-11-20T12:15:35.813108Z",
+  "run_ts": "2025-11-21T11:52:24.102190Z",
   "incident": {
     "incident_id": "83df77fa-8b6",
     "kind": "email",
@@ -10,8 +10,8 @@
   "agents": {
     "detection": {
       "final": {
-        "message_id": "detection-heuristic-83df77fa-8b6",
-        "from_agent": "detection_agent_heuristic_fallback",
+        "message_id": "detection-83df77fa-8b6",
+        "from_agent": "detection_agent",
         "incident_id": "83df77fa-8b6",
         "iocs": {
           "urls": [],
@@ -22,13 +22,15 @@
           "suspicious"
         ],
         "evidence_chain": [
-          "fallback_heuristic"
+          "suspicious_attachment",
+          "medium_confidence_rule"
         ],
         "metadata": {
           "kind": "email",
           "sender": "user896@docverify.net",
+          "recipient": "user1649@example.com",
           "attachment_type": "pdf",
-          "has_link": false
+          "pii_present": 0
         }
       },
       "rule": {
@@ -55,30 +57,9 @@
           "pii_present": 0
         }
       },
-      "llm": {
-        "message_id": "detection-heuristic-83df77fa-8b6",
-        "from_agent": "detection_agent_heuristic_fallback",
-        "incident_id": "83df77fa-8b6",
-        "iocs": {
-          "urls": [],
-          "domains": []
-        },
-        "score": 0.35,
-        "tags": [
-          "suspicious"
-        ],
-        "evidence_chain": [
-          "fallback_heuristic"
-        ],
-        "metadata": {
-          "kind": "email",
-          "sender": "user896@docverify.net",
-          "attachment_type": "pdf",
-          "has_link": false
-        }
-      },
+      "llm": null,
       "selection_meta": {
-        "chosen_by": "llm_tie_preference",
+        "chosen_by": "rule_only",
         "rule_msg": {
           "message_id": "detection-83df77fa-8b6",
           "from_agent": "detection_agent",
@@ -103,28 +84,7 @@
             "pii_present": 0
           }
         },
-        "llm_msg": {
-          "message_id": "detection-heuristic-83df77fa-8b6",
-          "from_agent": "detection_agent_heuristic_fallback",
-          "incident_id": "83df77fa-8b6",
-          "iocs": {
-            "urls": [],
-            "domains": []
-          },
-          "score": 0.35,
-          "tags": [
-            "suspicious"
-          ],
-          "evidence_chain": [
-            "fallback_heuristic"
-          ],
-          "metadata": {
-            "kind": "email",
-            "sender": "user896@docverify.net",
-            "attachment_type": "pdf",
-            "has_link": false
-          }
-        }
+        "llm_msg": null
       }
     },
     "misuse": {

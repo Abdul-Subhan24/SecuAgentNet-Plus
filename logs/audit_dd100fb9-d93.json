@@ -1,5 +1,5 @@
 {
-  "run_ts": "2025-11-20T12:14:55.696651Z",
+  "run_ts": "2025-11-21T11:52:24.148042Z",
   "incident": {
     "incident_id": "dd100fb9-d93",
     "kind": "email",
@@ -10,34 +10,31 @@
   "agents": {
     "detection": {
       "final": {
-        "message_id": "detection-dd100fb9-d93",
-        "from_agent": "detection_agent",
+        "message_id": "detection-llm-dd100fb9-d93",
+        "from_agent": "detection_agent_llm",
         "incident_id": "dd100fb9-d93",
         "iocs": {
           "urls": [
-            "https://parcel-track.net/?id=dd100fb9-d93"
+            "https://example.com"
           ],
           "domains": [
-            "parcel-track.net"
+            "example.com"
           ]
         },
-        "score": 0.77,
+        "score": 0.78,
         "tags": [
           "phishing"
         ],
         "evidence_chain": [
-          "contains_url",
-          "suspicious_keywords",
-          "suspicious_attachment",
-          "high_confidence_rule"
+          "Mock response"
         ],
         "metadata": {
           "kind": "email",
           "sender": "user359@trusted-health.org",
-          "recipient": "user1646@example.com",
           "attachment_type": "docx",
-          "pii_present": 0
-        }
+          "has_link": true
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
       },
       "rule": {
         "message_id": "detection-dd100fb9-d93",
@@ -69,9 +66,35 @@
           "pii_present": 0
         }
       },
-      "llm": null,
+      "llm": {
+        "message_id": "detection-llm-dd100fb9-d93",
+        "from_agent": "detection_agent_llm",
+        "incident_id": "dd100fb9-d93",
+        "iocs": {
+          "urls": [
+            "https://example.com"
+          ],
+          "domains": [
+            "example.com"
+          ]
+        },
+        "score": 0.78,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "Mock response"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user359@trusted-health.org",
+          "attachment_type": "docx",
+          "has_link": true
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
+      },
       "selection_meta": {
-        "chosen_by": "rule_only",
+        "chosen_by": "llm_tie_preference",
         "rule_msg": {
           "message_id": "detection-dd100fb9-d93",
           "from_agent": "detection_agent",
@@ -102,7 +125,33 @@
             "pii_present": 0
           }
         },
-        "llm_msg": null
+        "llm_msg": {
+          "message_id": "detection-llm-dd100fb9-d93",
+          "from_agent": "detection_agent_llm",
+          "incident_id": "dd100fb9-d93",
+          "iocs": {
+            "urls": [
+              "https://example.com"
+            ],
+            "domains": [
+              "example.com"
+            ]
+          },
+          "score": 0.78,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "Mock response"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user359@trusted-health.org",
+            "attachment_type": "docx",
+            "has_link": true
+          },
+          "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
+        }
       }
     },
     "misuse": {
@@ -142,7 +191,7 @@
       "message_id": "governance-dd100fb9-d93",
       "from_agent": "governance_agent",
       "incident_id": "dd100fb9-d93",
-      "autonomy_risk_score": 61.45,
+      "autonomy_risk_score": 61.3,
       "allow_automation": false,
       "policy_constraints": [
         "Limited_automation"
@@ -151,7 +200,7 @@
       "metadata": {
         "sensitivity": 0.6,
         "impact": 0.8,
-        "detection_confidence": 0.77
+        "detection_confidence": 0.78
       }
     },
     "triage": {

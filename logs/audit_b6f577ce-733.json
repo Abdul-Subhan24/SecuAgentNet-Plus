@@ -1,5 +1,5 @@
 {
-  "run_ts": "2025-11-20T12:15:14.733839Z",
+  "run_ts": "2025-11-21T11:52:24.077321Z",
   "incident": {
     "incident_id": "b6f577ce-733",
     "kind": "document",
@@ -10,8 +10,8 @@
   "agents": {
     "detection": {
       "final": {
-        "message_id": "detection-heuristic-b6f577ce-733",
-        "from_agent": "detection_agent_heuristic_fallback",
+        "message_id": "detection-b6f577ce-733",
+        "from_agent": "detection_agent",
         "incident_id": "b6f577ce-733",
         "iocs": {
           "urls": [],
@@ -22,13 +22,15 @@
           "benign"
         ],
         "evidence_chain": [
-          "fallback_heuristic"
+          "suspicious_attachment",
+          "pii_present"
         ],
         "metadata": {
           "kind": "document",
           "sender": "acmecorp@trusted-health.org",
+          "recipient": "records@hospital.org",
           "attachment_type": "docx",
-          "has_link": false
+          "pii_present": 1
         }
       },
       "rule": {
@@ -55,30 +57,9 @@
           "pii_present": 1
         }
       },
-      "llm": {
-        "message_id": "detection-heuristic-b6f577ce-733",
-        "from_agent": "detection_agent_heuristic_fallback",
-        "incident_id": "b6f577ce-733",
-        "iocs": {
-          "urls": [],
-          "domains": []
-        },
-        "score": 0.2,
-        "tags": [
-          "benign"
-        ],
-        "evidence_chain": [
-          "fallback_heuristic"
-        ],
-        "metadata": {
-          "kind": "document",
-          "sender": "acmecorp@trusted-health.org",
-          "attachment_type": "docx",
-          "has_link": false
-        }
-      },
+      "llm": null,
       "selection_meta": {
-        "chosen_by": "llm_tie_preference",
+        "chosen_by": "rule_only",
         "rule_msg": {
           "message_id": "detection-b6f577ce-733",
           "from_agent": "detection_agent",
@@ -103,28 +84,7 @@
             "pii_present": 1
           }
         },
-        "llm_msg": {
-          "message_id": "detection-heuristic-b6f577ce-733",
-          "from_agent": "detection_agent_heuristic_fallback",
-          "incident_id": "b6f577ce-733",
-          "iocs": {
-            "urls": [],
-            "domains": []
-          },
-          "score": 0.2,
-          "tags": [
-            "benign"
-          ],
-          "evidence_chain": [
-            "fallback_heuristic"
-          ],
-          "metadata": {
-            "kind": "document",
-            "sender": "acmecorp@trusted-health.org",
-            "attachment_type": "docx",
-            "has_link": false
-          }
-        }
+        "llm_msg": null
       }
     },
     "misuse": {

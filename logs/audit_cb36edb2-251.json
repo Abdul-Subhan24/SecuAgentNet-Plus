@@ -1,5 +1,5 @@
 {
-  "run_ts": "2025-11-20T12:15:29.788150Z",
+  "run_ts": "2025-11-21T11:52:24.095576Z",
   "incident": {
     "incident_id": "cb36edb2-251",
     "kind": "document",
@@ -10,8 +10,8 @@
   "agents": {
     "detection": {
       "final": {
-        "message_id": "detection-heuristic-cb36edb2-251",
-        "from_agent": "detection_agent_heuristic_fallback",
+        "message_id": "detection-cb36edb2-251",
+        "from_agent": "detection_agent",
         "incident_id": "cb36edb2-251",
         "iocs": {
           "urls": [],
@@ -22,13 +22,14 @@
           "benign"
         ],
         "evidence_chain": [
-          "fallback_heuristic"
+          "suspicious_attachment"
         ],
         "metadata": {
           "kind": "document",
           "sender": "jobhubpvtltd@loanfast.info",
+          "recipient": "records@hospital.org",
           "attachment_type": "docx",
-          "has_link": false
+          "pii_present": 0
         }
       },
       "rule": {
@@ -54,30 +55,9 @@
           "pii_present": 0
         }
       },
-      "llm": {
-        "message_id": "detection-heuristic-cb36edb2-251",
-        "from_agent": "detection_agent_heuristic_fallback",
-        "incident_id": "cb36edb2-251",
-        "iocs": {
-          "urls": [],
-          "domains": []
-        },
-        "score": 0.15,
-        "tags": [
-          "benign"
-        ],
-        "evidence_chain": [
-          "fallback_heuristic"
-        ],
-        "metadata": {
-          "kind": "document",
-          "sender": "jobhubpvtltd@loanfast.info",
-          "attachment_type": "docx",
-          "has_link": false
-        }
-      },
+      "llm": null,
       "selection_meta": {
-        "chosen_by": "llm_tie_preference",
+        "chosen_by": "rule_only",
         "rule_msg": {
           "message_id": "detection-cb36edb2-251",
           "from_agent": "detection_agent",
@@ -101,28 +81,7 @@
             "pii_present": 0
           }
         },
-        "llm_msg": {
-          "message_id": "detection-heuristic-cb36edb2-251",
-          "from_agent": "detection_agent_heuristic_fallback",
-          "incident_id": "cb36edb2-251",
-          "iocs": {
-            "urls": [],
-            "domains": []
-          },
-          "score": 0.15,
-          "tags": [
-            "benign"
-          ],
-          "evidence_chain": [
-            "fallback_heuristic"
-          ],
-          "metadata": {
-            "kind": "document",
-            "sender": "jobhubpvtltd@loanfast.info",
-            "attachment_type": "docx",
-            "has_link": false
-          }
-        }
+        "llm_msg": null
       }
     },
     "misuse": {

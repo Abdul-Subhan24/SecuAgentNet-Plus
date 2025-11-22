@@ -1,5 +1,5 @@
 {
-  "run_ts": "2025-11-20T12:15:32.801476Z",
+  "run_ts": "2025-11-21T11:52:24.098764Z",
   "incident": {
     "incident_id": "86eccf10-46b",
     "kind": "email",
@@ -10,30 +10,31 @@
   "agents": {
     "detection": {
       "final": {
-        "message_id": "detection-heuristic-86eccf10-46b",
-        "from_agent": "detection_agent_heuristic_fallback",
+        "message_id": "detection-llm-86eccf10-46b",
+        "from_agent": "detection_agent_llm",
         "incident_id": "86eccf10-46b",
         "iocs": {
           "urls": [
-            "https://parcel-track.net/?id=86eccf10-46b"
+            "https://example.com"
           ],
           "domains": [
-            "parcel-track.net"
+            "example.com"
           ]
         },
-        "score": 0.55,
+        "score": 0.78,
         "tags": [
-          "suspicious"
+          "phishing"
         ],
         "evidence_chain": [
-          "fallback_heuristic"
+          "Mock response"
         ],
         "metadata": {
           "kind": "email",
           "sender": "user714@trusted-health.org",
           "attachment_type": "jpg",
           "has_link": true
-        }
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
       },
       "rule": {
         "message_id": "detection-86eccf10-46b",
@@ -64,33 +65,34 @@
         }
       },
       "llm": {
-        "message_id": "detection-heuristic-86eccf10-46b",
-        "from_agent": "detection_agent_heuristic_fallback",
+        "message_id": "detection-llm-86eccf10-46b",
+        "from_agent": "detection_agent_llm",
         "incident_id": "86eccf10-46b",
         "iocs": {
           "urls": [
-            "https://parcel-track.net/?id=86eccf10-46b"
+            "https://example.com"
           ],
           "domains": [
-            "parcel-track.net"
+            "example.com"
           ]
         },
-        "score": 0.55,
+        "score": 0.78,
         "tags": [
-          "suspicious"
+          "phishing"
         ],
         "evidence_chain": [
-          "fallback_heuristic"
+          "Mock response"
         ],
         "metadata": {
           "kind": "email",
           "sender": "user714@trusted-health.org",
           "attachment_type": "jpg",
           "has_link": true
-        }
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
       },
       "selection_meta": {
-        "chosen_by": "llm_tie_preference",
+        "chosen_by": "llm_higher_confidence",
         "rule_msg": {
           "message_id": "detection-86eccf10-46b",
           "from_agent": "detection_agent",
@@ -120,30 +122,31 @@
           }
         },
         "llm_msg": {
-          "message_id": "detection-heuristic-86eccf10-46b",
-          "from_agent": "detection_agent_heuristic_fallback",
+          "message_id": "detection-llm-86eccf10-46b",
+          "from_agent": "detection_agent_llm",
           "incident_id": "86eccf10-46b",
           "iocs": {
             "urls": [
-              "https://parcel-track.net/?id=86eccf10-46b"
+              "https://example.com"
             ],
             "domains": [
-              "parcel-track.net"
+              "example.com"
             ]
           },
-          "score": 0.55,
+          "score": 0.78,
           "tags": [
-            "suspicious"
+            "phishing"
           ],
           "evidence_chain": [
-            "fallback_heuristic"
+            "Mock response"
           ],
           "metadata": {
             "kind": "email",
             "sender": "user714@trusted-health.org",
             "attachment_type": "jpg",
             "has_link": true
-          }
+          },
+          "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
         }
       }
     },
@@ -157,7 +160,7 @@
       "metadata": {
         "kind": "email",
         "detection_tags": [
-          "suspicious"
+          "phishing"
         ]
       }
     },
@@ -165,9 +168,9 @@
       "message_id": "deepfake-86eccf10-46b",
       "from_agent": "deepfake_agent",
       "incident_id": "86eccf10-46b",
-      "deepfake_prob": 0.15,
+      "deepfake_prob": 0.2,
       "tag": "benign",
-      "explanation": "attachment_type:jpg",
+      "explanation": "attachment_type:jpg; detection_phishing_signal",
       "metadata": {
         "attachment_type": "jpg"
       }
@@ -184,7 +187,7 @@
       "message_id": "governance-86eccf10-46b",
       "from_agent": "governance_agent",
       "incident_id": "86eccf10-46b",
-      "autonomy_risk_score": 64.75,
+      "autonomy_risk_score": 61.3,
       "allow_automation": false,
       "policy_constraints": [
         "Limited_automation"
@@ -193,12 +196,12 @@
       "metadata": {
         "sensitivity": 0.6,
         "impact": 0.8,
-        "detection_confidence": 0.55
+        "detection_confidence": 0.78
       }
     },
     "triage": {
-      "recommended_severity": "medium",
-      "reason": "moderate signals"
+      "recommended_severity": "high",
+      "reason": "strong signals"
     }
   }
 }

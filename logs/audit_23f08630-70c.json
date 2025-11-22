@@ -1,5 +1,5 @@
 {
-  "run_ts": "2025-11-20T12:15:43.355698Z",
+  "run_ts": "2025-11-21T11:52:24.108804Z",
   "incident": {
     "incident_id": "23f08630-70c",
     "kind": "sms",
@@ -10,30 +10,31 @@
   "agents": {
     "detection": {
       "final": {
-        "message_id": "detection-heuristic-23f08630-70c",
-        "from_agent": "detection_agent_heuristic_fallback",
+        "message_id": "detection-llm-23f08630-70c",
+        "from_agent": "detection_agent_llm",
         "incident_id": "23f08630-70c",
         "iocs": {
           "urls": [
-            "http://loanfast.info/surveys?id=23f08630-70c"
+            "https://example.com"
           ],
           "domains": [
-            "loanfast.info"
+            "example.com"
           ]
         },
-        "score": 0.52,
+        "score": 0.78,
         "tags": [
-          "suspicious"
+          "phishing"
         ],
         "evidence_chain": [
-          "fallback_heuristic"
+          "Mock response"
         ],
         "metadata": {
           "kind": "sms",
           "sender": "+917266614070",
           "attachment_type": "none",
           "has_link": true
-        }
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
       },
       "rule": {
         "message_id": "detection-23f08630-70c",
@@ -64,33 +65,34 @@
         }
       },
       "llm": {
-        "message_id": "detection-heuristic-23f08630-70c",
-        "from_agent": "detection_agent_heuristic_fallback",
+        "message_id": "detection-llm-23f08630-70c",
+        "from_agent": "detection_agent_llm",
         "incident_id": "23f08630-70c",
         "iocs": {
           "urls": [
-            "http://loanfast.info/surveys?id=23f08630-70c"
+            "https://example.com"
           ],
           "domains": [
-            "loanfast.info"
+            "example.com"
           ]
         },
-        "score": 0.52,
+        "score": 0.78,
         "tags": [
-          "suspicious"
+          "phishing"
         ],
         "evidence_chain": [
-          "fallback_heuristic"
+          "Mock response"
         ],
         "metadata": {
           "kind": "sms",
           "sender": "+917266614070",
           "attachment_type": "none",
           "has_link": true
-        }
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
       },
       "selection_meta": {
-        "chosen_by": "llm_tie_preference",
+        "chosen_by": "llm_higher_confidence",
         "rule_msg": {
           "message_id": "detection-23f08630-70c",
           "from_agent": "detection_agent",
@@ -120,30 +122,31 @@
           }
         },
         "llm_msg": {
-          "message_id": "detection-heuristic-23f08630-70c",
-          "from_agent": "detection_agent_heuristic_fallback",
+          "message_id": "detection-llm-23f08630-70c",
+          "from_agent": "detection_agent_llm",
           "incident_id": "23f08630-70c",
           "iocs": {
             "urls": [
-              "http://loanfast.info/surveys?id=23f08630-70c"
+              "https://example.com"
             ],
             "domains": [
-              "loanfast.info"
+              "example.com"
             ]
           },
-          "score": 0.52,
+          "score": 0.78,
           "tags": [
-            "suspicious"
+            "phishing"
           ],
           "evidence_chain": [
-            "fallback_heuristic"
+            "Mock response"
           ],
           "metadata": {
             "kind": "sms",
             "sender": "+917266614070",
             "attachment_type": "none",
             "has_link": true
-          }
+          },
+          "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
         }
       }
     },
@@ -157,7 +160,7 @@
       "metadata": {
         "kind": "sms",
         "detection_tags": [
-          "suspicious"
+          "phishing"
         ]
       }
     },
@@ -165,9 +168,9 @@
       "message_id": "deepfake-23f08630-70c",
       "from_agent": "deepfake_agent",
       "incident_id": "23f08630-70c",
-      "deepfake_prob": 0.0,
+      "deepfake_prob": 0.05,
       "tag": "benign",
-      "explanation": "no deepfake indicators",
+      "explanation": "detection_phishing_signal",
       "metadata": {
         "attachment_type": "none"
       }
@@ -184,7 +187,7 @@
       "message_id": "governance-23f08630-70c",
       "from_agent": "governance_agent",
       "incident_id": "23f08630-70c",
-      "autonomy_risk_score": 65.2,
+      "autonomy_risk_score": 61.3,
       "allow_automation": false,
       "policy_constraints": [
         "Limited_automation"
@@ -193,12 +196,12 @@
       "metadata": {
         "sensitivity": 0.6,
         "impact": 0.8,
-        "detection_confidence": 0.52
+        "detection_confidence": 0.78
       }
     },
     "triage": {
-      "recommended_severity": "medium",
-      "reason": "moderate signals"
+      "recommended_severity": "high",
+      "reason": "strong signals"
     }
   }
 }

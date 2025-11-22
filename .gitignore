@@ -1,0 +1,17 @@
+# virtualenv
+venv/
+
+# IDE / system
+.vscode/
+__pycache__/
+*.pyc
+.DS_Store
+
+# secrets and env
+.env
+*.key
+
+# generated outputs (do not commit)
+logs/
+reports/
+*.zip

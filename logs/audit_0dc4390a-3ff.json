@@ -1,5 +1,5 @@
 {
-  "run_ts": "2025-11-20T12:14:55.682947Z",
+  "run_ts": "2025-11-21T11:52:24.132173Z",
   "incident": {
     "incident_id": "0dc4390a-3ff",
     "kind": "email",
@@ -10,34 +10,31 @@
   "agents": {
     "detection": {
       "final": {
-        "message_id": "detection-0dc4390a-3ff",
-        "from_agent": "detection_agent",
+        "message_id": "detection-llm-0dc4390a-3ff",
+        "from_agent": "detection_agent_llm",
         "incident_id": "0dc4390a-3ff",
         "iocs": {
           "urls": [
-            "https://parcel-track.net/?id=0dc4390a-3ff"
+            "https://example.com"
           ],
           "domains": [
-            "parcel-track.net"
+            "example.com"
           ]
         },
-        "score": 0.72,
+        "score": 0.78,
         "tags": [
           "phishing"
         ],
         "evidence_chain": [
-          "contains_url",
-          "suspicious_keywords",
-          "pii_present",
-          "high_confidence_rule"
+          "Mock response"
         ],
         "metadata": {
           "kind": "email",
           "sender": "user379@docverify.net",
-          "recipient": "user1047@example.com",
           "attachment_type": "jpg",
-          "pii_present": 1
-        }
+          "has_link": true
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
       },
       "rule": {
         "message_id": "detection-0dc4390a-3ff",
@@ -69,9 +66,35 @@
           "pii_present": 1
         }
       },
-      "llm": null,
+      "llm": {
+        "message_id": "detection-llm-0dc4390a-3ff",
+        "from_agent": "detection_agent_llm",
+        "incident_id": "0dc4390a-3ff",
+        "iocs": {
+          "urls": [
+            "https://example.com"
+          ],
+          "domains": [
+            "example.com"
+          ]
+        },
+        "score": 0.78,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "Mock response"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user379@docverify.net",
+          "attachment_type": "jpg",
+          "has_link": true
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
+      },
       "selection_meta": {
-        "chosen_by": "rule_only",
+        "chosen_by": "llm_higher_confidence",
         "rule_msg": {
           "message_id": "detection-0dc4390a-3ff",
           "from_agent": "detection_agent",
@@ -102,7 +125,33 @@
             "pii_present": 1
           }
         },
-        "llm_msg": null
+        "llm_msg": {
+          "message_id": "detection-llm-0dc4390a-3ff",
+          "from_agent": "detection_agent_llm",
+          "incident_id": "0dc4390a-3ff",
+          "iocs": {
+            "urls": [
+              "https://example.com"
+            ],
+            "domains": [
+              "example.com"
+            ]
+          },
+          "score": 0.78,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "Mock response"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user379@docverify.net",
+            "attachment_type": "jpg",
+            "has_link": true
+          },
+          "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
+        }
       }
     },
     "misuse": {
@@ -110,7 +159,7 @@
       "from_agent": "misuse_agent",
       "incident_id": "0dc4390a-3ff",
       "misuse_label": "phishing",
-      "confidence": 0.72,
+      "confidence": 0.78,
       "explanation": "no strong misuse indicators; may be benign",
       "metadata": {
         "kind": "email",
@@ -142,7 +191,7 @@
       "message_id": "governance-0dc4390a-3ff",
       "from_agent": "governance_agent",
       "incident_id": "0dc4390a-3ff",
-      "autonomy_risk_score": 65.2,
+      "autonomy_risk_score": 64.3,
       "allow_automation": false,
       "policy_constraints": [
         "Limited_automation"
@@ -151,7 +200,7 @@
       "metadata": {
         "sensitivity": 0.8,
         "impact": 0.6,
-        "detection_confidence": 0.72
+        "detection_confidence": 0.78
       }
     },
     "triage": {

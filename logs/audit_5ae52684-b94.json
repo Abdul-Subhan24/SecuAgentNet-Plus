@@ -1,5 +1,5 @@
 {
-  "run_ts": "2025-11-20T12:14:55.685779Z",
+  "run_ts": "2025-11-21T11:52:24.136121Z",
   "incident": {
     "incident_id": "5ae52684-b94",
     "kind": "sms",
@@ -10,33 +10,31 @@
   "agents": {
     "detection": {
       "final": {
-        "message_id": "detection-5ae52684-b94",
-        "from_agent": "detection_agent",
+        "message_id": "detection-llm-5ae52684-b94",
+        "from_agent": "detection_agent_llm",
         "incident_id": "5ae52684-b94",
         "iocs": {
           "urls": [
-            "http://docverify.net/surveys?id=5ae52684-b94"
+            "https://example.com"
           ],
           "domains": [
-            "docverify.net"
+            "example.com"
           ]
         },
-        "score": 0.64,
+        "score": 0.78,
         "tags": [
           "phishing"
         ],
         "evidence_chain": [
-          "contains_url",
-          "suspicious_keywords",
-          "high_confidence_rule"
+          "Mock response"
         ],
         "metadata": {
           "kind": "sms",
           "sender": "+917696807981",
-          "recipient": "+919676965087",
           "attachment_type": "none",
-          "pii_present": 0
-        }
+          "has_link": true
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
       },
       "rule": {
         "message_id": "detection-5ae52684-b94",
@@ -67,9 +65,35 @@
           "pii_present": 0
         }
       },
-      "llm": null,
+      "llm": {
+        "message_id": "detection-llm-5ae52684-b94",
+        "from_agent": "detection_agent_llm",
+        "incident_id": "5ae52684-b94",
+        "iocs": {
+          "urls": [
+            "https://example.com"
+          ],
+          "domains": [
+            "example.com"
+          ]
+        },
+        "score": 0.78,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "Mock response"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+917696807981",
+          "attachment_type": "none",
+          "has_link": true
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
+      },
       "selection_meta": {
-        "chosen_by": "rule_only",
+        "chosen_by": "llm_higher_confidence",
         "rule_msg": {
           "message_id": "detection-5ae52684-b94",
           "from_agent": "detection_agent",
@@ -99,7 +123,33 @@
             "pii_present": 0
           }
         },
-        "llm_msg": null
+        "llm_msg": {
+          "message_id": "detection-llm-5ae52684-b94",
+          "from_agent": "detection_agent_llm",
+          "incident_id": "5ae52684-b94",
+          "iocs": {
+            "urls": [
+              "https://example.com"
+            ],
+            "domains": [
+              "example.com"
+            ]
+          },
+          "score": 0.78,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "Mock response"
+          ],
+          "metadata": {
+            "kind": "sms",
+            "sender": "+917696807981",
+            "attachment_type": "none",
+            "has_link": true
+          },
+          "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
+        }
       }
     },
     "misuse": {
@@ -107,7 +157,7 @@
       "from_agent": "misuse_agent",
       "incident_id": "5ae52684-b94",
       "misuse_label": "phishing",
-      "confidence": 0.64,
+      "confidence": 0.78,
       "explanation": "no strong misuse indicators; may be benign",
       "metadata": {
         "kind": "sms",
@@ -139,7 +189,7 @@
       "message_id": "governance-5ae52684-b94",
       "from_agent": "governance_agent",
       "incident_id": "5ae52684-b94",
-      "autonomy_risk_score": 56.4,
+      "autonomy_risk_score": 54.3,
       "allow_automation": false,
       "policy_constraints": [
         "Limited_automation"
@@ -148,12 +198,12 @@
       "metadata": {
         "sensitivity": 0.6,
         "impact": 0.6,
-        "detection_confidence": 0.64
+        "detection_confidence": 0.78
       }
     },
     "triage": {
-      "recommended_severity": "medium",
-      "reason": "moderate signals"
+      "recommended_severity": "high",
+      "reason": "strong signals"
     }
   }
 }

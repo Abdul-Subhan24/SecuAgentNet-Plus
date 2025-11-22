@@ -1,5 +1,5 @@
 {
-  "run_ts": "2025-11-20T12:14:55.698500Z",
+  "run_ts": "2025-11-21T11:52:24.150528Z",
   "incident": {
     "incident_id": "821de642-024",
     "kind": "email",
@@ -10,32 +10,31 @@
   "agents": {
     "detection": {
       "final": {
-        "message_id": "detection-821de642-024",
-        "from_agent": "detection_agent",
+        "message_id": "detection-llm-821de642-024",
+        "from_agent": "detection_agent_llm",
         "incident_id": "821de642-024",
         "iocs": {
           "urls": [
-            "https://loanfast.info/?id=821de642-024"
+            "https://example.com"
           ],
           "domains": [
-            "loanfast.info"
+            "example.com"
           ]
         },
-        "score": 0.55,
+        "score": 0.78,
         "tags": [
-          "suspicious"
+          "phishing"
         ],
         "evidence_chain": [
-          "contains_url",
-          "medium_confidence_rule"
+          "Mock response"
         ],
         "metadata": {
           "kind": "email",
           "sender": "user896@uni-scholar.org",
-          "recipient": "user1501@example.com",
           "attachment_type": "mp4",
-          "pii_present": 0
-        }
+          "has_link": true
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
       },
       "rule": {
         "message_id": "detection-821de642-024",
@@ -65,9 +64,35 @@
           "pii_present": 0
         }
       },
-      "llm": null,
+      "llm": {
+        "message_id": "detection-llm-821de642-024",
+        "from_agent": "detection_agent_llm",
+        "incident_id": "821de642-024",
+        "iocs": {
+          "urls": [
+            "https://example.com"
+          ],
+          "domains": [
+            "example.com"
+          ]
+        },
+        "score": 0.78,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "Mock response"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user896@uni-scholar.org",
+          "attachment_type": "mp4",
+          "has_link": true
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
+      },
       "selection_meta": {
-        "chosen_by": "rule_only",
+        "chosen_by": "llm_higher_confidence",
         "rule_msg": {
           "message_id": "detection-821de642-024",
           "from_agent": "detection_agent",
@@ -96,7 +121,33 @@
             "pii_present": 0
           }
         },
-        "llm_msg": null
+        "llm_msg": {
+          "message_id": "detection-llm-821de642-024",
+          "from_agent": "detection_agent_llm",
+          "incident_id": "821de642-024",
+          "iocs": {
+            "urls": [
+              "https://example.com"
+            ],
+            "domains": [
+              "example.com"
+            ]
+          },
+          "score": 0.78,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "Mock response"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user896@uni-scholar.org",
+            "attachment_type": "mp4",
+            "has_link": true
+          },
+          "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
+        }
       }
     },
     "misuse": {
@@ -109,7 +160,7 @@
       "metadata": {
         "kind": "email",
         "detection_tags": [
-          "suspicious"
+          "phishing"
         ]
       }
     },
@@ -117,9 +168,9 @@
       "message_id": "deepfake-821de642-024",
       "from_agent": "deepfake_agent",
       "incident_id": "821de642-024",
-      "deepfake_prob": 0.15,
+      "deepfake_prob": 0.2,
       "tag": "benign",
-      "explanation": "attachment_type:mp4",
+      "explanation": "attachment_type:mp4; detection_phishing_signal",
       "metadata": {
         "attachment_type": "mp4"
       }
@@ -136,7 +187,7 @@
       "message_id": "governance-821de642-024",
       "from_agent": "governance_agent",
       "incident_id": "821de642-024",
-      "autonomy_risk_score": 64.75,
+      "autonomy_risk_score": 61.3,
       "allow_automation": false,
       "policy_constraints": [
         "Limited_automation"
@@ -145,12 +196,12 @@
       "metadata": {
         "sensitivity": 0.6,
         "impact": 0.8,
-        "detection_confidence": 0.55
+        "detection_confidence": 0.78
       }
     },
     "triage": {
-      "recommended_severity": "medium",
-      "reason": "moderate signals"
+      "recommended_severity": "high",
+      "reason": "strong signals"
     }
   }
 }

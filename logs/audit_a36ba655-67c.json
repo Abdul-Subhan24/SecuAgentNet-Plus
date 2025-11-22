@@ -1,5 +1,5 @@
 {
-  "run_ts": "2025-11-20T12:15:40.344309Z",
+  "run_ts": "2025-11-21T11:52:24.106136Z",
   "incident": {
     "incident_id": "a36ba655-67c",
     "kind": "email",
@@ -10,8 +10,8 @@
   "agents": {
     "detection": {
       "final": {
-        "message_id": "detection-heuristic-a36ba655-67c",
-        "from_agent": "detection_agent_heuristic_fallback",
+        "message_id": "detection-a36ba655-67c",
+        "from_agent": "detection_agent",
         "incident_id": "a36ba655-67c",
         "iocs": {
           "urls": [
@@ -28,13 +28,17 @@
           "phishing"
         ],
         "evidence_chain": [
-          "fallback_heuristic"
+          "contains_url",
+          "suspicious_keywords",
+          "suspicious_attachment",
+          "high_confidence_rule"
         ],
         "metadata": {
           "kind": "email",
           "sender": "user501@uni-scholar.org",
+          "recipient": "user1030@example.com",
           "attachment_type": "pdf",
-          "has_link": true
+          "pii_present": 0
         }
       },
       "rule": {
@@ -70,35 +74,34 @@
         }
       },
       "llm": {
-        "message_id": "detection-heuristic-a36ba655-67c",
-        "from_agent": "detection_agent_heuristic_fallback",
+        "message_id": "detection-llm-a36ba655-67c",
+        "from_agent": "detection_agent_llm",
         "incident_id": "a36ba655-67c",
         "iocs": {
           "urls": [
-            "https://loanfast.info/?id=a36ba655-67c",
-            "https://loanfast.info/?id=a36ba655-67c."
+            "https://example.com"
           ],
           "domains": [
-            "loanfast.info",
-            "loanfast.info"
+            "example.com"
           ]
         },
-        "score": 0.99,
+        "score": 0.78,
         "tags": [
           "phishing"
         ],
         "evidence_chain": [
-          "fallback_heuristic"
+          "Mock response"
         ],
         "metadata": {
           "kind": "email",
           "sender": "user501@uni-scholar.org",
           "attachment_type": "pdf",
           "has_link": true
-        }
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
       },
       "selection_meta": {
-        "chosen_by": "llm_tie_preference",
+        "chosen_by": "rule_higher_confidence",
         "rule_msg": {
           "message_id": "detection-a36ba655-67c",
           "from_agent": "detection_agent",
@@ -132,32 +135,31 @@
           }
         },
         "llm_msg": {
-          "message_id": "detection-heuristic-a36ba655-67c",
-          "from_agent": "detection_agent_heuristic_fallback",
+          "message_id": "detection-llm-a36ba655-67c",
+          "from_agent": "detection_agent_llm",
           "incident_id": "a36ba655-67c",
           "iocs": {
             "urls": [
-              "https://loanfast.info/?id=a36ba655-67c",
-              "https://loanfast.info/?id=a36ba655-67c."
+              "https://example.com"
             ],
             "domains": [
-              "loanfast.info",
-              "loanfast.info"
+              "example.com"
             ]
           },
-          "score": 0.99,
+          "score": 0.78,
           "tags": [
             "phishing"
           ],
           "evidence_chain": [
-            "fallback_heuristic"
+            "Mock response"
           ],
           "metadata": {
             "kind": "email",
             "sender": "user501@uni-scholar.org",
             "attachment_type": "pdf",
             "has_link": true
-          }
+          },
+          "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
         }
       }
     },

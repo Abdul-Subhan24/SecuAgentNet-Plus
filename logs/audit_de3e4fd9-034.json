@@ -1,5 +1,5 @@
 {
-  "run_ts": "2025-11-20T12:14:55.700429Z",
+  "run_ts": "2025-11-21T11:52:24.152801Z",
   "incident": {
     "incident_id": "de3e4fd9-034",
     "kind": "email",
@@ -73,9 +73,35 @@
           "pii_present": 0
         }
       },
-      "llm": null,
+      "llm": {
+        "message_id": "detection-llm-de3e4fd9-034",
+        "from_agent": "detection_agent_llm",
+        "incident_id": "de3e4fd9-034",
+        "iocs": {
+          "urls": [
+            "https://example.com"
+          ],
+          "domains": [
+            "example.com"
+          ]
+        },
+        "score": 0.78,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "Mock response"
+        ],
+        "metadata": {
+          "kind": "email",
+          "sender": "user957@payments-update.com",
+          "attachment_type": "pdf",
+          "has_link": true
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
+      },
       "selection_meta": {
-        "chosen_by": "rule_only",
+        "chosen_by": "rule_higher_confidence",
         "rule_msg": {
           "message_id": "detection-de3e4fd9-034",
           "from_agent": "detection_agent",
@@ -108,7 +134,33 @@
             "pii_present": 0
           }
         },
-        "llm_msg": null
+        "llm_msg": {
+          "message_id": "detection-llm-de3e4fd9-034",
+          "from_agent": "detection_agent_llm",
+          "incident_id": "de3e4fd9-034",
+          "iocs": {
+            "urls": [
+              "https://example.com"
+            ],
+            "domains": [
+              "example.com"
+            ]
+          },
+          "score": 0.78,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "Mock response"
+          ],
+          "metadata": {
+            "kind": "email",
+            "sender": "user957@payments-update.com",
+            "attachment_type": "pdf",
+            "has_link": true
+          },
+          "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
+        }
       }
     },
     "misuse": {

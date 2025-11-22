@@ -1,5 +1,5 @@
 {
-  "run_ts": "2025-11-20T12:15:23.767437Z",
+  "run_ts": "2025-11-21T11:52:24.090807Z",
   "incident": {
     "incident_id": "c84ede81-d9d",
     "kind": "social",
@@ -10,8 +10,8 @@
   "agents": {
     "detection": {
       "final": {
-        "message_id": "detection-heuristic-c84ede81-d9d",
-        "from_agent": "detection_agent_heuristic_fallback",
+        "message_id": "detection-c84ede81-d9d",
+        "from_agent": "detection_agent",
         "incident_id": "c84ede81-d9d",
         "iocs": {
           "urls": [],
@@ -21,14 +21,13 @@
         "tags": [
           "benign"
         ],
-        "evidence_chain": [
-          "fallback_heuristic"
-        ],
+        "evidence_chain": [],
         "metadata": {
           "kind": "social",
           "sender": "Vikram Rao",
+          "recipient": "public",
           "attachment_type": "none",
-          "has_link": false
+          "pii_present": 0
         }
       },
       "rule": {
@@ -52,30 +51,9 @@
           "pii_present": 0
         }
       },
-      "llm": {
-        "message_id": "detection-heuristic-c84ede81-d9d",
-        "from_agent": "detection_agent_heuristic_fallback",
-        "incident_id": "c84ede81-d9d",
-        "iocs": {
-          "urls": [],
-          "domains": []
-        },
-        "score": 0.0,
-        "tags": [
-          "benign"
-        ],
-        "evidence_chain": [
-          "fallback_heuristic"
-        ],
-        "metadata": {
-          "kind": "social",
-          "sender": "Vikram Rao",
-          "attachment_type": "none",
-          "has_link": false
-        }
-      },
+      "llm": null,
       "selection_meta": {
-        "chosen_by": "llm_tie_preference",
+        "chosen_by": "rule_only",
         "rule_msg": {
           "message_id": "detection-c84ede81-d9d",
           "from_agent": "detection_agent",
@@ -97,28 +75,7 @@
             "pii_present": 0
           }
         },
-        "llm_msg": {
-          "message_id": "detection-heuristic-c84ede81-d9d",
-          "from_agent": "detection_agent_heuristic_fallback",
-          "incident_id": "c84ede81-d9d",
-          "iocs": {
-            "urls": [],
-            "domains": []
-          },
-          "score": 0.0,
-          "tags": [
-            "benign"
-          ],
-          "evidence_chain": [
-            "fallback_heuristic"
-          ],
-          "metadata": {
-            "kind": "social",
-            "sender": "Vikram Rao",
-            "attachment_type": "none",
-            "has_link": false
-          }
-        }
+        "llm_msg": null
       }
     },
     "misuse": {

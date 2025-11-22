@@ -1,5 +1,5 @@
 {
-  "run_ts": "2025-11-20T12:14:55.668981Z",
+  "run_ts": "2025-11-21T11:52:24.117498Z",
   "incident": {
     "incident_id": "63596b7b-cdf",
     "kind": "sms",
@@ -10,32 +10,31 @@
   "agents": {
     "detection": {
       "final": {
-        "message_id": "detection-63596b7b-cdf",
-        "from_agent": "detection_agent",
+        "message_id": "detection-llm-63596b7b-cdf",
+        "from_agent": "detection_agent_llm",
         "incident_id": "63596b7b-cdf",
         "iocs": {
           "urls": [
-            "http://parcel-track.net/surveys?id=63596b7b-cdf"
+            "https://example.com"
           ],
           "domains": [
-            "parcel-track.net"
+            "example.com"
           ]
         },
-        "score": 0.52,
+        "score": 0.78,
         "tags": [
-          "suspicious"
+          "phishing"
         ],
         "evidence_chain": [
-          "contains_url",
-          "medium_confidence_rule"
+          "Mock response"
         ],
         "metadata": {
           "kind": "sms",
           "sender": "+919079320645",
-          "recipient": "+918859294667",
           "attachment_type": "none",
-          "pii_present": 0
-        }
+          "has_link": true
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
       },
       "rule": {
         "message_id": "detection-63596b7b-cdf",
@@ -65,9 +64,35 @@
           "pii_present": 0
         }
       },
-      "llm": null,
+      "llm": {
+        "message_id": "detection-llm-63596b7b-cdf",
+        "from_agent": "detection_agent_llm",
+        "incident_id": "63596b7b-cdf",
+        "iocs": {
+          "urls": [
+            "https://example.com"
+          ],
+          "domains": [
+            "example.com"
+          ]
+        },
+        "score": 0.78,
+        "tags": [
+          "phishing"
+        ],
+        "evidence_chain": [
+          "Mock response"
+        ],
+        "metadata": {
+          "kind": "sms",
+          "sender": "+919079320645",
+          "attachment_type": "none",
+          "has_link": true
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
+      },
       "selection_meta": {
-        "chosen_by": "rule_only",
+        "chosen_by": "llm_higher_confidence",
         "rule_msg": {
           "message_id": "detection-63596b7b-cdf",
           "from_agent": "detection_agent",
@@ -96,20 +121,46 @@
             "pii_present": 0
           }
         },
-        "llm_msg": null
+        "llm_msg": {
+          "message_id": "detection-llm-63596b7b-cdf",
+          "from_agent": "detection_agent_llm",
+          "incident_id": "63596b7b-cdf",
+          "iocs": {
+            "urls": [
+              "https://example.com"
+            ],
+            "domains": [
+              "example.com"
+            ]
+          },
+          "score": 0.78,
+          "tags": [
+            "phishing"
+          ],
+          "evidence_chain": [
+            "Mock response"
+          ],
+          "metadata": {
+            "kind": "sms",
+            "sender": "+919079320645",
+            "attachment_type": "none",
+            "has_link": true
+          },
+          "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
+        }
       }
     },
     "misuse": {
       "message_id": "misuse-63596b7b-cdf",
       "from_agent": "misuse_agent",
       "incident_id": "63596b7b-cdf",
-      "misuse_label": "suspicious",
-      "confidence": 0.52,
-      "explanation": "detection_agent_signals",
+      "misuse_label": "phishing",
+      "confidence": 0.78,
+      "explanation": "no strong misuse indicators; may be benign",
       "metadata": {
         "kind": "sms",
         "detection_tags": [
-          "suspicious"
+          "phishing"
         ]
       }
     },
@@ -117,9 +168,9 @@
       "message_id": "deepfake-63596b7b-cdf",
       "from_agent": "deepfake_agent",
       "incident_id": "63596b7b-cdf",
-      "deepfake_prob": 0.0,
+      "deepfake_prob": 0.05,
       "tag": "benign",
-      "explanation": "no deepfake indicators",
+      "explanation": "detection_phishing_signal",
       "metadata": {
         "attachment_type": "none"
       }
@@ -136,21 +187,21 @@
       "message_id": "governance-63596b7b-cdf",
       "from_agent": "governance_agent",
       "incident_id": "63596b7b-cdf",
-      "autonomy_risk_score": 7.2,
-      "allow_automation": true,
+      "autonomy_risk_score": 54.3,
+      "allow_automation": false,
       "policy_constraints": [
-        "Automation_allowed_under_monitoring"
+        "Limited_automation"
       ],
-      "justification": "Low autonomy risk; automation permitted",
+      "justification": "Moderate autonomy risk; escalate to analyst",
       "metadata": {
-        "sensitivity": 0.0,
-        "impact": 0.0,
-        "detection_confidence": 0.52
+        "sensitivity": 0.6,
+        "impact": 0.6,
+        "detection_confidence": 0.78
       }
     },
     "triage": {
-      "recommended_severity": "medium",
-      "reason": "moderate signals"
+      "recommended_severity": "high",
+      "reason": "strong signals"
     }
   }
 }

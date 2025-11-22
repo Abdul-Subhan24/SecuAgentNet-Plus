@@ -1,5 +1,5 @@
 {
-  "run_ts": "2025-11-20T12:15:37.332808Z",
+  "run_ts": "2025-11-21T11:52:24.103689Z",
   "incident": {
     "incident_id": "e433fccd-9b6",
     "kind": "sms",
@@ -10,30 +10,31 @@
   "agents": {
     "detection": {
       "final": {
-        "message_id": "detection-heuristic-e433fccd-9b6",
-        "from_agent": "detection_agent_heuristic_fallback",
+        "message_id": "detection-llm-e433fccd-9b6",
+        "from_agent": "detection_agent_llm",
         "incident_id": "e433fccd-9b6",
         "iocs": {
           "urls": [
-            "http://trusted-health.org/surveys?id=e433fccd-9b6"
+            "https://example.com"
           ],
           "domains": [
-            "trusted-health.org"
+            "example.com"
           ]
         },
-        "score": 0.64,
+        "score": 0.78,
         "tags": [
           "phishing"
         ],
         "evidence_chain": [
-          "fallback_heuristic"
+          "Mock response"
         ],
         "metadata": {
           "kind": "sms",
           "sender": "+918592691728",
           "attachment_type": "none",
           "has_link": true
-        }
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
       },
       "rule": {
         "message_id": "detection-e433fccd-9b6",
@@ -64,33 +65,34 @@
         }
       },
       "llm": {
-        "message_id": "detection-heuristic-e433fccd-9b6",
-        "from_agent": "detection_agent_heuristic_fallback",
+        "message_id": "detection-llm-e433fccd-9b6",
+        "from_agent": "detection_agent_llm",
         "incident_id": "e433fccd-9b6",
         "iocs": {
           "urls": [
-            "http://trusted-health.org/surveys?id=e433fccd-9b6"
+            "https://example.com"
           ],
           "domains": [
-            "trusted-health.org"
+            "example.com"
           ]
         },
-        "score": 0.64,
+        "score": 0.78,
         "tags": [
           "phishing"
         ],
         "evidence_chain": [
-          "fallback_heuristic"
+          "Mock response"
         ],
         "metadata": {
           "kind": "sms",
           "sender": "+918592691728",
           "attachment_type": "none",
           "has_link": true
-        }
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
       },
       "selection_meta": {
-        "chosen_by": "llm_tie_preference",
+        "chosen_by": "llm_higher_confidence",
         "rule_msg": {
           "message_id": "detection-e433fccd-9b6",
           "from_agent": "detection_agent",
@@ -120,30 +122,31 @@
           }
         },
         "llm_msg": {
-          "message_id": "detection-heuristic-e433fccd-9b6",
-          "from_agent": "detection_agent_heuristic_fallback",
+          "message_id": "detection-llm-e433fccd-9b6",
+          "from_agent": "detection_agent_llm",
           "incident_id": "e433fccd-9b6",
           "iocs": {
             "urls": [
-              "http://trusted-health.org/surveys?id=e433fccd-9b6"
+              "https://example.com"
             ],
             "domains": [
-              "trusted-health.org"
+              "example.com"
             ]
           },
-          "score": 0.64,
+          "score": 0.78,
           "tags": [
             "phishing"
           ],
           "evidence_chain": [
-            "fallback_heuristic"
+            "Mock response"
           ],
           "metadata": {
             "kind": "sms",
             "sender": "+918592691728",
             "attachment_type": "none",
             "has_link": true
-          }
+          },
+          "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
         }
       }
     },
@@ -184,7 +187,7 @@
       "message_id": "governance-e433fccd-9b6",
       "from_agent": "governance_agent",
       "incident_id": "e433fccd-9b6",
-      "autonomy_risk_score": 63.4,
+      "autonomy_risk_score": 61.3,
       "allow_automation": false,
       "policy_constraints": [
         "Limited_automation"
@@ -193,12 +196,12 @@
       "metadata": {
         "sensitivity": 0.6,
         "impact": 0.8,
-        "detection_confidence": 0.64
+        "detection_confidence": 0.78
       }
     },
     "triage": {
-      "recommended_severity": "medium",
-      "reason": "moderate signals"
+      "recommended_severity": "high",
+      "reason": "strong signals"
     }
   }
 }

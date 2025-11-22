@@ -1,5 +1,5 @@
 {
-  "run_ts": "2025-11-20T12:15:34.306776Z",
+  "run_ts": "2025-11-21T11:52:24.100468Z",
   "incident": {
     "incident_id": "41e4458b-d01",
     "kind": "sms",
@@ -10,30 +10,31 @@
   "agents": {
     "detection": {
       "final": {
-        "message_id": "detection-heuristic-41e4458b-d01",
-        "from_agent": "detection_agent_heuristic_fallback",
+        "message_id": "detection-llm-41e4458b-d01",
+        "from_agent": "detection_agent_llm",
         "incident_id": "41e4458b-d01",
         "iocs": {
           "urls": [
-            "http://secure-bank.com/surveys?id=41e4458b-d01"
+            "https://example.com"
           ],
           "domains": [
-            "secure-bank.com"
+            "example.com"
           ]
         },
-        "score": 0.52,
+        "score": 0.78,
         "tags": [
-          "suspicious"
+          "phishing"
         ],
         "evidence_chain": [
-          "fallback_heuristic"
+          "Mock response"
         ],
         "metadata": {
           "kind": "sms",
           "sender": "+917647420164",
           "attachment_type": "none",
           "has_link": true
-        }
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
       },
       "rule": {
         "message_id": "detection-41e4458b-d01",
@@ -64,33 +65,34 @@
         }
       },
       "llm": {
-        "message_id": "detection-heuristic-41e4458b-d01",
-        "from_agent": "detection_agent_heuristic_fallback",
+        "message_id": "detection-llm-41e4458b-d01",
+        "from_agent": "detection_agent_llm",
         "incident_id": "41e4458b-d01",
         "iocs": {
           "urls": [
-            "http://secure-bank.com/surveys?id=41e4458b-d01"
+            "https://example.com"
           ],
           "domains": [
-            "secure-bank.com"
+            "example.com"
           ]
         },
-        "score": 0.52,
+        "score": 0.78,
         "tags": [
-          "suspicious"
+          "phishing"
         ],
         "evidence_chain": [
-          "fallback_heuristic"
+          "Mock response"
         ],
         "metadata": {
           "kind": "sms",
           "sender": "+917647420164",
           "attachment_type": "none",
           "has_link": true
-        }
+        },
+        "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
       },
       "selection_meta": {
-        "chosen_by": "llm_tie_preference",
+        "chosen_by": "llm_higher_confidence",
         "rule_msg": {
           "message_id": "detection-41e4458b-d01",
           "from_agent": "detection_agent",
@@ -120,30 +122,31 @@
           }
         },
         "llm_msg": {
-          "message_id": "detection-heuristic-41e4458b-d01",
-          "from_agent": "detection_agent_heuristic_fallback",
+          "message_id": "detection-llm-41e4458b-d01",
+          "from_agent": "detection_agent_llm",
           "incident_id": "41e4458b-d01",
           "iocs": {
             "urls": [
-              "http://secure-bank.com/surveys?id=41e4458b-d01"
+              "https://example.com"
             ],
             "domains": [
-              "secure-bank.com"
+              "example.com"
             ]
           },
-          "score": 0.52,
+          "score": 0.78,
           "tags": [
-            "suspicious"
+            "phishing"
           ],
           "evidence_chain": [
-            "fallback_heuristic"
+            "Mock response"
           ],
           "metadata": {
             "kind": "sms",
             "sender": "+917647420164",
             "attachment_type": "none",
             "has_link": true
-          }
+          },
+          "raw_llm": "{\"threat_type\": \"phishing\", \"confidence\": 0.78, \"iocs\": {\"urls\":[\"https://example.com\"], \"domains\":[\"example.com\"]}, \"explanation\":\"Contains urgent+link\"}"
         }
       }
     },
@@ -151,13 +154,13 @@
       "message_id": "misuse-41e4458b-d01",
       "from_agent": "misuse_agent",
       "incident_id": "41e4458b-d01",
-      "misuse_label": "suspicious",
-      "confidence": 0.52,
-      "explanation": "detection_agent_signals",
+      "misuse_label": "phishing",
+      "confidence": 0.78,
+      "explanation": "no strong misuse indicators; may be benign",
       "metadata": {
         "kind": "sms",
         "detection_tags": [
-          "suspicious"
+          "phishing"
         ]
       }
     },
@@ -165,9 +168,9 @@
       "message_id": "deepfake-41e4458b-d01",
       "from_agent": "deepfake_agent",
       "incident_id": "41e4458b-d01",
-      "deepfake_prob": 0.0,
+      "deepfake_prob": 0.05,
       "tag": "benign",
-      "explanation": "no deepfake indicators",
+      "explanation": "detection_phishing_signal",
       "metadata": {
         "attachment_type": "none"
       }
@@ -184,21 +187,21 @@
       "message_id": "governance-41e4458b-d01",
       "from_agent": "governance_agent",
       "incident_id": "41e4458b-d01",
-      "autonomy_risk_score": 7.2,
-      "allow_automation": true,
+      "autonomy_risk_score": 54.3,
+      "allow_automation": false,
       "policy_constraints": [
-        "Automation_allowed_under_monitoring"
+        "Limited_automation"
       ],
-      "justification": "Low autonomy risk; automation permitted",
+      "justification": "Moderate autonomy risk; escalate to analyst",
       "metadata": {
-        "sensitivity": 0.0,
-        "impact": 0.0,
-        "detection_confidence": 0.52
+        "sensitivity": 0.6,
+        "impact": 0.6,
+        "detection_confidence": 0.78
       }
     },
     "triage": {
-      "recommended_severity": "medium",
-      "reason": "moderate signals"
+      "recommended_severity": "high",
+      "reason": "strong signals"
     }
   }
 }
