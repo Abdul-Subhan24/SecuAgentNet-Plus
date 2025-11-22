@@ -1,17 +1,25 @@
-# virtualenv
+# Virtual environment
 venv/
 
-# IDE / system
+# IDE/editor
 .vscode/
+.idea/
+
+# Python
 __pycache__/
 *.pyc
-.DS_Store
 
-# secrets and env
+# env and secrets
 .env
+.env.local
+secrets.yml
 *.key
 
-# generated outputs (do not commit)
+# generated outputs
 logs/
 reports/
 *.zip
+
+# OS
+.DS_Store
+Thumbs.db
