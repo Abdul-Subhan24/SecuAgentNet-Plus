@@ -1,7 +1,8 @@
 # Virtual environment
+.venv/
 venv/
 
-# IDE/editor
+# Editor
 .vscode/
 .idea/
 
@@ -9,22 +10,17 @@ venv/
 __pycache__/
 *.pyc
 
-# env and secrets
+# secret env
 .env
 .env.local
-secrets.yml
-*.key
 
 # generated outputs
 logs/
 reports/
 *.zip
-
-# OS
-.DS_Store
-Thumbs.db
-venv/
+.venv/
 __pycache__/
 *.pyc
 logs/
 reports/
+.env
