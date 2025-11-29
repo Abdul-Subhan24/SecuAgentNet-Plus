@@ -1,44 +1,24 @@
-# Virtual environment
+# Virtual env
 .venv/
 venv/
 
-# Editor
-.vscode/
-.idea/
-
-# Python
+# Python cache
 __pycache__/
 *.pyc
 
-# secret env
-.env
-.env.local
+# Jupyter checkpoints
+.ipynb_checkpoints/
 
-# generated outputs
-logs/
-reports/
-*.zip
-.venv/
-__pycache__/
-*.pyc
-logs/
-reports/
+# Secrets
 .env
-.venv/
-__pycache__/
-*.pyc
+*.key
+secrets.yml
+
+# Runtime output
 logs/
 reports/
-.env
-.venv/
-__pycache__/
-*.pyc
-logs/
-reports/
-.env
-.venv/
-__pycache__/
-*.pyc
-logs/
-reports/
-.env
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
