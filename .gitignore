@@ -30,3 +30,9 @@ __pycache__/
 logs/
 reports/
 .env
+.venv/
+__pycache__/
+*.pyc
+logs/
+reports/
+.env
