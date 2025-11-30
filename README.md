@@ -195,62 +195,61 @@ secuagentnet-plus/
 ## How to Run
 **Windows (PowerShell)**
 ```powershell
-# create & activate venv (recommended Python 3.11.x)
-python -m venv .venv
-. .venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-
-# run pipeline (mock mode if you don't want to call LLMs)
-python -m scripts.prompt_tuning_test --mock
-python -m scripts.run_pipeline_full   # or run individual scripts
+.\\venv\\Scripts\\Activate.ps1
+python -m scripts.run_pipeline_full
 python -m scripts.evaluate
-
+python -m scripts.run_detection_llm_test
+python -m scripts.prompt_tuning_test
+```
 
 **Unix / Mac**
-python3 -m venv venv
+```bash
 source venv/bin/activate
-pip install -r requirements.txt
 python -m scripts.run_pipeline_full
-
+python -m scripts.evaluate
+python -m scripts.run_detection_llm_test
+python -m scripts.prompt_tuning_test
+```
 
 **Notes:**
+- LLM detection runs are mocked or configured via environment variables pointing to an LLM provider (OpenAI / Gemini / Ollama) in `scripts/run_detection_llm_test.py`.
+- Audit logs are emitted to `logs/audit_*.json` for review.
 
-1. For real LLM runs set your provider environment variables locally (do not commit .env with real keys).
+---
 
-2. Use --mock if you want to avoid external API calls during validation.
+## Prompt Tuning & LLMs
+- The repo ships with 4 prompt variants (A/B/C/D) used for automated prompt tuning experiments.  
+- Structured output enforcement and schema validation are required to reduce hallucination.  
+- For deployment, configure provider credentials and set model selection in `src/agents/detection_agent_llm.py`.
 
-**Prompt Tuning & LLMs**
+---
 
-The repo ships with 4 prompt variants (A/B/C/D) used for automated prompt tuning experiments.
+## Future Enhancements
+- Add a vision model for real deepfake detection (beyond simulation).
+- Integrate Gemini Flash / Claude 3 Haiku for low‑latency LLM responses.
+- Add vector embedding memory store for repeated fraud patterns and fast lookup.
+- Deploy FastAPI backend and a Streamlit demo front‑end for interactive testing.
+- Production Dockerization and SOC dashboard for metrics/alerting.
 
-Structured output enforcement and schema validation are required to reduce hallucination.
+---
 
-For deployment, configure provider credentials and set model selection in src/agents/detection_agent_llm.py.
+## Contributing
+Contributions are welcome. Suggested workflow:
+1. Fork the repository
+2. Create a feature branch
+3. Add tests where appropriate
+4. Open a pull request with a clear description of the change
 
-**Future Enhancements**
+Please run `python -m pytest` (or project test command) before submitting PRs.
 
-1. Add a vision model for real deepfake detection (beyond simulation).
+---
 
-2. Integrate Gemini Flash / Claude 3 Haiku for low-latency LLM responses.
+## License
+This project is released under the **MIT License**. See `LICENSE` for details.
 
-3. Add vector embedding memory store for repeated fraud patterns and fast lookup.
-
-4. Deploy FastAPI backend and a Streamlit demo front-end for interactive testing.
-
-5. Production Dockerization and SOC dashboard for metrics/alerting.
-
-**Contributing**
-
-Contributions welcome — fork, branch, add tests, and open a PR. Run python -m pytest before submitting.
-
-**License**
-
-Released under the **MIT License**. See LICENSE.
+---
 
 **Author**: Md Abdul Subhan
 
-Prepared for Kaggle Agents Intensive Capstone 2025 — SecuAgentNet+
-
-
----
+*Prepared for Kaggle Agents Intensive Capstone 2025 — SecuAgentNet+*
 
