@@ -1,24 +1,35 @@
-# Virtual env
+# Virtual envs
 .venv/
 venv/
+env/
+ENV/
 
-# Python cache
+# IDE / editors
+.vscode/
+.idea/
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
-# Jupyter checkpoints
+# Environments & secrets
+.env
+.env.local
+.env.*.local
+secrets.yml
+*.key
+
+# Jupyter
 .ipynb_checkpoints/
 
-# Secrets
-.env
-*.key
-secrets.yml
-
-# Runtime output
+# Runtime/logs
 logs/
 reports/
 *.log
+*.zip
 
-# System files
+# OS
 .DS_Store
 Thumbs.db
